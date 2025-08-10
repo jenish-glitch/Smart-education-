@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>पाठ १: आमाको सपना</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Modern, beautiful CSS for a clean and engaging look */
+        :root {
+            --primary-color: #2c3e50; /* Dark blue-grey */
+            --secondary-color: #3498db; /* Bright blue */
+            --accent-color: #e74c3c; /* Red for buttons */
+            --background-color: #ecf0f1; /* Light grey */
+            --card-background: #ffffff;
+            --text-color: #333333;
+            --light-text-color: #7f8c8d;
+            --border-radius: 12px;
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --hover-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Mukta', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--card-background);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 40px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .container:hover {
+            box-shadow: var(--hover-shadow);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .header h1::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            border-radius: 2px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+            padding: 25px;
+            background-color: var(--background-color);
+            border-radius: var(--border-radius);
+        }
+        
+        .section h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.75rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+            line-height: 1.2;
+        }
+        
+        .section ol, .section ul {
+            margin-left: 20px;
+            padding-left: 0;
+            list-style: none; /* Removed default list style for custom styling */
+        }
+
+        .section li {
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .subsection {
+            margin-bottom: 25px;
+        }
+
+        .subsection h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        /* Custom styling for list items */
+        .qna-list li:before,
+        .vocab-list li:before,
+        .match-list li:before {
+            content: '✓';
+            color: var(--secondary-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            margin-right: 0.5em;
+        }
+        
+        .match-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .match-item {
+            background-color: var(--card-background);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .match-item span:first-child {
+            color: var(--primary-color);
+        }
+
+        .match-item span:last-child {
+            color: var(--light-text-color);
+            text-align: right;
+            flex-grow: 1;
+        }
+
+        .match-item::after {
+            content: '→';
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin: 0 10px;
+        }
+
+        .qna-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .qna-item {
+            background-color: var(--card-background);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .qna-item h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            margin-bottom: 8px;
+        }
+        
+        .qna-item p {
+            margin: 0;
+        }
+        
+        .text-block {
+            background-color: var(--card-background);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+
+        .text-block p {
+            margin: 0 0 15px 0;
+        }
+        
+        .text-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .app-download {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .app-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #ffffff;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3);
+        }
+
+        .app-button:hover {
+            background-color: #c0392b;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(231, 76, 60, 0.4);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+
+            .subsection h3 {
+                font-size: 1.1rem;
+            }
+
+            .app-button {
+                padding: 12px 25px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header class="header">
+            <h1>पाठ १: आमाको सपना</h1>
+        </header>
+
+        <section class="section">
+            <h2>शब्दभण्डार</h2>
+
+            <div class="subsection">
+                <h3>१. उस्तै अर्थ दिने शब्दबिच जोडा मिलाउनुहोस्:</h3>
+                <div class="match-list">
+                    <div class="match-item">
+                        <span>उषा</span>
+                        <span>झिसमिसे उज्यालो</span>
+                    </div>
+                    <div class="match-item">
+                        <span>सपना</span>
+                        <span>रमाइलो भविष्यको आशा वा कल्पना</span>
+                    </div>
+                    <div class="match-item">
+                        <span>यौवन</span>
+                        <span>युवा अवस्था</span>
+                    </div>
+                    <div class="match-item">
+                        <span>कलिलो</span>
+                        <span>कलकलाउँदो</span>
+                    </div>
+                    <div class="match-item">
+                        <span>सङ्ग्राम</span>
+                        <span>लडाइँ</span>
+                    </div>
+                    <div class="match-item">
+                        <span>जडता</span>
+                        <span>मूर्खता</span>
+                    </div>
+                    <div class="match-item">
+                        <span>कण्ठ</span>
+                        <span>घाँटी</span>
+                    </div>
+                    <div class="match-item">
+                        <span>आशा</span>
+                        <span>चाहेको वस्तु पाउने इच्छा</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>२. अर्थसँग मिल्ने शब्द पाठबाट खोजेर लेख्नुहोस्:</h3>
+                <ul class="qna-list">
+                    <li class="qna-item">
+                        <h4>(क) राती जमिन, रुख, पात आदिमा पर्ने पानीका ससाना थोप्ला :</h4>
+                        <p><strong>उत्तर:</strong> शीत</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>(ख) ओठमा राखी दाहिने कुमतिर फर्काई बजाइने बासँ, निगालो आदिबाट बनाइएको बाजा :</h4>
+                        <p><strong>उत्तर:</strong> बाँसुरी</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>(ग) लिने वा समात्ने काम :</h4>
+                        <p><strong>उत्तर:</strong> ग्रहण</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>(घ) सिर्जना गर्ने क्षमता :</h4>
+                        <p><strong>उत्तर:</strong> सिर्जनाशक्ति</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>(ङ) सन्तुष्ट हुने वा पार्ने वचन :</h4>
+                        <p><strong>उत्तर:</strong> सान्त्वना</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>(च) वेगसित चलेको हावा :</h4>
+                        <p><strong>उत्तर:</strong> हुरी</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>३. दिइएका शब्दको पर्यायवाची शब्द लेख्नुहोस् र तिनलाई वाक्यमा प्रयोग पनि गर्नुहोस्:</h3>
+                <ul class="qna-list">
+                    <li class="qna-item">
+                        <h4>वायु :</h4>
+                        <p><strong>पर्यायवाची:</strong> हावा<br><strong>वाक्य:</strong> प्रदूषित हावा गह्रौँ हुने हुनाले धेरै समयसम्म शहरभित्रै रुमल्लिएर बस्छ।</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>आमा :</h4>
+                        <p><strong>पर्यायवाची:</strong> माता<br><strong>वाक्य:</strong> हामीले माताको भावनामा चोट पुर्‍याउनु हुँदैन।</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>मधुर :</h4>
+                        <p><strong>पर्यायवाची:</strong> मन्द<br><strong>वाक्य:</strong> मेरो साथीको आवज सुनेर म मन्द भए ।</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>गरिमा :</h4>
+                        <p><strong>पर्यायवाची:</strong> गौरव<br><strong>वाक्य:</strong> उनको आफ्नो शक्तिको गौरव र अनुग्रह दुबै व्यक्त गरिन्।</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>करुणा :</h4>
+                        <p><strong>पर्यायवाची:</strong> दया<br><strong>वाक्य:</strong> मानव प्राणीमा कुनै दया वा करुणा छैन।</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>नगर :</h4>
+                        <p><strong>पर्यायवाची:</strong> शहर<br><strong>वाक्य:</strong> हामीले गत बिहीबार राती शहर छोड्यौं।</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>दक्ष :</h4>
+                        <p><strong>पर्यायवाची:</strong> सक्षम, कुशल<br><strong>वाक्य:</strong> राजधानीमा एक अत्यधिक कुशल सार्वजनिक यातायात प्रणाली छ।</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>एकान्त :</h4>
+                        <p><strong>पर्यायवाची:</strong> सुनसान<br><strong>वाक्य:</strong> पिर परेको समयमा सुनसान ठाउँको आवश्यकता पर्दछ ।</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>धरती :</h4>
+                        <p><strong>पर्यायवाची:</strong> पृथ्वी<br><strong>वाक्य:</strong> पृथ्वी एकमात्र ग्रह हो जसले जीवनलाई समर्थन गर्दछ।</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>शिशु :</h4>
+                        <p><strong>पर्यायवाची:</strong> नानी<br><strong>वाक्य:</strong> आमाले नानीलाई राम्ररी स्याहारसुसार गर्नुहुन्छ ।</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>४. दिइएका उखानको प्रयोग गरी आफ्नो जन्मस्थानको वर्णन गर्नुहोस्:</h3>
+                <div class="text-block">
+                    <p>मेरो जन्म आजभन्दा करिब १७ वर्ष अगाडि नेपालको एउटा रमणीय गाउँ विसालटारमा भएको हो । पहाडको हरियो भोटोले बनेको गाउँ विसालटार मेरो मुटुको टुक्रा हो । सिन्धुमा हराएको बिन्दु जस्तै नेपालको भूमिमा सानो देखिए पनि मेरो गाउँ मेरो हृदयको धड़कन हो । मेरो गाउँ प्राकृतिक दृष्टिले नै राम्रो देखिए पनि <strong>'नजिकको तीर्थ हेला'</strong> भनेझैँ मानिस सुन्दरता खोज्दै अन्य सहरहरूमा लाग्छन् ।</p>
+                    <p><strong>'एकले थुकी सुकी सयले थुकी नदी'</strong> भनेझैँ सहरहरूको धुँवा र धुलो खानु भन्दा मानिसहरू गाउँ घुम्न आउने हो भने गाउँको पर्यटन विकास बढ्न सक्थ्यो । <strong>'एक हातले ताली बज्दैन'</strong> भनेझैँ सबै मिली गर्ने हो भने यो काम सम्भव हुन सक्छ । मेरो लागि आफ्नो गाउँको मानिसहरू <strong>'जिउँदाको जन्ती मर्दाको मलामी'</strong> हुन् । यहाँको मानिसको व्यवहारमा <strong>'आफू भलो त जगतै भलो'</strong> भन्ने सिद्धान्त झल्किन्छ । मेरो गाउँका मानिसहरू मिलनसार बनि मिलिजुली बसेका छन् ।</p>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>५. दिइएका पारिभाषिक शब्दलाई शब्दकोशीय अनुक्रममा मिलाउनुहोस् र तिनको अर्थ पनि लेख्नुहोस्:</h3>
+                <p><strong>अनुक्रमअनुसार मिलाइएको :</strong> अधिवक्ता, अध्यादेश, इजलास, कायलनामा, जमानत, तारिख, देवानी, फौजदारी, बिगो, मुचुल्का, वारेस, विधेयक, सनाखत, सरजमिन, हदम्याद</p>
+                <ul class="qna-list">
+                    <li class="qna-item">
+                        <h4>अधिवक्ता :</h4>
+                        <p>अधिकृत तहको कानुन व्यवसायी ।</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>अध्यादेश :</h4>
+                        <p>संसद्को अधिवेशन नभएको बेला खास अवस्थामा सरकारले जारी गर्ने कानुन ।</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>इजलास :</h4>
+                        <p>अदालतमा मुद्दा हेर्ने ठाउँ ।</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>कायलनामा :</h4>
+                        <p>अपराध वा गल्ती स्वीकार गरी लेखिने कागज ।</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>जमानत :</h4>
+                        <p>अदालतमा मुद्दाको धरौटी वा धितो ।</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>तारिख :</h4>
+                        <p>अदालतबाट झगडियालाई हाजिर हुन आउनू भनी दिइएको मिति ।</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>देवानी :</h4>
+                        <p>फौजदारी मुद्दाबाहेक अरू मुद्दा हेर्ने वा सुल्झाउने ।</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>फौजदारी :</h4>
+                        <p>चोरी, डकैती, ज्यान मार्ने जस्ता अपराधको न्यायिक कारवाहीसँग सम्बन्धित ।</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>बिगो :</h4>
+                        <p>अनुचित किसिमले लिएको धनमाल वा सोही रकमको दाबी ।</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>मुचुल्का :</h4>
+                        <p>घटना घटेको ठाउँका मानिसले लेखिदिएको बयानको कागज ।</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>वारेस :</h4>
+                        <p>कानुनी उत्तराधिकारी ।</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>विधेयक :</h4>
+                        <p>संसद्बाट पारित हुनुभन्दा अगाडिको कानुनको मस्यौदा ।</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>सनाखत :</h4>
+                        <p>चिन्ने वा चिनाउने काम ।</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>सरजमिन :</h4>
+                        <p>सम्बन्धित घटना घटेको वा समस्या परेको ठाउँ ।</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>हदम्याद :</h4>
+                        <p>कुनै काम वा मुद्दाको लागि तोकिएको अन्तिम समयसीमा ।</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="app-download">
+                <a href="#" class="app-button">हाम्रो एप डाउनलोड गर्नुहोस्</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>बोध र अभिव्यक्ति</h2>
+
+            <div class="subsection">
+                <h3>३. कवितांश पढेर सोधिएका प्रश्नहरूको उत्तर:</h3>
+                <ul class="qna-list">
+                    <li class="qna-item">
+                        <h4>(क) 'त्यो' र 'तिमी' भनेका को को हुन् ?</h4>
+                        <p>यस कवितामा 'त्यो' भनेको क्रान्ति हो, जसले भविष्यमा जन्म लिने वीर योद्धालाई जनाउँछ । 'तिमी' भनेको चाहिँ वर्तमानका सन्तानहरू हुन् ।</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>(ख) किन क्रान्तिको आवश्यकता परेको हो ?</h4>
+                        <p>यो कविता वि.सं. २००० सालतिर लेखिएको हो । त्यतिबेला नेपाली समाज निरङ्कुश शासन, अन्याय, भ्रष्टाचार र कुरीतिले गर्दा एकदमै दुषित थियो । त्यसैले यो फोहोर हटाएर समाजमा परिवर्तन ल्याउन र स्वस्थ बनाउन क्रान्तिको खाँचो परेको हो ।</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>(ग) 'त्यो हिउँ र आगोभन्दा पनि बढ्ता छोइने भएर आउँछ' भन्नुको तात्पर्य के हो ?</h4>
+                        <p>यसको अर्थ क्रान्ति यति शक्तिशाली भएर आउँछ कि त्यसलाई कसैले पनि रोक्न सक्दैन । जसरी आगो र हिउँलाई छुन सकिँदैन, त्यसरी नै यो क्रान्तिलाई पनि कसैले नियन्त्रण गर्न सक्दैन । यो पानी र आगोभन्दा पनि बलवान् हुनेछ ।</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>(घ) माथिको कवितांशमा कस्तो शैलीको प्रयोग गरिएको छ ?</h4>
+                        <p>माथिको कवितांशमा गद्यलयात्मक र संवादात्मक शैलीको प्रयोग गरिएको छ ।</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>४. कवितांश पढेर सोधिएका प्रश्नहरूको उत्तर:</h3>
+                <ul class="qna-list">
+                    <li class="qna-item">
+                        <h4>(क) आमाको सपना के थियो ?</h4>
+                        <p>आमाले निरन्तर दुःख र पीडा पाइरहेकी थिइन् । त्यसैले उनले भविष्यमा जन्मने हरेक सन्तान वीर, साहसी र योद्धा बनून् भन्ने सपना देखेकी थिइन् । उनलाई विश्वास थियो कि यो परिवर्तन वर्तमानका सन्तानले होइन, बरु भविष्यका सन्तानले ल्याउनेछन् र यसबाट उनले मुक्ति पाउनेछन् ।</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>(ख) 'त्यो मिठो गीतले तिमीलाई आफ्नो बाँसुरी बनाएनछ' भन्नुको तात्पर्य के हो ?</h4>
+                        <p>आमाको इच्छा देशभक्त सन्तान जन्माएर उनीहरूलाई क्रान्तिकारी योद्धा बनाई देशलाई स्वतन्त्रता दिलाउने थियो । उनले आफ्नो सन्तानको तोते बोलीमा पनि परिवर्तनको मधुर धुन सुनेकी थिइन् । तर ती सन्तानले त्यो गीतको धुनलाई मिठो संगीत निकाल्ने बाँसुरी बनाउन नसकेकोमा आमाले चिन्ता व्यक्त गरेकी छन् ।</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>५. कवितामा 'आमा' र 'छोरा' के केका प्रतीकका रूपमा प्रयोग गरिएका छन्?</h3>
+                <div class="text-block">
+                    <p>गोपालप्रसाद रिमाल नेपाली साहित्यका एक स्थापित कवि हुन् । उनले 'आमाको सपना' कवितामा निरङ्कुश शासन, अन्याय र भ्रष्टाचारले दुर्गन्धित भएको नेपाली समाजको चित्रण गरेका छन् । यो कविता आमा र छोराको संवादको माध्यमबाट समाजमा परिवर्तन ल्याउन क्रान्ति आवश्यक छ भन्ने सन्देश दिन्छ ।</p>
+                    <p>यस कवितामा <strong>'आमा'</strong> लाई <strong>नेपाल आमा</strong>को प्रतीकका रूपमा प्रयोग गरिएको छ, जो अन्याय र शोषणले पीडित छिन् । उनले आफ्ना सन्तानबाट परिवर्तनको आशा राखेकी छिन् । तर वर्तमानका सन्तानबाट त्यो परिवर्तन नआएको देख्दा उनी चिन्तित छिन् ।</p>
+                    <p>त्यस्तै, <strong>'छोरा'</strong> लाई <strong>जनता</strong>को प्रतीकका रूपमा प्रयोग गरिएको छ । आमा (नेपाल आमा) ले आफ्ना छोरा (जनता) बाट वीरता र क्रान्तिको अपेक्षा गरेकी छिन् । उनलाई लाग्छ कि अब आउने नयाँ पुस्तामा क्रान्ति गर्ने चेतना हुनेछ र तिनीहरूले देशलाई नयाँ दिशामा लैजानेछन् ।</p>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>६. कवितामा कस्तो परिवेशको चित्रण गरिएको छ?</h3>
+                <div class="text-block">
+                    <p>यो कविता वि.सं. २००० सालमा प्रकाशित भएको थियो, जुन १९९७ सालको सहिद काण्डपछि रचना गरिएको हो । त्यसैले यो कविता क्रान्तिको चेतनाले भरिएको छ र यसमा तत्कालीन समाजको परिवेशको चित्रण गरिएको छ ।</p>
+                    <p>कवितामा राणाशासनले गर्दा नेपाली समाज अन्याय र शोषणमा परेको देखाइएको छ । यो कविता २००७ सालको क्रान्तिको एउटा पूर्वघोषणा जस्तो पनि लाग्छ, जहाँ निरङ्कुशताको अन्त्य भई शोषणमुक्त समाज बन्ने विश्वास व्यक्त गरिएको छ । कविले त्यतिबेलाको राजनैतिक अस्थिरता र देश विकासमा आएको अवरोधलाई पनि औंल्याएका छन् ।</p>
+                    <p>अतः यो कवितामा **राणाशासनको उकुसमुकुस वातावरण, जनतामा बढ्दै गएको राजनीतिक चेतना, विद्रोहको आवाज र क्रान्तिप्रति आशावादी सोच**को चित्रण गरिएको छ । कविले क्रान्तिबिना शान्ति असम्भव छ भन्ने सन्देश दिँदै एक दिन अन्यायको अन्त्य भएर सुनौलो बिहानी अवश्य आउने कुरामा जोड दिएका छन् ।</p>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>७. 'मैले यसरी रोगीलाई झैँ तिम्रो कपाल मुसारिरहनुपर्ने छैन' कवितांशबाट कविले के भन्न खोजेका हुन्?</h3>
+                <div class="text-block">
+                    <p>यो कवितांशमा कविले **भविष्यका पुस्ताहरू साहसी र क्रान्तिकारी हुनेछन्** भन्ने कुरा व्यक्त गर्न खोजेका छन् ।</p>
+                    <p>अहिलेसम्म आमा (नेपाल आमा) ले आफ्ना सन्तानहरूलाई रोगीजस्तो गरी कमजोर र असहाय ठानी माया गर्दै आएकी थिइन् । तर जब भविष्यमा क्रान्ति आउँछ, तब उनका सन्तानहरू अब रोगीजस्ता रहने छैनन् । तिनीहरू देशभक्तिले भरिएका, शक्तिशाली र क्रान्तिकारी योद्धा हुनेछन् । उनीहरूले निरङ्कुशताको विरुद्ध लड्न आफ्नो ज्यानको बाजी लगाउनेछन् । त्यस अवस्थामा आमाले उनीहरूलाई रोगीलाई झैँ मुसारिरहनु पर्ने छैन किनभने उनीहरूले आफ्नो हकका लागि आफैँ आवाज उठाउनेछन् र देशलाई मुक्तिको बाटोमा लैजानेछन् ।</p>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>८. 'आमाको सपना' कवितामा क्रान्ति किन र कसरी आउने कल्पना गरिएको छ?</h3>
+                <div class="text-block">
+                    <p>आमाको सपना कवितामा कविले क्रान्ति **निरङ्कुश शासनको अन्याय र अत्याचार** चिर्नको लागि आउने कल्पना गरेका छन् । तत्कालीन समयमा समाजमा फैलिएको भ्रष्टाचार, कुरीति र अस्थिरतालाई हटाएर सुन्दर भविष्यको कल्पना गर्न क्रान्ति आवश्यक छ ।</p>
+                    <p>कवितामा क्रान्ति **कसरी आउँछ** भन्ने कुरालाई पनि कविले स्पष्ट पारेका छन् । उनले भनेका छन् कि आउने पुस्ता हावाको भन्दा चर्को वेगले आउनेछ । यो क्रान्ति बिहानको सूर्य जस्तो शक्तिशाली र उज्यालो हुनेछ । यसले निरङ्कुशताको जञ्जीरलाई तोडेर सम्पूर्ण जनतालाई स्वतन्त्रता दिलाउनेछ । कविले आमाको माध्यमबाट यो आशावादी भाव प्रकट गरेका छन् कि भावी पुस्तामा क्रान्ति ल्याउने चेतना हुनेछ र तिनीहरूले देशलाई समृद्धिको बाटोमा लैजानेछन् ।</p>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>९. आमाको सपना के हो र त्यो कसरी साकार हुन सक्छ?</h3>
+                <div class="text-block">
+                    <p>आमाको सपना कवितामा **आमाको सपना क्रान्ति र परिवर्तन हो** । उनी निरङ्कुशता, अन्याय र अत्याचारको अन्त्य भएको हेर्न चाहन्छिन् । उनी आफ्ना सन्तानलाई निडर, आत्मविश्वासी र स्वावलम्बी भएको देख्न चाहन्छिन् । उनले शिशुकै कलिलो अनुहारमा क्रान्तिको छाप र तोते बोलीमा परिवर्तनको मधुर आवाज सुन्न चाहन्छिन् ।</p>
+                    <p>आमाको यो सपना **क्रान्तिबाट मात्र साकार हुन सक्छ** । जब भविष्यका सन्तानहरू क्रान्तिकारी चेतनाले भरिएर उठ्नेछन्, तब मात्र यो सम्भव हुन्छ । कविले कवितामा क्रान्ति आउने कुरामा पूर्ण विश्वास व्यक्त गरेका छन् । जब क्रान्ति आउँछ, तब सबै जनता एकजुट भएर अन्यायको विरुद्ध लड्नेछन् र समाजमा एउटा नयाँ, स्वतन्त्र र समृद्ध युगको सुरुवात हुनेछ ।</p>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>१०. अनुच्छेद पढेर सोधिएका प्रश्नहरूको छोटो उत्तर:</h3>
+                <ul class="qna-list">
+                    <li class="qna-item">
+                        <h4>(क) पदक्रमका आधारमा संसारका भाषालाई कति प्रकारमा वर्गीकरण गरिएको छ ?</h4>
+                        <p><strong>उत्तर:</strong> पदक्रमका आधारमा संसारका भाषालाई ६ प्रकारमा वर्गीकरण गरिएको छ ।</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>(ख) नेपाली र अङ्ग्रेजी कस्तो कस्तो पदक्रम भएका भाषा हुन् ?</h4>
+                        <p><strong>उत्तर:</strong> नेपाली कर्ता, कर्म र क्रियाको पदक्रम भएको भाषा हो भने अङ्ग्रेजी कर्ता, क्रिया र कर्मको पदक्रम भएको भाषा हो ।</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>(ग) ब्याकरणिक पदक्रम र आलङ्कारिक पदक्रममा के भिन्नता छ ?</h4>
+                        <p><strong>उत्तर:</strong> ब्याकरणिक पदक्रममा शब्दहरू निश्चित क्रममा हुन्छन् भने आलङ्कारिक पदक्रममा भनाइमा जोड दिनका लागि शब्दहरूको क्रमलाई बदलिएको हुन्छ ।</p>
+                    </li>
+                    <li class="qna-item">
+                        <h4>(घ) भाषामा विचलन किन हुन्छ ?</h4>
+                        <p><strong>उत्तर:</strong> भाषामा कुनै कुरालाई बढी जोड दिनको लागि विचलन हुन्छ ।</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>११. कवितांशलाई सामान्य पदक्रममा रुपान्तरण गरी भन्न खोजिएको कुरा के हो, छलफल गर्नुहोस्:</h3>
+                <div class="text-block">
+                    <p><strong>रुपान्तरण:</strong> तिमी सत्य कुरालाई कथा सुने झैँ यसरी चुम्बकिएर सुन्ने छैनौ । तिमी त्यसलाई आफैँ नै देख्न, सहन र ग्रहण गर्न सक्ने हुनेछौ । तिमी मैले यसरी धैर्य दिनुको सट्टा सङ्ग्राममा जाँदा लाख सम्झाएर पनि नमान्ने आमाको मनलाई सान्त्वना दिँदै विदा हुनेछौ ।</p>
+                    <p><strong>भन्न खोजिएको कुरा:</strong> यस कवितांशले भविष्यका पुस्ताहरू **सत्य कुरालाई केवल सुन्ने मात्र नभई त्यसलाई आफ्नै अनुभवबाट बुझ्ने र स्वीकार गर्नेछन्** भन्ने भाव व्यक्त गरेको छ । उनीहरू यति साहसी र दृढ हुनेछन् कि देशका लागि युद्ध (सङ्ग्राम) मा जानका लागि आमाले रोक्दा पनि मान्ने छैनन् । बरु उल्टै आमालाई नै सान्त्वना दिएर बिदा हुनेछन् । यसले भावी पुस्ताको देशभक्ति र क्रान्तिकारी भावनाको चित्रण गरेको छ ।</p>
+                </div>
+            </div>
+
+        </section>
+        
+    </div>
+
+</body>
+</html>
+
