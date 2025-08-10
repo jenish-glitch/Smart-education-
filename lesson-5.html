@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>एक चिहान</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap');
+        
+        :root {
+            --primary-color: #5d4037; /* Dark Brown */
+            --secondary-color: #8d6e63; /* Light Brown */
+            --accent-color: #ffcc80; /* Light Orange */
+            --background-color: #efebe9; /* Light Beige */
+            --card-background: #ffffff; /* White */
+            --text-color: #3e2723; /* Very Dark Brown */
+            --heading-color: #4e342e; /* Darker Brown */
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --border-radius: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Mukta', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--card-background);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        h1, h2, h3 {
+            color: var(--heading-color);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--secondary-color);
+            padding-bottom: 0.25rem;
+        }
+
+        p, ol, ul {
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .section {
+            background-color: #f7f3f1; /* Lighter beige for sections */
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .qna {
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 1rem;
+        }
+
+        .qna p {
+            margin: 0;
+        }
+
+        .qna strong {
+            color: var(--primary-color);
+        }
+        
+        .list-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .list-item {
+            background-color: #f0f4f8; /* background-color */
+            padding: 0.75rem;
+            border-radius: 8px;
+            flex: 1 1 200px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .list-item strong {
+            color: var(--primary-color);
+        }
+
+        .grammar-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .grammar-list li {
+            background-color: var(--primary-color);
+            color: var(--card-background);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .quote {
+            background-color: var(--accent-color);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            font-style: italic;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .summary {
+            background-color: #fff9c4; /* Light yellow */
+            padding: 1.5rem;
+            border-left: 5px solid var(--accent-color);
+            border-radius: var(--border-radius);
+        }
+        
+        /* Mobile-specific adjustments */
+        @media (max-width: 600px) {
+            body {
+                padding: 0.5rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            .list-item {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>एक चिहान</h1>
+    <hr>
+    <div class="section">
+        <h2>शब्दभण्डार</h2>
+        <h3>१. शब्द र अर्थको जोडा मिलाउनुहोस् :</h3>
+        <div class="list-container">
+            <div class="list-item"><strong>रुजु</strong> – कुनै कुरा ठिक छ कि छैन भनी जाँच्ने काम</div>
+            <div class="list-item"><strong>कविराज</strong> – आयुर्वेदिक उपचार गर्ने चिकित्सकको एक उपाधि</div>
+            <div class="list-item"><strong>पेस्की</strong> – काम पूरा हुनु पहिले दिइने रकम</div>
+            <div class="list-item"><strong>तल्सिङ</strong> – मोहीलाई जग्गा कमाउन दिने व्यक्ति, जग्गाधनी</div>
+            <div class="list-item"><strong>समवेदना</strong> – उस्तै दु:खको अनुभव</div>
+            <div class="list-item"><strong>निर्दयी</strong> – दया नभएको</div>
+            <div class="list-item"><strong>अकर्मण्य</strong> – केही पनि काम नगर्ने, निस्क्रिय</div>
+            <div class="list-item"><strong>मुराद</strong> – भित्री आशय</div>
+            <div class="list-item"><strong>सान्त्वना</strong> – आश्वासन, ढाडस</div>
+            <div class="list-item"><strong>हथुङ्गा</strong> – हातको नाडीदेखि औंलाका टुप्पासम्मको भाग</div>
+            <div class="list-item"><strong>दागबत्ती</strong> – शवका मुखमा राख्ने बत्ती</div>
+            <div class="list-item"><strong>कृतज्ञता</strong> – अरूले गरेको गुनप्रति धन्यवाद दिने भाव</div>
+        </div>
+
+        <h3>२. पाठमा प्रयोग भएका शब्दको अर्थ पहिचान गरी लेख्नुहोस् :</h3>
+        <div class="list-container">
+            <div class="list-item"><strong>गुभाजु</strong> – बिरामीहरूलाई झारफुक गर्ने नेवार समुदायको तान्त्रिक व्यक्ति</div>
+            <div class="list-item"><strong>उघाड</strong> – सीमा नाघेर भन्नु</div>
+            <div class="list-item"><strong>फोने</strong> – विना मागमा आफैँ दिन खोज्नु</div>
+            <div class="list-item"><strong>माचाछी</strong> – जोईपोइ बच्चाबच्चीको एकसरो परिवार मात्र</div>
+            <div class="list-item"><strong>नङ्के</strong> – कहिल्यै प्राप्त वा अनुभव नभएको कुरा पाउनु</div>
+            <div class="list-item"><strong>बिचा:</strong> – क्रियापुत्रीलाई बन्धुवर्गका तर्फबाट दिइने सिधा</div>
+            <div class="list-item"><strong>डल्लेठो</strong> – डल्ला फोर्ने काठको हतियार</div>
+            <div class="list-item"><strong>खर्पन</strong> – काठमाडौँमा प्रचलित मालसमान बोक्ने साधन</div>
+            <div class="list-item"><strong>क्वेना</strong> – बाँध, किनार, कुना, नदीको भुमरी पर्ने किनारको खोच</div>
+        </div>
+
+        <h3>३. उस्तै अर्थ दिने शब्द पहिचान गरी लेख्नुहोस् :</h3>
+        <div class="list-container">
+            <div class="list-item"><strong>दीक्षा</strong> – मन्त्रोपदेश</div>
+            <div class="list-item"><strong>सितिमिति</strong> – हत्तपत्त</div>
+            <div class="list-item"><strong>उपचार</strong> – इलाज</div>
+            <div class="list-item"><strong>पेटपालो</strong> – गुजारा</div>
+            <div class="list-item"><strong>मृत्यु</strong> – निधन</div>
+            <div class="list-item"><strong>बोली</strong> – वाणी</div>
+            <div class="list-item"><strong>मौन</strong> – चुप</div>
+            <div class="list-item"><strong>तत्क्षण</strong> – तत्काल</div>
+            <div class="list-item"><strong>फजिती</strong> – मुस्किल</div>
+            <div class="list-item"><strong>सावगास</strong> – शक्ति</div>
+        </div>
+
+        <h3>४. अनेकार्थक शब्दलाई फरक फरक अर्थ दिने गरी वाक्यमा प्रयोग गर्नुहोस् :</h3>
+        <ul>
+            <li><strong>उत्तर:</strong> उनले मेरा सबै प्रश्नहरूको <strong>उत्तर</strong> दिइन्। / <strong>उत्तर</strong>बाट हावा चलिरहेको छ।</li>
+            <li><strong>खरी:</strong> म <strong>खरी</strong>को बोटमा चढेँ। / कालो पाटीमा <strong>खरी</strong>ले राम्ररी लेख।</li>
+            <li><strong>गोल:</strong> पृथ्वी <strong>गोल</strong> छ। / कोभेन्ट्रीको <strong>गोल</strong> अफसाइडको लागि अस्वीकृत थियो।</li>
+            <li><strong>जग:</strong> राम्रो <strong>जग</strong> बिना कुनै राम्रो भवन बन्दैन। / मैले <strong>जग</strong>बाट पानी खाएँ।</li>
+            <li><strong>तान:</strong> <strong>तान</strong>मा कपडा बुन्न सजिलो हुन्छ। / तिमी बिस्तारै डोरी <strong>तान</strong>।</li>
+            <li><strong>तर:</strong> दुधको <strong>तर</strong>बाट मोही बनाइन्छ। / खोला <strong>तर</strong> होसियार हुनुपर्छ।</li>
+            <li><strong>पत्र:</strong> मसँग रोबर्टको <strong>पत्र</strong> थियो। / <strong>पत्र</strong>पत्रिका पढ्ने बानी राम्रो हो।</li>
+            <li><strong>वर:</strong> नारायणी <strong>वर</strong> मेरो घर छ। / चौतारीमा <strong>वर</strong>को रुख छ।</li>
+            <li><strong>बाली:</strong> यसपाली <strong>बाली</strong> सप्रियो। / हर्केको गाई <strong>बाली</strong> गएछ।</li>
+            <li><strong>रहर:</strong> मेरो काठमाडौँ सहर घुम्ने <strong>रहर</strong> छ। / <strong>रहर</strong>को दाल धेरै महँगो भएछ।</li>
+            <li><strong>साँचो:</strong> <strong>साँचो</strong> बोल्ने बानी सबैले बसाल्नु पर्छ। / <strong>साँचो</strong>ले ताल्चा खोलिन्छ।</li>
+            <li><strong>सुर:</strong> ऊ आफ्नै <strong>सुर</strong>मा काम गर्छ। / मलाई सङ्गीतको <strong>सुर</strong> निकै मन पर्छ।</li>
+            <li><strong>हार:</strong> अज्ञानी मान्छेलाई <strong>हार</strong>उन असम्भव छ। / मैले मेरो प्रेमिकालाई <strong>हार</strong> उपहार दिएँ।</li>
+            <li><strong>जाली:</strong> राम निकै <strong>जाली</strong> भएछ। / <strong>जाली</strong> नोटको कारोबार दण्डनीय छ।</li>
+        </ul>
+
+        <h3>५. श्रुतिसमभिन्नार्थक शब्द लेख्नुहोस् :</h3>
+        <div class="list-container">
+            <div class="list-item">दिन – <strong>दीन</strong></div>
+            <div class="list-item">दिशा – <strong>दिसा</strong></div>
+            <div class="list-item">शव – <strong>सब</strong></div>
+            <div class="list-item">बाँस – <strong>बास</strong></div>
+            <div class="list-item">व्यसन – <strong>बेसन</strong></div>
+            <div class="list-item">प्रदान – <strong>प्रधान</strong></div>
+            <div class="list-item">कोस – <strong>कोश</strong></div>
+            <div class="list-item">जाति – <strong>जाती</strong></div>
+            <div class="list-item">फेरि – <strong>फेरी</strong></div>
+            <div class="list-item">खालि – <strong>खाली</strong></div>
+            <div class="list-item">पाश – <strong>पास</strong></div>
+            <div class="list-item">गर्भ – <strong>गर्व</strong></div>
+            <div class="list-item">विष – <strong>बिस</strong></div>
+            <div class="list-item">आदि – <strong>आदी</strong></div>
+            <div class="list-item">पाइन् – <strong>पाइन</strong></div>
+            <div class="list-item">ताप – <strong>टाप</strong></div>
+            <div class="list-item">देखि – <strong>देखी</strong></div>
+            <div class="list-item">सिता – <strong>सीता</strong></div>
+        </div>
+
+        <h3>६. समूहवाचक शब्द लेख्नुहोस् :</h3>
+        <div class="list-container">
+            <div class="list-item">कमिला – <strong>ताँती</strong></div>
+            <div class="list-item">गाईवस्तु – <strong>बथान</strong></div>
+            <div class="list-item">मौरी – <strong>गोलो</strong></div>
+            <div class="list-item">बारुला – <strong>गोलो</strong></div>
+            <div class="list-item">बाँस – <strong>घारी</strong></div>
+            <div class="list-item">दाउरा – <strong>खलियो</strong></div>
+            <div class="list-item">डोरी – <strong>माला</strong></div>
+            <div class="list-item">मानिस – <strong>जमात</strong></div>
+            <div class="list-item">मकै – <strong>थाङ्ग्रो</strong></div>
+            <div class="list-item">भेडा – <strong>बथान</strong></div>
+            <div class="list-item">पराल – <strong>कुनिउँ, माँच, टौवा</strong></div>
+            <div class="list-item">पर्वत – <strong>शृङ्खला, श्रेणी</strong></div>
+            <div class="list-item">सिपाही – <strong>फौज, पल्टन</strong></div>
+            <div class="list-item">धुवाँ – <strong>मुस्लो</strong></div>
+        </div>
+
+        <h3>७. प्रतीकात्मक शब्दको अर्थ लेख्नुहोस् :</h3>
+        <div class="list-container">
+            <div class="list-item"><strong>छेपारो</strong> – रङ बदल्ने</div>
+            <div class="list-item"><strong>कुवेर</strong> – धनी</div>
+            <div class="list-item"><strong>रामराज्य</strong> – सम्पन्न र सुखी राज्य</div>
+            <div class="list-item"><strong>दुर्वासा</strong> – रिसाहा</div>
+            <div class="list-item"><strong>दधिची</strong> – त्यागी</div>
+            <div class="list-item"><strong>सुदामा</strong> – गरिब, निर्धन</div>
+            <div class="list-item"><strong>भीष्म</strong> – भयानक</div>
+            <div class="list-item"><strong>बाँदर</strong> – आफ्नो घर बिगार्ने अरुको पनि बनाउन नदिने</div>
+            <div class="list-item"><strong>साँढे</strong> – मिचाहा</div>
+            <div class="list-item"><strong>जुको</strong> – परजीवी</div>
+            <div class="list-item"><strong>सावित्री</strong> – सती वा पतिव्रता</div>
+            <div class="list-item"><strong>गङ्गा</strong> – पवित्रता</div>
+            <div class="list-item"><strong>स्याल</strong> – बाठो</div>
+            <div class="list-item"><strong>ब्वाँसो</strong> – धूर्त</div>
+            <div class="list-item"><strong>आकाश</strong> – रित्तो वा विशाल</div>
+            <div class="list-item"><strong>एकलव्य</strong> – लगनशील वा एक्लो योद्धा</div>
+            <div class="list-item"><strong>मौरी</strong> – परिश्रमी</div>
+            <div class="list-item"><strong>लक्ष्मण रेखा</strong> – सीमा वा मर्यादा</div>
+            <div class="list-item"><strong>महाभारत</strong> – लडाइँ, झगडा</div>
+            <div class="list-item"><strong>कर्ण</strong> – दानी, उदारता</div>
+            <div class="list-item"><strong>भेडो</strong> – मुर्ख</div>
+            <div class="list-item"><strong>कुम्भकर्ण</strong> – सुताहा</div>
+            <div class="list-item"><strong>भगीरथ</strong> – प्रयत्न कठिन प्रयास</div>
+            <div class="list-item"><strong>विदुर</strong> – ज्ञानी वा विवेकी</div>
+            <div class="list-item"><strong>युधिष्ठिर</strong> – धर्मात्मा वा अजेय</div>
+            <div class="list-item"><strong>शकुनि</strong> – कपटी वा षडयन्त्रकारी</div>
+            <div class="list-item"><strong>नारद</strong> – कुरौटे</div>
+        </div>
+
+        <h3>८. सिङ्गो शब्दको अर्थ लेख्नुहोस् :</h3>
+        <div class="list-container">
+            <div class="list-item"><strong>शाकाहारी</strong> – सात्विक भोजन मात्र गर्ने वा माछामासु नखाने</div>
+            <div class="list-item"><strong>मांसाहारी</strong> – माछामासु खाने</div>
+            <div class="list-item"><strong>पुङमाङ</strong> – दुवैपट्टि खुला भएको ढुङ्ग्रो</div>
+            <div class="list-item"><strong>गृहस्थी</strong> – घरबार गरेर बस्ने व्यक्ति</div>
+            <div class="list-item"><strong>अल्लारे</strong> – आलोकाँचो अवस्थाको</div>
+            <div class="list-item"><strong>पेवा</strong> – निजी</div>
+            <div class="list-item"><strong>दशक</strong> – दश वर्षको अवधि</div>
+            <div class="list-item"><strong>शताब्दी</strong> – सय वर्षको समय</div>
+            <div class="list-item"><strong>सहस्राब्दी</strong> – एक हजार वर्ष</div>
+            <div class="list-item"><strong>शाश्वत</strong> – सधैं रहिरहने, चिरस्थायी</div>
+            <div class="list-item"><strong>वात्सल्य</strong> – आमाबाबुको सन्तानप्रतिको स्नेह</div>
+            <div class="list-item"><strong>न्वाँगी</strong> – नयाँ धानबाली पाकेपछि देवता वा पितृलाई चढाई खाइने दही चामल</div>
+            <div class="list-item"><strong>नाबालक</strong> – बालिग हुने उमेर नपुगेको बालक</div>
+            <div class="list-item"><strong>लैनो</strong> – भर्खर बियाएको</div>
+            <div class="list-item"><strong>बकेर्नो</strong> – दुध थाक्ने बेला भएको दुहुनो</div>
+            <div class="list-item"><strong>सत्पात्र</strong> – असल व्यक्ति वा पात्र</div>
+            <div class="list-item"><strong>आद्योपान्त</strong> – सुरुदेखि अन्त्यसम्म</div>
+            <div class="list-item"><strong>क्षितिज</strong> – पृथ्वी र आकाश जोडिएजस्तो देखिने</div>
+            <div class="list-item"><strong>उपवास</strong> – केही नखाई व्रत बस्ने काम</div>
+            <div class="list-item"><strong>सर्वभक्षी</strong> – भोज्य र अभोज्य विचार नगरी सबै कुरा खाने</div>
+            <div class="list-item"><strong>ढडिया</strong> – माछा समात्ने सोलीजस्तो पासो</div>
+            <div class="list-item"><strong>अभेद्य</strong> – प्वाल पार्न नसकिने</div>
+            <div class="list-item"><strong>कटुभाषी</strong> – नमिठो बोल्ने</div>
+            <div class="list-item"><strong>अल्पभाषी</strong> – थोरै भाषा जान्ने</div>
+            <div class="list-item"><strong>मृदुभाषी</strong> – मिठो भाषा बोल्ने</div>
+            <div class="list-item"><strong>बहुभाषी</strong> – धेरै भाषा बोल्ने</div>
+            <div class="list-item"><strong>बहुरूपी</strong> – धेरै रूप धारण गर्ने</div>
+            <div class="list-item"><strong>अघोरी</strong> – जे पायो त्यही खाने</div>
+            <div class="list-item"><strong>कायममुकायम</strong> – कार्यबाहक</div>
+            <div class="list-item"><strong>कार्यवाहक</strong> – कुनै व्यक्तिको अनुपस्थितिमा नियमानुसार अधिकार लिई अस्थायी रूपमा काम गर्ने कर्मचारी</div>
+            <div class="list-item"><strong>पर्म</strong> – आलोपालो गरी एकले अर्काको काम गरिदिने चलन</div>
+            <div class="list-item"><strong>अवर्णनीय</strong> – वर्णन गर्न नसकिने</div>
+            <div class="list-item"><strong>अव्यक्त</strong> – प्रकट नभएको</div>
+            <div class="list-item"><strong>थाती</strong> – धरौटी जमानत</div>
+            <div class="list-item"><strong>कलस्यौली</strong> – विवाहमा कलश बोकेर जन्तीमा हिँड्ने कन्या</div>
+            <div class="list-item"><strong>अलौकिक</strong> – यस लोकमा नहुने वा नपाइने</div>
+        </div>
+
+        <h3>९. अन्तरिक्षसम्बन्धी शब्दकोशीय अनुक्रममा मिलाई अर्थ पत्ता लगाउनुहोस् :</h3>
+        <ul>
+            <li><strong>उल्कापुञ्ज:</strong> धूमकेतु।</li>
+            <li><strong>ग्रह:</strong> सूर्य र यसको वरिपरि घुम्ने आकाशीय पिण्ड।</li>
+            <li><strong>ज्ञेय:</strong> जान्न लायक।</li>
+            <li><strong>धूमकेतु:</strong> पुच्छ्रेतारा।</li>
+            <li><strong>नक्षत्र:</strong> तारा, सितारा मोती।</li>
+            <li><strong>ब्रह्माण्ड:</strong> पृथ्वी, अन्तरिक्ष, ग्रह।</li>
+            <li><strong>राशि:</strong> क्रान्तिवृत्तमा रहेका मेष, वृष, मिथुन लगायत बाह्र ताराहरूको समूह।</li>
+            <li><strong>सौर्यमण्डल:</strong> सूर्य र यसको वरिपरि घुम्ने ग्रहहरूको समूह।</li>
+            <li><strong>तारापुञ्ज:</strong> आकाशमा देखिने ताराहरूको समुदाय, तारामण्डल।</li>
+        </ul>
+    </div>
+    <hr>
+    <div class="section">
+        <h2>बोध र अभिव्यक्ति</h2>
+        <h3>१. 'एक चिहान' उपन्यासको पहिलो परिच्छेदसम्बन्धी प्रश्नको उत्तर :</h3>
+        <div class="qna">
+            <p><strong>(क) अष्टनारानले श्रीमती, छोराहरू र छोरीलाई के भनेर सम्झाउँछन् ?</strong></p>
+            <p>अष्टनारानले आफ्ना छोराहरू र छोरीलाई 'मैले तिमीहरूलाई जन्माएँ तर गाँसबासको केही व्यवस्था मिलाउन सकिनँ, सधैँभरि पूजा गरे पनि भगवानले पनि केही सुनेनन्' भन्दै श्रीमतीलाई सम्झाउँछन्। साथै, आमा र बहिनीलाई जस्तोसुकै दुःख सहेर पनि हेला नगर्नु भनी सम्झाए।</p>
+        </div>
+        <div class="qna">
+            <p><strong>(ख) अष्टनारानले आफ्नो काजकिरियाका लागि कस्तो बन्दोबस्त मिलाएका छन् ?</strong></p>
+            <p>अष्टनारानले अलिअलि गरी पच्चिस रुपियाँ जम्मा गरेर छिँडीमा ढिकीनेर खाल्टोमा गाडेर राखी आफ्नो काजकिरियाका लागि रुपियाँको बन्दोबस्त मिलाएका छन्।</p>
+        </div>
+
+        <h3>२. 'एक चिहान' उपन्यासको परिच्छेद दुई र तीनको सार :</h3>
+        <p>दुई महिनादेखि सिकिस्त बिरामी अष्टनारानको उपचार सुरु हुन्छ। उनलाई आफ्नै टोलको गुभाजुबाट एक महिना, असनका तुयु गुभाजुबाट एक्काइस दिन, माहिला कविराजबाट एक हप्ता उपचार गराउँछन्। यति गर्दा पनि कसैको सीप लाग्दैन र व्यथा झन् बढ्दै जान्छ। गाउँमा एउटा डाक्टर त थिए तर उनीसँग उपचार गराउन उनीहरूसँग पैसा थिएन। उनीहरूले क्रियाको खर्चका लागि राखेको पच्चिस रुपियाँले बाबुको उपचार गर्ने निर्णय गर्छन् र डाक्टर गोदत्तप्रसादकहाँ जान्छन्। गोदत्तप्रसादले शिवनारानको आग्रहलाई महत्त्व दिँदैनन्। अष्टनारानलाई बिमारले साह्रो पारेपछि पुननारान पनि डाक्टरकहाँ पुग्छन्। शिवनारान र पुननारानले अनुरोध गर्दा पनि गोदत्तप्रसाद आउन तयार हुँदैनन्। घरपुग्नासाथ पाँच रुपियाँ फी दिने कबुल गरेपछि मात्र गोदत्तप्रसाद अष्टनारानकहाँ जान तयार हुन्छन्।</p>
+
+        <h3>३. उपन्यास अंश पढी प्रश्नको उत्तर लेख्नुहोस् :</h3>
+        <div class="qna">
+            <p><strong>(क) प्रेम हुन केही गाह्रो छैन भन्नुको तात्पर्य के हो ?</strong></p>
+            <p>प्रेम हुन केही गाह्रो छैन भन्नुको तात्पर्य प्रेमले संस्कृति, भाषा, जाति, दूरी, सुखदुःख जस्ता कुराहरू हेर्दैन। दिलसँग दिल मिलेपछि तुरुन्त प्रेम हुन्छ भन्ने हो।</p>
+        </div>
+        <div class="qna">
+            <p><strong>(ख) दिइएको उपन्यास अंशमा प्रेमका सम्बन्धमा कसरी व्याख्या गरिएको छ ?</strong></p>
+            <p>उपन्यास अंशमा प्रेमलाई तुरुन्तै हुने कुराको रूपमा व्याख्या गरिएको छ। यसले कुनै पनि सामाजिक वा भौगोलिक सीमालाई मान्दैन। तर, उपन्यासकारले अल्लारे र भावुक प्रेमलाई त्यागी आत्मीय प्रेम गर्नुपर्छ भन्ने सन्देश दिएका छन्, किनकि अल्लारे प्रेमले दुःख दिन्छ।</p>
+        </div>
+
+        <h3>४. अष्टनारानले बताएका किसानका सिद्धान्त के के हुन्, उत्तर लेख्नुहोस् ।</h3>
+        <p>अष्टनारानले आफ्ना छोरालाई बताएका किसानका सिद्धान्तहरू निम्न छन्:
+            <ol>
+                <li>किसान संसारका अन्नदाता हुन्।</li>
+                <li>उनीहरूको रगत र पसिनाबाट अन्न फल्ने गर्छ।</li>
+                <li>उनीहरूकै परिश्रममा संसार थामिएको छ।</li>
+                <li>किसानको छोराले मरेको बाबुलाई समेत फ्याँकेर असारको पूजा गर्नुपर्छ, किनकि असार बिग्रियो भने एक वर्षको सौभाग्य बिग्रन्छ।</li>
+                <li>किसानले कहिल्यै अल्छी गर्नु हुँदैन र सधैँ कृषि कर्ममा तल्लीन रहनुपर्छ।</li>
+            </ol>
+        </p>
+        
+        <h3>५. मरेपछि गरिने काजक्रियासम्बन्धी अष्टनारानको विचारसँग तपाईंको सहमति वा विमति :</h3>
+        <div class="summary">
+            <p>'एक चिहान' उपन्यासमा अष्टनारानले मरेपछि गरिने काजकिरिया र दानदक्षिणामा हुने अनावश्यक खर्चको विरोध गर्छन्। उनी समाजमा व्याप्त यस्ता कुप्रथाहरूलाई अन्धविश्वास मान्छन्, जसले गरिबहरूलाई झन् गरिब बनाउँछ। म उहाँको यो विचारसँग पूर्ण सहमत छु। हाम्रो समाजमा आज पनि यस्ता परम्पराहरू कायम छन्, जसले आर्थिक भार थोपर्छ। अष्टनारानले जस्तै हामीले पनि यस्ता अनावश्यक परम्परालाई जरैदेखि उखेलेर फाल्नुपर्छ। केवल असल र सबैलाई उपयोगी हुने चलनलाई मात्रै हामीले निरन्तरता दिनुपर्छ।</p>
+        </div>
+
+        <h3>६. 'एक चिहान' उपन्यासमा नेपाली समाजको कस्तो अवस्थाको चित्रण गरिएको छ, वर्णन गर्नुहोस् ।</h3>
+        <div class="summary">
+            <p>'एक चिहान' उपन्यासमा २०११ सालतिरको काठमाडौँको सामाजिक यथार्थ चित्रण गरिएको छ। उपन्यासले समाजलाई दुई वर्गमा विभाजित देखाउँछ, जहाँ हुने खाने वर्गले गरिबहरूलाई शोषण गरिरहेका छन्। शिक्षा र स्वास्थ्यमा पनि धनीहरूकै पहुँच रहेको छ। गरिब किसानहरूले दिनरात मिहिनेत गर्दा पनि हातमुख जोड्न मुस्किल पर्छ। जातीय विभेद, रुढिवादी सोच र सामाजिक-आर्थिक असमानताका कारण गरिबहरू निरन्तर शोषित छन्। उपन्यासले परम्पराको नाममा हुने काजकिरिया, भोजभतेर र दानदक्षिणाको विरोध गरेको छ, जसले गरिबहरूलाई ऋणमा डुबाउँछ। सुब्बा सुरमान र डाक्टर गोदत्तप्रसादजस्ता नकारात्मक पात्रहरूले कसरी गरिबको शोषण गर्छन् भन्ने यथार्थ पनि उपन्यासमा देखाइएको छ। तर, शोषणको सीमा नाघेपछि गरिबहरूमा चेतनाको लहर पलाउन थालेको अवस्था पनि उपन्यासमा प्रस्तुत गरिएको छ, जसले सामाजिक विकृति हटाएर असल समाज निर्माणको सन्देश दिन्छ।</p>
+        </div>
+
+        <h3>७. 'एक चिहान' उपन्यासका आधारमा पात्रको चरित्र चित्रण गर्नुहोस् :</h3>
+        <div class="qna">
+            <p><strong>(क) शिवनारान</strong></p>
+            <p>अष्टनारानको जेठो छोरो, शिवनारान उपन्यासको प्रमुख पुरुष पात्र हो। ऊ परिश्रमी, विवेकी र कर्मठ किसान हो जसले किसान वर्गको प्रतिनिधित्व गर्छ। ऊ अन्यायको विरोधी र प्रगतिशील विचार राख्ने पात्र हो। बाबुको सम्मान गर्ने र उहाँका विचारबाट प्रेरित भई कर्तव्यप्रति सचेत रहने उनको सकारात्मक भूमिका छ।</p>
+        </div>
+        <div class="qna">
+            <p><strong>(ख) रञ्जनादेवी</strong></p>
+            <p>रञ्जनादेवी सहायक स्त्री पात्र हुन्। उनी शिक्षित, सचेत र प्रोफेसरकी छोरी हुन्। उनी स्वार्थी प्रेमको विरोध गर्छिन् र नारी-पुरुषबिच समन्वय हुनुपर्छ भन्ने आदर्श चिन्तन राख्छिन्। उनको चरित्र सकारात्मक छ।</p>
+        </div>
+        <div class="qna">
+            <p><strong>(ग) नानीथकुँ</strong></p>
+            <p>नानीथकुँ उपन्यासकी प्रमुख नारी पात्र हुन्। अष्टनारानकी छोरी र शिवनारानकी बहिनी, उनी १७ वर्षकी, सुन्दर, सरल र निश्चल छिन्। यही सरलताका कारण उनी डाक्टर गोदत्तप्रसादको बलात्कारको सिकार बन्नुपर्छ। पछि उनी तराईबासी रामखेलावन राउतसँग अन्तरजातीय विवाह गर्छिन्। उनको चरित्र सकारात्मक छ।</p>
+        </div>
+        
+        <h3>८. डाक्टर गोदत्तप्रसाद र सुरमान सुब्बाका चरित्रमा पाइने समानता :</h3>
+        <p>'एक चिहान' उपन्यासका नकारात्मक पात्र डाक्टर गोदत्तप्रसाद र सुब्बा सुरमानका चरित्रमा धेरै समानताहरू छन्। दुवै उच्च वर्गका प्रतिष्ठीत व्यक्ति भए पनि दुवैको सोच दूषित छ। दुवै विवाहित र बालबच्चा भएका पात्र हुन्। उनीहरूको मुख्य उद्देश्य नानीथकुँको जवानी प्राप्त गर्नु हो। दुवै निर्दयी, स्वार्थी, मानवता रहित र धूर्त छन्। यी दुई पात्रका माध्यमबाट उपन्यासकारले समाजका हुने खाने वर्गले कसरी गरिबहरूलाई शोषण गर्छन् भन्ने देखाएका छन्।</p>
+
+        <h3>९. विवाहबाट उपन्यासले दिन खोजेको सन्देश :</h3>
+        <p>'एक चिहान' उपन्यासमा हर्षनारान र पुतली, तथा नानीथकुँ र रामखेलावन राउतको विवाह दाइजो र भोजभतेरबिना सम्पन्न भएको छ। यसले हाम्रो समाजमा व्याप्त दाइजो प्रथा र विवाहमा हुने फजुल खर्चको विरोध गरेको छ। उपन्यासले विवाहका लागि दुलहा र दुलहीको आपसी सम्बन्ध नै महत्त्वपूर्ण हो, अन्य आडम्बर होइन भन्ने सन्देश दिन्छ। यी अन्तरजातीय विवाहहरूले हिमाल, पहाड र तराईका मानिसहरूबिचको जातीय र क्षेत्रीय विभेद अन्त्य गरी एकताबद्ध नेपाल निर्माणको आवश्यकतामा जोड दिएको छ। यसबाट समाजमा सामाजिक विकृति कम भई समृद्धि र समानताको मार्ग प्रशस्त हुने सन्देश पाइन्छ।</p>
+        
+        <h3>१०. 'एक चिहान' उपन्यासको अन्त्य र आफ्नो विचार :</h3>
+        <div class="summary">
+            <p>'एक चिहान' उपन्यासको अन्त्य मलाई ठिक लाग्यो। निम्नवर्गीय जीवनको यथार्थलाई उपन्यासकारले मार्मिक ढङ्गले प्रस्तुत गरेका छन् र शीर्षकलाई पनि सार्थक बनाएका छन्। यदि म यसको लेखक भएको भए पनि यसै गरी अन्त्य गर्थें। तर, थप केही पात्रहरूलाई समावेश गरी गरिबीको अन्त्य गर्ने उद्घोषका साथ उपन्यासको अन्त्य गरेर आशाको सन्देश दिने प्रयास गर्थें।</p>
+        </div>
+
+        <h3>११. उपन्यास अंशबाट मुख्य मुख्य घटना टिप्नुहोस् :</h3>
+        <ol>
+            <li>शिवनारानको खेतमा रोपाइँ हुनु।</li>
+            <li>पुननारान र हर्षनारान पनि रोपाइँमा जुट्नु।</li>
+            <li>शिवनारानका सबै सदस्यहरू मग्नमस्त भएर रोपाइँमा लाग्नु।</li>
+            <li>नानीथकुँ आफ्नो मनका पीडा भुलेर पनि अरूसरह खुसी भई रोपाइँमा लाग्नु।</li>
+            <li>अष्टनारानलाई रोपाइँको दिन सबैभन्दा आनन्द आउने हुँदा पिताको आत्मालाई आघात नपुर्याउन नानीथकुँले दुःख बिर्सेर हर्ष मनाउनु।</li>
+        </ol>
+
+        <h3>१२. उपन्यास अंशमा आएका पात्रको चरित्रचित्रण गर्नुहोस् :</h3>
+        <div class="qna">
+            <p><strong>शिवनारानको चरित्रचित्रण:</strong></p>
+            <p>शिवनारान, अष्टनारानको जेठो छोरो र उपन्यासको प्रमुख पुरुष पात्र हो। ऊ अन्यायको विरोधी, इमानदार, परिश्रमी र विवेकी किसान हो। उसले आफ्नो बाबुको सम्मान गर्छ र बाबुको प्रगतिशील विचारबाट प्रेरित छ।</p>
+        </div>
+        <div class="qna">
+            <p><strong>रामबहादुरको चरित्रचित्रण:</strong></p>
+            <p>रामबहादुर यस उपन्यासमा खलपात्रका रूपमा देखिएको छ। ऊ सुब्बा सुरमानको कारिन्दा हो। सुब्बाको योजनाअनुसार ऊ नानीथकुँको हात माग्न शिवनारानको घरमा आएको थियो। ऊ कसलाई कसरी फकाउने भन्ने कुरामा सिपालु छ। ऊ असमान विवाहका लागि लागिपरेको नकारात्मक पात्र हो, जसको योजना शिवनारानको चलाखीले विफल हुन्छ।</p>
+        </div>
+        
+        <h3>१३. उपन्यास अंशबाट चित्रण गरिएको परिवेशलाई बुँदागत रूपमा लेख्नुहोस् :</h3>
+        <ul>
+            <li>जेठ महिनाको समयगत परिवेश।</li>
+            <li>पानी परिरहेको बर्सात अगावैको समय।</li>
+            <li>रोपाइँ, किसानको प्रसङ्गबाट ग्रामीण परिवेश।</li>
+            <li>पुराना र थोत्रा घरहरू भएकाले वर्षाबाट त्रसित हुनुपर्ने निम्नवर्गीय आर्थिक अवस्थाको चित्रण।</li>
+        </ul>
+        
+        <h3>१४. अनुच्छेद पढी सोधिएका प्रश्नको उत्तर लेख्नुहोस् :</h3>
+        <div class="qna">
+            <p><strong>(क) "उस्तरी बस्ती थिएन" भन्नुको तात्पर्य के हो ?</strong></p>
+            <p>"उस्तरी बस्ती थिएन" भन्नुको तात्पर्य त्यस बस्तीमा कम मानिस बसोबास गर्थे भन्ने हो।</p>
+        </div>
+        <div class="qna">
+            <p><strong>(ख) सम्साँझमै स्याल कराउनका लागि कुन कुराले सहयोग गरेको थियो ?</strong></p>
+            <p>सम्साँझमै स्याल कराउनका लागि तितेपातीका घारी र खरीका रुखले सहयोग गरेको थियो।</p>
+        </div>
+        <div class="qna">
+            <p><strong>(ग) कसरी कोटेश्वर आधुनिक जङ्गलमा बदलियो ?</strong></p>
+            <p>मानिसका घारी, आधुनिक भवनहरू, बिजुलीका पोल र तारका कारणले कोटेश्वर आधुनिक जङ्गलमा बदलियो।</p>
+        </div>
+        <div class="qna">
+            <p><strong>(घ) अहिलेको कोटेश्वरमा कस्ता मानिस बस्छन् ?</strong></p>
+            <p>अहिलेको कोटेश्वरमा नेता, कार्यकर्ता, व्यापारी, सुरक्षाकर्मी, न्यायकर्ता, साहुमहाजन, उद्योगी, चोरफटाहा सबै किसिमका मानिसहरू बस्छन्।</p>
+        </div>
+    </div>
+    <hr>
+    <div class="section">
+        <h2>व्याकरण</h2>
+        <h3>२. 'खेल्, हिँड्, खा, बस्, घुम्, नाच्' जस्ता धातुबाट भूतकालिक क्रियापदको प्रयोग गरी शैक्षिक भ्रमणबारे लेख्नुहोस् :</h3>
+        <p>वि.सं. २०७७ साल माघ १३ गते हामी नेपाल मा.वि. चितवनको कक्षा १२ मा अध्ययनरत १२८ जना विद्यार्थी साथीहरू शैक्षिक भ्रमणको लागि बिहानै पोखरा <strong>हिँड्यौँ</strong>। बाटोमा कोही साथीहरू अन्ताक्षरी <strong>खेल्दै थिए</strong> अनि कोही साथीहरू <strong>नाच्दै थिए</strong>। हामी करिब एघार बजेतिर लेखनाथ पुगी खाना <strong>खाएका थियौँ</strong>। खाना <strong>खाएपछि</strong> हामी फेवाताल, बेगनास ताल, महेन्द्र गुफा, चमेरे गुफा, रुपा ताल, माटेपानी गुम्बा आदि रमणीय ठाउँहरू <strong>घुम्यौँ</strong>। त्यो दिनको बास हामी पोखरामा नै <strong>बस्यौँ</strong>। बेलुकाको खाना पनि त्यहीको होटेलमा <strong>खायौँ</strong>। हामी बेलुका गीत गाउँदै <strong>नाचेका थियौँ</strong>। भोलिपल्ट भने बिहानै सात बजे हामी चिया र नास्ता <strong>खाएर</strong> चितवन <strong>फर्कीयौँ</strong>।</p>
+
+        <h3>३. भूत कालका अभ्यस्त पक्षका क्रियापदको प्रयोग गरी बाल्यकालका बारेमा वर्णन गर्नुहोस् :</h3>
+        <p>म बाल्यकालमा साथीहरूसँग खुब <strong>खेल्थेँ</strong>। म प्रायः घुम्न <strong>जान्थेँ</strong>। म जङ्गलमा कटुस <strong>टिप्थेँ</strong>, दमौरा <strong>टिप्थेँ</strong>, लिची <strong>टिप्थेँ</strong>, आँप <strong>टिप्थेँ</strong>, काफल <strong>टिप्थेँ</strong>, तिजु <strong>टिप्थेँ</strong> अनि साथीहरूसँगै रमाउँदै <strong>खान्थेँ</strong>। मलाई पौडी खेल्न असाध्यै मन <strong>पर्थ्यो</strong>। म हर्पन खोलामा खुब पौडी <strong>खेल्थेँ</strong>। मलाई पुलबाट तल खोलामा हाम फाल्न खुब मज्जा आउँथ्यो। कोही साथीहरू डुबेको खण्डमा मैले नै <strong>निकाल्थेँ</strong>। म कालिका मा. वि. मा <strong>पढ्थेँ</strong>। म कहिलेकाहीँ कश्यप तालमा पनि पौडी खेल्न <strong>जान्थेँ</strong>। म कश्यप ताल पूरै एक फन्का <strong>हान्थेँ</strong>। म तीव्र गतिमा पौडी खेल्न <strong>सक्थेँ</strong>। मलाई पौडी खेलमा कसैले जित्न <strong>सक्दैनथ्यो</strong>। म अनुशासित, मिहिनेती विद्यार्थी भनेर <strong>चिनिन्थेँ</strong>। म परीक्षामा प्रायः प्रथम नै <strong>हुन्थेँ</strong>।</p>
+
+        <h3>४. भविष्यत् कालका अपूर्ण तथा पूर्ण पक्षको प्रयोग गरी भविष्यको योजनाबारे लेख्नुहोस् :</h3>
+        <p>म भविष्यमा असल शिक्षक <strong>बनेको हुने छु</strong>। म उच्च शिक्षा अध्ययनका लागि त्रिभुवन विश्वविद्यालयमा <strong>भर्ना भएको हुने छु</strong>। म धेरै मिहिनेत गरी <strong>पढ्दै हुने छु</strong>। राम्रो प्रतिशत ल्याएर स्नातकोत्तर तह <strong>उत्तीर्ण गरेको हुने छु</strong>। शिक्षक सेवा आयोगको <strong>तयारी गर्दै हुने छु</strong>। आयोगको परीक्षा <strong>दिँदै हुने छु</strong>। मैले परीक्षामा राम्रोसँग <strong>लेखेको हुने छु</strong>। आयोगको परीक्षामा नाम <strong>निकालेको हुने छु</strong>। दुर्गम गाउँमा शिक्षाको ज्योति <strong>छर्दै हुने छु</strong>। म असल एवं कर्तव्यनिष्ठ शिक्षक <strong>बनेको हुने छु</strong>।</p>
+
+        <h3>५. वर्तमान कालको अपूर्ण पक्षमा परिवर्तन गरी लेख्नुहोस् :</h3>
+        <p>शिवनारान आज साबिक झैँ समयमै खेतमा <strong>जाँदै छन्</strong>। आजैदेखि उनले नानीथकुँलाई पनि खेतमा लैजान <strong>सुरु गर्दै छन्</strong>। रोपाइँ सकिएकाले खेतको सुरक्षाका लागि आजदेखि खेतमा खाने र सुत्ने अर्थात् रातदिन खेतैमा बस्ने बन्दोबस्त पनि शिवनारानले <strong>गर्दै छन्</strong>। खास गरेर शिवनारानको कोठाको एक परिवार खेतैमा बस्न <strong>थाल्दै छ</strong>। नानीथकुँ र पुननारानकी स्वास्नी अनि उनका दुई केटाकेटीसहित दिनभरि खेतमा काम गरी साँझमा <strong>फर्कदै छन्</strong>।</p>
+
+        <h3>६. भूत कालको अज्ञात पक्षमा परिवर्तन गरी लेख्नुहोस् :</h3>
+        <p>डाक्टर गोदत्तप्रसादले आफू विवाहित र छोराछोरीको बाबु हुँ भन्ने पनि <strong>बिर्सिएछन्</strong>। उनी नानीथकुँका घरमा <strong>धाउन थालेछन्</strong>। उनीहरू एकान्तमा <strong>भेट्ने र कुराकानी गर्न थालेछन्</strong>। त्यो कुरा थाहा पाएर शिवनारानले नानीथकुँलाई <strong>सम्झाएछन्</strong>। डाक्टर गोदत्तप्रसादकी पत्नी रञ्जनादेवीले पनि <strong>सम्झाइछन्</strong>। अन्त्यमा नानीथकुँले पनि कुरा <strong>बुझिछन्</strong>। नानीथकुँ र गोदत्तप्रसादका बिचमा सम्बन्ध <strong>टुटेछ</strong>। एक दिन नानीथकुँको रामखेलावन राउतसँग भेट <strong>भएछ</strong>। रामखेलावन र नानीथकुँका बिचमा प्रेम <strong>भएछ</strong>। त्यो कुरा शिवनारानले <strong>विचार गरिराखेछन्</strong>, उनले नानीथकुँको बिहे रामखेलावनसँग <strong>गराइदिनुभएछ</strong>। आफूले रोजेको मान्छेसँग बिहे गर्न पाएर दुवै जना खुसी <strong>भएछन्</strong>।</p>
+
+        <h3>७. शिरबिन्दु तथा चन्द्रबिन्दुको प्रयोग भएका शब्दलाई वर्णानुक्रमअनुसार लेख्नुहोस् :</h3>
+        <ul class="grammar-list">
+            <li>अँगार</li><li>अँध्यारो</li><li>अंश</li><li>भयौँ</li><li>वंश</li><li>सँग</li><li>संयम</li><li>संरक्षण</li><li>संलग्न</li><li>संवाद</li><li>संशय</li><li>संसार</li><li>संहार</li>
+        </ul>
+
+        <h3>८. तालिकामा शब्दहरू :</h3>
+        <div class="list-container">
+            <div class="list-item">
+                <strong>क, ख, ग, घ अघि 'ङ्':</strong>
+                <ul class="grammar-list">
+                    <li>अङ्क</li><li>शङ्कर</li><li>शङ्ख</li><li>पङ्खा</li><li>ढङ्ग</li><li>मङ्गल</li><li>बङ्गुर</li><li>गङ्गा</li><li>चङ्गा</li><li>सङ्घ</li>
+                </ul>
+            </div>
+            <div class="list-item">
+                <strong>च, छ, ज, झ अघि (तत्सम शब्दमा मात्र) 'ञ्':</strong>
+                <ul class="grammar-list">
+                    <li>अञ्चल</li><li>पञ्च</li><li>पुञ्ज</li><li>लाञ्छना</li><li>ब्यञ्जन</li><li>झञ्झा</li><li>मञ्जुल</li>
+                </ul>
+            </div>
+            <div class="list-item">
+                <strong>ट. ठ ड ढ अघि (तत्सम शब्दमा मात्र) 'ण्':</strong>
+                <ul class="grammar-list">
+                    <li>पण्डित</li><li>कण्ठ</li><li>कुण्ठा</li><li>दण्ड</li><li>खण्ड</li><li>खण्डन</li>
+                </ul>
+            </div>
+            <div class="list-item">
+                <strong>त, थ, द ध अघि 'न्':</strong>
+                <ul class="grammar-list">
+                    <li>सन्त</li><li>बन्धन</li><li>भिन्न</li><li>मन्तव्य</li><li>परन्तु</li><li>पन्थ</li><li>बन्दी</li><li>खिन्न</li>
+                </ul>
+            </div>
+            <div class="list-item">
+                <strong>प. फ ब भ अघि 'म्':</strong>
+                <ul class="grammar-list">
+                    <li>कम्प</li><li>पम्फा</li><li>अम्बा</li><li>लम्ब</li><li>स्तम्भ</li><li>जम्मा</li>
+                </ul>
+            </div>
+            <div class="list-item">
+                <strong>य, र, ल, व, श, ष, स, ह, ज्ञ अघि (तत्सम शब्द) शिरबिन्दु:</strong>
+                <ul class="grammar-list">
+                    <li>सयम</li><li>संशय</li><li>संसार</li><li>संहार</li><li>संरक्षण</li><li>संलग्न</li><li>संवाद</li><li>वंश</li><li>संज्ञा</li><li>संज्ञान</li><li>संवाद</li><li>संवत्</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
