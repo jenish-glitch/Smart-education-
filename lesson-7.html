@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>हामीलाई बोलाउँछन् हिमचुली</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap');
+
+        :root {
+            --primary-color: #004d40;
+            --secondary-color: #26a69a;
+            --accent-color: #ffb74d;
+            --background-color: #e0f2f1;
+            --card-background: #ffffff;
+            --text-color: #212121;
+            --heading-color: #00332e;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --border-radius: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Mukta', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--card-background);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        h1, h2, h3 {
+            color: var(--heading-color);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--secondary-color);
+            padding-bottom: 0.25rem;
+        }
+
+        p, ol, ul {
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .section {
+            background-color: #f3fcfc;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .list-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .list-item {
+            background-color: #e0f7fa;
+            padding: 0.75rem;
+            border-radius: 8px;
+            flex: 1 1 200px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .list-item strong {
+            color: var(--primary-color);
+        }
+
+        .qna {
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 1rem;
+        }
+
+        .qna p {
+            margin: 0;
+        }
+
+        .qna strong {
+            color: var(--primary-color);
+        }
+
+        .note {
+            background-color: var(--accent-color);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            font-style: italic;
+            border-left: 5px solid var(--primary-color);
+        }
+        
+        .summary {
+            background-color: #f1f8e9;
+            padding: 1.5rem;
+            border-left: 5px solid var(--secondary-color);
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+        }
+        
+        .pure-prose pre {
+            background-color: #f8f8f8;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            border: 1px solid #ddd;
+            white-space: pre-wrap;
+            font-family: 'Mukta', sans-serif;
+            margin-bottom: 1rem;
+        }
+        
+        .qna ol, .qna ul {
+            padding-left: 1.5rem;
+        }
+        
+        .qna li {
+            list-style-type: disc;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: var(--card-background);
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 0.5rem;
+            }
+            .container {
+                padding: 1rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            .list-item {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>हामीलाई बोलाउँछन् हिमचुली</h1>
+    <hr>
+    <div class="section">
+        <h2>शब्दभण्डार</h2>
+        <h3>१. शब्दकोशको सहायता लिई दिइएका शब्द र अर्थबिच जोडा मिलाउनुहोस्:</h3>
+        <div class="list-container">
+            <div class="list-item"><strong>तिरिन:</strong> घाँस, पराल आदिको थोरै अंश</div>
+            <div class="list-item"><strong>डोरेटो:</strong> एक दुई जना मात्र हिँड्न हुने सानो बाटो</div>
+            <div class="list-item"><strong>निनी:</strong> गाईका ससाना बाछाबाछीलाई प्यारो गरेर भनिने शब्द</div>
+            <div class="list-item"><strong>पातल:</strong> सधैँ हराभरा भइरहने लेकको सेपिलो एवम् घना जङ्गल</div>
+            <div class="list-item"><strong>बुकी:</strong> हिमाली भेगमा पाइने भारविशेष</div>
+            <div class="list-item"><strong>नागियुँ:</strong> चौरी गाई चर्ने ठाउँ</div>
+            <div class="list-item"><strong>छङ्गाछुर:</strong> ज्यादै अग्लो र विकट खालको भिर वा पहरो खगर</div>
+            <div class="list-item"><strong>खगर:</strong> वर्षभरिमा नौ महिना हिउँले ढाकिने ठाउँ</div>
+            <div class="list-item"><strong>सामलतुमल:</strong> अन्न आदि खाने कुरा</div>
+        </div>
+
+        <h3>२. दिइएका शब्दसँग मिल्ने अनुप्रासयुक्त शब्द पाठबाट खोज्नुहोस्:</h3>
+        <div class="list-container">
+            <div class="list-item"><strong>राम्रा:</strong> हाम्रा</div>
+            <div class="list-item"><strong>शिखर:</strong> रहर</div>
+            <div class="list-item"><strong>हेर्लान्:</strong> घेर्लान्</div>
+            <div class="list-item"><strong>होला:</strong> छोला</div>
+            <div class="list-item"><strong>हिलाएर:</strong> झुलाएर</div>
+            <div class="list-item"><strong>ढाक्ला:</strong> डाक्ला</div>
+            <div class="list-item"><strong>ध्वनि:</strong> पनि</div>
+            <div class="list-item"><strong>पारी:</strong> मारी</div>
+            <div class="list-item"><strong>हान्छ:</strong> जान्छ</div>
+            <div class="list-item"><strong>छाप:</strong> नापजाप</div>
+        </div>
+
+        <h3>३. दिइएका शब्दको पर्यायवाची शब्द पाठबाट खोज्नुहोस्:</h3>
+        <div class="list-container">
+            <div class="list-item"><strong>चिसो:</strong> शीतल</div>
+            <div class="list-item"><strong>देउराली:</strong> पहाडको उकालो सिद्धिने ठाउँ</div>
+            <div class="list-item"><strong>तिरिन:</strong> तृण</div>
+            <div class="list-item"><strong>टाकुरा:</strong> शिखर</div>
+            <div class="list-item"><strong>फूल:</strong> पुष्प</div>
+            <div class="list-item"><strong>बाटो:</strong> डोरेटो</div>
+        </div>
+        
+        <h3>४. गीतमा प्रयोग भएका केही शब्द कथ्य रूपमा छन्। ती शब्दको स्तरीय रूप लेख्नुहोस्:</h3>
+        <div class="list-container">
+            <div class="list-item"><strong>कल्ले:</strong> कसले</div>
+            <div class="list-item"><strong>नउरङ्गे:</strong> नौरङ्गे</div>
+            <div class="list-item"><strong>चम्री:</strong> चौंरी</div>
+            <div class="list-item"><strong>गोठालिनी:</strong> गोठाल्नी</div>
+        </div>
+    </div>
+    <hr>
+    <div class="section">
+        <h2>बोध र अभिव्यक्ति</h2>
+        <h3>१. 'हामीलाई बोलाउँछन् हिमचुली' कविता लय मिलाई वाचन गर्नुहोस्:</h3>
+        <p><em>(यो प्रश्न पाठकसँग सम्बन्धित भएकोले यहाँ उत्तर उपलब्ध छैन।)</em></p>
+
+        <h3>२. दिइएका शब्दको अक्षर छुट्याएर शुद्ध उच्चारण गर्नुहोस्:</h3>
+        <div class="list-container">
+            <div class="list-item"><strong>सुसेली:</strong> / सु.से.लि /</div>
+            <div class="list-item"><strong>हिमचुली:</strong> / हिम्.चु.लि /</div>
+            <div class="list-item"><strong>शिखर:</strong> / सि. खर् /</div>
+            <div class="list-item"><strong>उक्लियौला:</strong> / उक्.लि.यौं.ला /</div>
+            <div class="list-item"><strong>मर्नैपर्छ:</strong> / मर्नै पर्छ /</div>
+        </div>
+
+        <h3>६. दिइएको कवितांश पढी मौखिक उत्तर दिनुहोस्:</h3>
+        <div class="qna">
+            <p><strong>(क) माथिको कवितांशमा कस्तो परिवेशको चित्रण गरिएको छ?</strong></p>
+            <p>माथिको कवितांशमा उकाली, देउराली, वनपाखा जस्ता पहाडी भौगोलिक परिवेशका साथै बिसौनीमा सुसेली हाल्दै गीत गाउने, गोठालो जाने, गाई चराउने जस्ता नेपाली रमणीय परम्पराको परिवेश चित्रण गरिएको छ।</p>
+        </div>
+        <div class="qna">
+            <p><strong>(ख) 'देउरालीको बिसौनीमा सुसेलीले गाउँला' यस कथनको तात्पर्य के हो?</strong></p>
+            <p>'देउरालीको बिसौनीमा सुसेलीले गाउँला' कथनको तात्पर्य देउरालीमा थकाइ मार्ने क्रममा चिसो बतासको आनन्द लिदै सुसेली हाल्दै गीत गाउने र प्रकृतिको रमाइलो अनुभूति लिनु हो।</p>
+        </div>
+        <div class="qna">
+            <p><strong>(ग) 'वनभित्र ढुङ्गामाथि गाउलिन् गोठालिनी' यस कथनलाई सामान्य पदक्रममा रूपान्तर गर्नुहोस्।</strong></p>
+            <p>गोठाल्नी वनभित्र ढुङ्गामाथि गाउलिन्।</p>
+        </div>
+        <div class="qna">
+            <p><strong>(घ) गोठाल्नीले गाईलाई कसरी बोलाउँछिन्?</strong></p>
+            <p>गोठाल्नीले गाईलाई लाला ओदी निनी भनेर बोलाउँछिन्।</p>
+        </div>
+
+        <h3>७. 'टाकुरामा……. नउरङ्गे डाँफे' कवितांश पढी हिमाली भेगमा पाइने जनावर र बोटबिरुवाका बारेमा छोटो अनुच्छेद लेख्नुहोस्।</h3>
+        <pre>नेपालको हिमाली भेग निकै चिसो हुने भएकोले त्यहाँ सीमित जनावर र बोटबिरुवाहरू पाइन्छन्। यस्ता जनावर र बोटबिरुवाहरूले त्यहाँको हावापानीमा पनि आफ्नो अस्तित्व कायम गर्न सक्दछन्। यस भेगमा भेडा, चौरी जस्ता बाक्ला रौँ भएका जनावर पाइन्छन्। नौरङ्गी डाँफे जस्ता पन्छीहरू पनि यही क्षेत्रमा पाइन्छ। निगाला, बुकी फूल, धुपी लगायतका थुप्रै महत्त्वपूर्ण बोटबिरुवाहरू पनि यस क्षेत्रमा पाइन्छन्।</pre>
+
+        <h3>८. दिइएको कवितांश पढी सोधिएका प्रश्नको उत्तर लेख्नुहोस्:</h3>
+        <div class="qna">
+            <p><strong>(क) माथिको कवितांशमा नेपालीको कस्तो मानसिकताको चित्रण गरिएको छ?</strong></p>
+            <p>माथिको कवितांशमा नेपालीको साहसी, शूर, वीर मानसिकताको चित्रण गरिएको छ। नेपालीहरु हिमालझैँ अटल, कहिल्यै नझुक्ने स्वाभिमानी, जस्तोसुकै प्रतिकूल अवस्था नै किन नहोस् सतिसालझैँ अविचलित हृदय हुने, शूरता, वीरता, धीरताका शक्तिपुञ्ज एवं अदम्य साहसको अजस्र मुहान हुन् भनिएको छ। नेपालीहरू मृत्यु देखेर समेत डराउँदैनन्। जन्म र मरण प्रकृतिको ऐन हो र एकदिन मर्नु नै पर्छ भन्ने सबै नेपालीलाई थाहा छ। त्यसैले उनीहरूले आफ्नो मातृभूमिको लागि हाँसेर आफ्नो प्राण दिन सक्दछन्। हिमालझैँ नझुक्ने स्वभाव भएका हिमालवासी नेपालीहरू हिमाल चढ्न सिपालु हुन्छन्। नेपालीहरु नदेखेको कुरा देख्न चाहने, नजानेको कुरा जान्न बुझ्न चाहने जिज्ञासु किसिमका हुन्छन्। अतः माथिको कवितांशमा कहिल्यै नझुक्ने हिमाल भएको देशमा बसोबास गर्ने नेपालीहरूको धैर्य, साहस र आत्मविश्वासी मानसिकताको चित्रण गरिएको छ।</p>
+        </div>
+        <div class="qna">
+            <p><strong>(ख) नेपालीले हिमचुलीबाट कस्तो प्रेरणा प्राप्त गरेका छन्?</strong></p>
+            <p>नेपालीहरू हिमचुलीको काखमा हुर्किएका हुन्छन्। हिमचुलीहरू नेपालका पहिचान हुन्। सदियौँदेखि कहिल्यै पनि नझुकेका अटल अनि रहस्यको भण्डार हिमचुलीले कहिल्यै नझुकी निर्भयका साथ स्वाभिमानी बन्नमा नेपालीलाई प्रेरित गरेको छ। नदेखेको, नजानेको, नबुझेको कार्य गर्न प्रेरणा प्रदान गर्दछ। विगतमा हाम्रो हिमाल कहिल्यै कसैसँग झुकेन, त्यसैगरी हामी नेपालीहरू पनि कहिल्यै अरूसामु झुक्नु हुँदैन। हिमचुलीको उचाइसँगै नेपालीहरूको शान र मान पनि चुलिएको छ। हामीमा धैर्य, साहस र आत्मबल कहिल्यै डग्मगाउनु हुँदैन। तसर्थ नेपालीले हिमचुलीबाट सफलताको शिखर चुमी नयाँ नौलो कीर्ति राखी राष्ट्र र राष्ट्रियतालाई चम्काएर जीवनलाई सार्थक बनाउनुपर्छ भन्ने प्रेरणा प्राप्त गरेका छन्।</p>
+        </div>
+        
+        <h3>९. 'हामीलाई बोलाउँछन् हिमचुली' कवितामा कस्तो परिवेशको चित्रण गरिएको छ, दिइएका बुँदालाई समेत आधार बनाई समीक्षात्मक प्रतिक्रिया लेख्नुहोस्।</h3>
+        <pre>राष्ट्रकवि माधवप्रसाद घिमिरेद्वारा रचित 'हामीलाई बोलाउँछन् हिमचुली' कवितामा नेपालको मनमोहक हिमाली भेगको वातावरण र परिवेश प्रस्तुत गरिएको छ। यस कवितामा कविले नेपाललाई हिमचुलीको काखमा रहेको तेस्रो ध्रुवको देशका रूपमा चित्रण गरेका छन्। यहाँको हिमाली वातावरण र परिवेशले विश्वलाई मोहित पार्न सक्ने जादु लुकेको छ। कवितामा बगिरहने लेकको सेपिलो एवं घना जङ्गल, चिसो र ओसिलो जमिनमा पाइने बहुमूल्य जडिबुटीको भण्डार, हिमालको चिसो बताससँगै बहने कस्तुरीको सुगन्ध, र हिमाली आकर्षणकै कारण हिमाल आरोहणका लागि आउने पर्यटकको घुइँचो जस्ता दृश्यहरू प्रस्तुत गरिएका छन्। हराभरा जङ्गलमा विभिन्न प्रजातिका चराचुरुङ्गी र कस्तुरी मृगको बथानले रौनक भरेको पाइन्छ। धुपी र बुकी जस्ता बोटबिरुवा र नौरङ्गे डाँफेको उपस्थितिले पनि यो क्षेत्र आकर्षक बनेको छ। हिमाली क्षेत्रका बासिन्दाहरूको पशुपालन गर्ने र जडिबुटी सङ्कलन गरी जीविकोपार्जन गर्ने सामाजिक परम्परा पनि कवितामा देखाइएको छ। सधैँ नयाँ कुरा गर्न उत्सुक र समस्याबाट पछि नहट्ने साहसी नेपालीको वीरताको परिवेश प्रस्तुत गरेर कविले लोकछन्द सवाईका माध्यमबाट नेपाललाई प्राकृतिक आभूषणहरूले सुशोभित प्रकृतिको सुन्दर राजधानीका रूपमा चित्रण गरेका छन्।</pre>
+        
+        <h3>१०. 'हामीलाई बोलाउँछन् हिमचुली' कविताले दिएको सन्देश के हो, समीक्षात्मक उत्तर लेख्नुहोस्।</h3>
+        <pre>राष्ट्रकवि माधवप्रसाद घिमिरेको 'हामीलाई बोलाउँछन् हिमचुली' कविताले नेपालीहरूको अदम्य साहस, धैर्य, र स्वाभिमानको सन्देश दिएको छ। कविताले नेपालीहरूको हिमालझैँ अटल, कहिल्यै नझुक्ने, शूरता र वीरताका शक्तिपुञ्ज एवं अदम्य साहसको अजस्र मुहान भएको मानसिकतालाई प्रस्तुत गर्दछ। हिमचुलीको काखमा हुर्किएका नेपालीहरूलाई हिमालले कहिल्यै नझुकी निर्भयका साथ स्वाभिमानी बन्न प्रेरित गरेको छ। हिमालको उचाइसँगै नेपालीहरूको शान र मान पनि चुलिएको छ भन्ने सन्देश कविताले दिएको छ। नेपालीहरूले नदेखेको, नजानेको र नबुझेको कार्य गर्न पनि हिमालबाट प्रेरणा प्राप्त गर्दछन्। कविताले हामीलाई धैर्य, साहस र आत्मबल कहिल्यै डग्मगाउनु हुँदैन भन्ने सन्देश दिन्छ। तसर्थ, सफलताको शिखर चुमी नयाँ नौलो कीर्ति राखेर राष्ट्र र राष्ट्रियतालाई चम्काउनु र जीवनलाई सार्थक बनाउनु नै यस कविताको मुख्य सन्देश हो।</pre>
+        
+        <h3>११. गजल पढ्नुहोस् र आफूलाई मन पर्ने विषयमा एउटा गजलको रचना गर्नुहोस्।</h3>
+        <p><em>(यो प्रश्न रचनात्मक लेखनसँग सम्बन्धित भएकोले यहाँ उत्तर उपलब्ध छैन।)</em></p>
+
+        <h3>१२. दिइएको अनुच्छेद पढी सोधिएका प्रश्नको छोटो उत्तर दिनुहोस्:</h3>
+        <div class="qna">
+            <p><strong>(क) कविता भनेको के हो?</strong></p>
+            <p>कविता भनेको विचार वा भावनाको लयबद्ध कलात्मक भाषिक अभिव्यक्ति हो।</p>
+        </div>
+        <div class="qna">
+            <p><strong>(ख) कविता र गजलमा के अन्तर छ?</strong></p>
+            <p>कविता छन्दमा लेखिएको हुन्छ भने गजल बहरमा लेखिएको हुन्छ। छन्द र बहरको ढाँचा फरक हुने भएकाले यी दुईमा अन्तर छ।</p>
+        </div>
+        <div class="qna">
+            <p><strong>(ग) गजलका संरचक के के हुन्?</strong></p>
+            <p>गजलका संरचक बहर, मिसरा, सेर, मत्ला, मक्ता, काफिया, रदिफ हुन्।</p>
+        </div>
+        <div class="qna">
+            <p><strong>(घ) गजलका प्रत्येक सेरको दोस्रो मिसरा कस्तो हुनुपर्छ?</strong></p>
+            <p>गजलमा प्रत्येक सेरको दोस्रो मिसरा हमकाफिया अर्थात् अनुप्रासान्त हुनुपर्छ।</p>
+        </div>
+    </div>
+    <hr>
+    <div class="section">
+        <h2>व्याकरण</h2>
+        <h3>१. दिइएको अनुच्छेदबाट उपसर्ग व्युत्पन्न शब्द टिप्नुहोस् र तालिकामा देखाए जस्तै गरी उपसर्ग र आधार छुट्याउनुहोस्:</h3>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>उपसर्ग व्युत्पन्न शब्द</th>
+                        <th>उपसर्ग</th>
+                        <th>आधार पद</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>अत्यावश्यक</td><td>अति</td><td>आवश्यक</td></tr>
+                    <tr><td>अधिकार</td><td>अधि</td><td>कार</td></tr>
+                    <tr><td>अवरोध</td><td>अव</td><td>रोध</td></tr>
+                    <tr><td>समृद्धि</td><td>सम्</td><td>ऋद्धि</td></tr>
+                    <tr><td>प्रतिकूल</td><td>प्रति</td><td>कूल</td></tr>
+                    <tr><td>समृद्ध</td><td>सम्</td><td>ऋद्ध</td></tr>
+                    <tr><td>सुस्वास्थ्य</td><td>सु</td><td>स्वास्थ्य</td></tr>
+                    <tr><td>समुचित</td><td>सम्</td><td>उचित</td></tr>
+                    <tr><td>आहार</td><td>आ</td><td>हार</td></tr>
+                    <tr><td>संरक्षण</td><td>सम्</td><td>रक्षण</td></tr>
+                    <tr><td>संसार</td><td>सम्</td><td>सार</td></tr>
+                    <tr><td>सङ्कट</td><td>सम्</td><td>कट</td></tr>
+                    <tr><td>प्रकोप</td><td>प्र</td><td>कोप</td></tr>
+                    <tr><td>परिणाम</td><td>परि</td><td>नाम</td></tr>
+                    <tr><td>उत्पन्न</td><td>उत्</td><td>पन्न</td></tr>
+                    <tr><td>विचार</td><td>वि</td><td>चार</td></tr>
+                    <tr><td>सङ्गठन</td><td>सम्</td><td>गठन</td></tr>
+                    <tr><td>अनुसार</td><td>अनु</td><td>सार</td></tr>
+                    <tr><td>उपयुक्त</td><td>उप</td><td>युक्त</td></tr>
+                    <tr><td>सचेत</td><td>स</td><td>चेत</td></tr>
+                    <tr><td>उपचार</td><td>उप</td><td>चार</td></tr>
+                    <tr><td>विकराल</td><td>वि</td><td>कराल</td></tr>
+                    <tr><td>सम्पूर्णतः</td><td>सम्</td><td>पूर्णतः</td></tr>
+                    <tr><td>विकास</td><td>वि</td><td>कास</td></tr>
+                    <tr><td>अवरुद्ध</td><td>अव</td><td>रुद्ध</td></tr>
+                    <tr><td>प्रयोग</td><td>प्र</td><td>योग</td></tr>
+                    <tr><td>उपयोग</td><td>उप</td><td>योग</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <h3>२. 'सम्' उपसर्ग लागेर बनेका अन्य दशओटा शब्द र तिनको निर्माण प्रक्रिया देखाउनुहोस्:</h3>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>उपसर्ग</th>
+                        <th>आधार पद</th>
+                        <th>उपसर्ग व्युत्पन्न शब्द</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>सम्</td><td>ऋद्ध</td><td>समृद्ध</td></tr>
+                    <tr><td>सम्</td><td>सद</td><td>संसद</td></tr>
+                    <tr><td>सम्</td><td>मान</td><td>सम्मान</td></tr>
+                    <tr><td>सम्</td><td>हार</td><td>संहार</td></tr>
+                    <tr><td>सम्</td><td>वाद</td><td>संवाद</td></tr>
+                    <tr><td>सम्</td><td>सार</td><td>संसार</td></tr>
+                    <tr><td>सम्</td><td>रक्षण</td><td>सम्रक्षण</td></tr>
+                    <tr><td>सम्</td><td>वेदना</td><td>संवेदना</td></tr>
+                    <tr><td>सम्</td><td>स्मरण</td><td>संस्मरण</td></tr>
+                    <tr><td>सम्</td><td>सान</td><td>सम्सान</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <h3>३. प्रत्येक आधार शब्दमा एउटा एउटा उपसर्ग संयोजन गरेर नयाँ शब्द बनाउनुहोस्:</h3>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>उपसर्ग</th>
+                        <th>आधार पद</th>
+                        <th>उपसर्ग व्युत्पन्न शब्द</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>अनु</td><td>गमन</td><td>अनुगमन</td></tr>
+                    <tr><td>अव</td><td>नति</td><td>अवनति</td></tr>
+                    <tr><td>निस्</td><td>छल</td><td>निश्छल</td></tr>
+                    <tr><td>निर्</td><td>ईक्षण</td><td>निरीक्षण</td></tr>
+                    <tr><td>परि</td><td>ईक्षा</td><td>परीक्षा</td></tr>
+                    <tr><td>अति</td><td>अधिक</td><td>अत्यधिक</td></tr>
+                    <tr><td>सु</td><td>आगत</td><td>स्वागत</td></tr>
+                    <tr><td>अधि</td><td>आगमन</td><td>अध्यागमन</td></tr>
+                    <tr><td>प्रति</td><td>एक</td><td>प्रत्येक</td></tr>
+                    <tr><td>दुस्</td><td>चिन्ता</td><td>दुश्चिन्ता</td></tr>
+                    <tr><td>दुर्</td><td>आशय</td><td>दुराशय</td></tr>
+                    <tr><td>वि</td><td>ज्ञान</td><td>विज्ञान</td></tr>
+                    <tr><td>सन्</td><td>देश</td><td>सन्देश</td></tr>
+                    <tr><td>उत्</td><td>नत</td><td>उन्नत</td></tr>
+                    <tr><td>अनु</td><td>छेद</td><td>अनुच्छेद</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>५. दिइएको अनुच्छेदबाट प्रत्यय व्युत्पन्न शब्द टिप्नुहोस् र आधार र प्रत्यय छुट्याउनुहोस्:</h3>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>प्रत्यय व्युत्पन्न शब्द</th>
+                        <th>आधार पद</th>
+                        <th>प्रत्यय</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>स्मरणीय</td><td>स्मृ</td><td>अनीय</td></tr>
+                    <tr><td>भुलक्कड</td><td>भुल्</td><td>अक्कड</td></tr>
+                    <tr><td>परिचायक</td><td>परिचय</td><td>अक</td></tr>
+                    <tr><td>संस्कृति</td><td>संस्कृत</td><td>इ</td></tr>
+                    <tr><td>कारण</td><td>कृ</td><td>अन</td></tr>
+                    <tr><td>जातीय</td><td>जात</td><td>ईय</td></tr>
+                    <tr><td>सांस्कृतिक</td><td>संस्कृति</td><td>इक</td></tr>
+                    <tr><td>प्राचीन</td><td>प्राच्</td><td>ईन</td></tr>
+                    <tr><td>वैदिक</td><td>वेद</td><td>इक</td></tr>
+                    <tr><td>नेपाली</td><td>नेपाल</td><td>ई</td></tr>
+                    <tr><td>स्वार्थी</td><td>स्वार्थ</td><td>ई</td></tr>
+                    <tr><td>भावना</td><td>भाव</td><td>ना</td></tr>
+                    <tr><td>पूजा</td><td>पूज्</td><td>आ</td></tr>
+                    <tr><td>देवता</td><td>देव</td><td>ता</td></tr>
+                    <tr><td>निष्क्रियता</td><td>निष्क्रिय</td><td>ता</td></tr>
+                    <tr><td>चोरी</td><td>चोर</td><td>ई</td></tr>
+                    <tr><td>ठगाहा</td><td>ठग्</td><td>आहा</td></tr>
+                    <tr><td>मिचाहा</td><td>मिच्</td><td>आहा</td></tr>
+                    <tr><td>हेपाहा</td><td>हेप्</td><td>आहा</td></tr>
+                    <tr><td>चुसाहा</td><td>चुस्</td><td>आहा</td></tr>
+                    <tr><td>लुटाहा</td><td>लुट्</td><td>आहा</td></tr>
+                    <tr><td>हिंस्रक</td><td>हिंसा</td><td>अक</td></tr>
+                    <tr><td>शोषक</td><td>शोष्</td><td>अक</td></tr>
+                    <tr><td>शोषण</td><td>शोष्</td><td>अण</td></tr>
+                    <tr><td>घमण्डी</td><td>घमण्ड</td><td>ई</td></tr>
+                    <tr><td>पियक्कड</td><td>पिउ</td><td>अक्कड</td></tr>
+                    <tr><td>बुझक्कड</td><td>बुझ्</td><td>अक्कड</td></tr>
+                    <tr><td>फिरन्ते</td><td>फिर्</td><td>अन्ते</td></tr>
+                    <tr><td>मगन्ते</td><td>माग्</td><td>अन्ते</td></tr>
+                    <tr><td>जीवन</td><td>जीव</td><td>न</td></tr>
+                    <tr><td>उन्नति</td><td>उन्नत</td><td>इ</td></tr>
+                    <tr><td>कारक</td><td>कृ</td><td>अक</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>६. कृदन्त व्युत्पन्न र तद्वितान्त व्युत्पन्न शब्द बनाउनुहोस्:</h3>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>व्युत्पन्न शब्द</th>
+                        <th>आधार पद</th>
+                        <th>प्रत्यय</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>दर्शक</td><td>दृश्</td><td>अक</td></tr>
+                    <tr><td>सृष्टि</td><td>सृज्</td><td>ति</td></tr>
+                    <tr><td>गन्तब्य</td><td>गम्</td><td>तब्य</td></tr>
+                    <tr><td>स्मरणीय</td><td>स्मृ</td><td>अनीय</td></tr>
+                    <tr><td>श्रवण</td><td>श्रु</td><td>अन</td></tr>
+                    <tr><td>नीत</td><td>नी</td><td>त</td></tr>
+                    <tr><td>वक्ता</td><td>वच्</td><td>ता</td></tr>
+                    <tr><td>नृत्य</td><td>नृत्</td><td>य</td></tr>
+                    <tr><td>नेता</td><td>नी</td><td>ता</td></tr>
+                    <tr><td>दैनिक</td><td>दिन</td><td>इक</td></tr>
+                    <tr><td>स्वर्णिम</td><td>स्वर्ण</td><td>इम</td></tr>
+                    <tr><td>ग्रामीण</td><td>ग्राम</td><td>ईन</td></tr>
+                    <tr><td>दिवसीय</td><td>दिवस</td><td>ईय</td></tr>
+                    <tr><td>राष्ट्रिय</td><td>राष्ट्र</td><td>इय</td></tr>
+                    <tr><td>विशेषतः</td><td>विशेष</td><td>तः</td></tr>
+                    <tr><td>सौन्दर्य</td><td>सुन्दर</td><td>य</td></tr>
+                    <tr><td>महत्ता</td><td>महत्</td><td>ता</td></tr>
+                    <tr><td>गौर</td><td>गुरु</td><td>अ</td></tr>
+                    <tr><td>वाङ्मय</td><td>वाक्</td><td>मय</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <h3>७. सन्धियुक्त ब्युत्पन्न शब्द पहिचान गरी तिनको सन्धि विच्छेद गर्नुहोस्:</h3>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>सन्धि व्युत्पन्न शब्द</th>
+                        <th>निर्माण प्रक्रिया</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>प्रत्येक</td><td>प्रति + एक</td></tr>
+                    <tr><td>सदाचार</td><td>सत् + आचार</td></tr>
+                    <tr><td>सदैव</td><td>सदा + एव</td></tr>
+                    <tr><td>सज्जन</td><td>सत् + जन</td></tr>
+                    <tr><td>सन्देश</td><td>सम् + देश</td></tr>
+                    <tr><td>अनुसरण</td><td>अनु + सरण</td></tr>
+                    <tr><td>निष्क्रियता</td><td>निष्क्रिय + ता</td></tr>
+                    <tr><td>निराशा</td><td>निर् + आशा</td></tr>
+                    <tr><td>निष्काम</td><td>निस् + काम</td></tr>
+                    <tr><td>भावना</td><td>भाव + ना</td></tr>
+                    <tr><td>निरन्तर</td><td>निर् + अन्तर</td></tr>
+                    <tr><td>समर्पित</td><td>समर्पण + इत</td></tr>
+                    <tr><td>सन्तुलन</td><td>सन् + तुलन</td></tr>
+                    <tr><td>अत्यधिक</td><td>अति + अधिक</td></tr>
+                    <tr><td>परीक्षित</td><td>परीक्षा + इत</td></tr>
+                    <tr><td>सङ्कल्प</td><td>सम् + कल्प</td></tr>
+                    <tr><td>प्राप्ति</td><td>प्राप्त + इ</td></tr>
+                    <tr><td>उद्देश्य</td><td>उत् + देश्य</td></tr>
+                    <tr><td>तल्लीन</td><td>तत् + लीन</td></tr>
+                    <tr><td>सफलता</td><td>सफल + ता</td></tr>
+                    <tr><td>सफल</td><td>स + फल</td></tr>
+                    <tr><td>विकास</td><td>वि + कास</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <h3>८. शुद्ध गरी पुनर्लेखन गर्नुहोस्:</h3>
+        <pre>म गत हप्ता भृकुटीमण्डपमा विज्ञान प्रदर्शनी हेर्न गएँ। त्यहाँ धेरै किसिमका कम्प्युटर, ल्यापटप र मोबाइलहरू राखिएका थिए। त्यस प्रदर्शनीमा भर्खर कक्षा दश पूरा गरेर एघारमा पढ्दै गरेका विद्यार्थीदेखि एम.ए. र पी.एच.डी. गरेका प्राध्यापकहरूसमेत आएका थिए। त्यहाँ इज्जतदार, इमानदार, जमिनदार, लेखनदास सबैको जमघट एक ठाउँमा भएको देखेर म दङ्ग परें। मान्छेहरूले खचाखच भरिएको त्यस प्रदर्शनीस्थलबाट एउटा ल्यापटप किनेर सरासर घर फर्केँ।</pre>
+    </div>
+</div>
+
+</body>
+</html>
+
