@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 12 English Notes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #388E3C;
+            --background-color: #f4f7f6;
+            --card-background: #ffffff;
+            --text-color: #333333;
+            --light-text-color: #666666;
+            --border-color: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: var(--card-background);
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px 20px; /* Reduced bottom padding */
+            background: var(--primary-color);
+            color: white;
+            border-radius: 12px 12px 0 0;
+            margin: -20px -20px 0 -20px; /* Adjusted margin to fit the menu */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        .lesson-title {
+            font-size: 1.2rem;
+            margin: 5px 0 0;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+        
+        .topics-menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 10px 0;
+            background: var(--secondary-color);
+            border-radius: 0 0 12px 12px;
+            margin: 0 -20px 20px -20px;
+        }
+
+        .topics-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            margin: 5px;
+            font-weight: 600;
+            border-radius: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .topics-menu a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+
+        h2, h3 {
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .subsection {
+            margin-bottom: 20px;
+        }
+
+        .question {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--secondary-color);
+        }
+
+        .answer {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .answer::before {
+            content: "✓";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .list-group {
+            list-style: none;
+            padding: 0;
+        }
+
+        .list-group-item {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s;
+        }
+
+        .list-group-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .list-group-item strong {
+            color: var(--secondary-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .cta-button {
+            display: block;
+            width: fit-content;
+            margin: 30px auto;
+            padding: 15px 30px;
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: #2e7d32;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 10px;
+                padding: 10px;
+            }
+
+            header {
+                padding: 30px 10px;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            h2, h3 {
+                font-size: 1.5rem;
+            }
+            
+            .list-group-item {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Class 12 English Notes</h1>
+            <p class="lesson-title">History</p>
+        </header>
+        <div class="topics-menu">
+            <a href="#working-with-words">Working with Words</a>
+            <a href="#comprehension">Comprehension</a>
+            <a href="#critical-thinking">Critical Thinking</a>
+            <a href="#writing">Writing</a>
+            <a href="#grammar">Grammar</a>
+        </div>
+
+        <section id="working-with-words" class="section">
+            <h2>Working with Words</h2>
+            
+            <div class="subsection">
+                <h3>A. Match the words with their definitions/meanings.</h3>
+                <ul class="list-group">
+                    <li class="list-group-item"><strong>a. passion:</strong> any powerful or compelling emotion or feeling, as love or hate</li>
+                    <li class="list-group-item"><strong>b. surveillance:</strong> continuous observation of a place, person, group, or ongoing activity in order to gather information</li>
+                    <li class="list-group-item"><strong>c. integrity:</strong> the state of being whole, entire, or undiminished</li>
+                    <li class="list-group-item"><strong>d. avuncular:</strong> like an uncle</li>
+                    <li class="list-group-item"><strong>e. livelihood:</strong> a means of supporting one's existence</li>
+                    <li class="list-group-item"><strong>f. fascination:</strong> powerful attraction</li>
+                    <li class="list-group-item"><strong>g. innovation:</strong> an idea, practice, or object that is perceived as new</li>
+                    <li class="list-group-item"><strong>h. panorama:</strong> an unobstructed and wide view of an extensive area in all directions</li>
+                    <li class="list-group-item"><strong>i. resilience:</strong> the power or ability of a material to return to its original form, position, etc., after being bent, compressed, or stretched</li>
+                    <li class="list-group-item"><strong>j. evacuation:</strong> the removal of people or things from an endangered area</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>B. Define the following professionals.</h3>
+                <ul class="list-group">
+                    <li class="list-group-item"><strong>Architect:</strong> An engineer who designs buildings and advises in their construction.</li>
+                    <li class="list-group-item"><strong>Civil engineer:</strong> An engineer who designs and oversees the construction of public works.</li>
+                    <li class="list-group-item"><strong>Mechanical engineer:</strong> An engineer who designs, produces, and operates machines.</li>
+                    <li class="list-group-item"><strong>Aerospace engineer:</strong> An engineer who designs, tests and manages the manufacturing of aircrafts.</li>
+                    <li class="list-group-item"><strong>Automobile engineer:</strong> An engineer who designs, manufactures and repairs vehicles.</li>
+                    <li class="list-group-item"><strong>Electronic engineer:</strong> An engineer who designs, develops and manufactures electrical equipments.</li>
+                    <li class="list-group-item"><strong>Electrical engineer:</strong> An engineer who creates, designs and manages electrical equipments.</li>
+                    <li class="list-group-item"><strong>Computer engineer:</strong> An engineer who evaluates, designs and maintains computer hardware and software systems.</li>
+                    <li class="list-group-item"><strong>Food engineer:</strong> An engineer who ensures the safety and efficiency of processing, packaging and delivering of food items.</li>
+                    <li class="list-group-item"><strong>Chemical engineer:</strong> An engineer who develops and designs chemical manufacturing processes.</li>
+                    <li class="list-group-item"><strong>Biomedical engineer:</strong> An engineer who develops new equipment for improving human health.</li>
+                </ul>
+            </div>
+        </section>
+        
+        <a href="#" class="cta-button">Download Android App for Offline Access</a>
+
+        <section id="comprehension" class="section">
+            <h2>Comprehension</h2>
+            <div class="subsection">
+                <h3>Answer the following questions.</h3>
+                <div class="answer-group">
+                    <div class="question">a. Where were Frank and Nicole employed?</div>
+                    <div class="answer">Frank and Nicole were employed as architects in the twin towers of the World Trade Centre situated in the USA.</div>
+                </div>
+                <div class="answer-group">
+                    <div class="question">b. How does the author describe Frank's attachment to the twin towers?</div>
+                    <div class="answer">The author describes Frank's attachment to the twin towers as a source of livelihood and passion.</div>
+                </div>
+                <div class="answer-group">
+                    <div class="question">c. How did the two families become intimate with each other?</div>
+                    <div class="answer">The two families became intimate with each other because of their children.</div>
+                </div>
+                <div class="answer-group">
+                    <div class="question">d. What, according to Nicole, did Frank think of the towers?</div>
+                    <div class="answer">According to Nicole, Frank thought of the towers as an incredible human feat. The scale, magnitude, innovative design, and efficient use of materials of the towers were awesome to Frank. Sometimes he said that they were built to take the impact of a light airplane.</div>
+                </div>
+                <div class="answer-group">
+                    <div class="question">e. Why did Frank want to help the people in the tower after the attack?</div>
+                    <div class="answer">Frank wanted to help the people in the tower after the attack because only a few people knew about the strength of the building.</div>
+                </div>
+                <div class="answer-group">
+                    <div class="question">f. Why did Frank not follow Nicole's request even after knowing that the building was on fire?</div>
+                    <div class="answer">Frank did not follow Nicole's request even after knowing that the building was on fire because he was confident that he could help the injured people on their way to a safe place without hurting himself.</div>
+                </div>
+                <div class="answer-group">
+                    <div class="question">g. Who did Frank call from the building after the attack?</div>
+                    <div class="answer">Frank called his sister Nina, who lived on West 93rd street in Manhattan, from the building after the attack.</div>
+                </div>
+                <div class="answer-group">
+                    <div class="question">h. How did Nicole feel after the collapse of the first tower?</div>
+                    <div class="answer">After the collapse of the first tower, Nicole felt that it was like the beginning of a nuclear war. Everything went absolutely quiet and she felt in the middle of a fog that was as blindingly bright as a snowstorm on a sunny day.</div>
+                </div>
+                <div class="answer-group">
+                    <div class="question">i. Were Frank's children serious as soon as they heard the news of their missing father? Why?</div>
+                    <div class="answer">Frank's children were not serious as soon as they heard the news of their missing father because they were busy playing games.</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="critical-thinking" class="section">
+            <h2>Critical Thinking</h2>
+            <div class="subsection">
+                <div class="question">a. Many innocent people lose their lives in ruthless attacks every year. What do you think the governments should do to protect their people from such attacks and make the world a safer place to live?</div>
+                <div class="answer">It is true that many innocent people lose their lives in ruthless attacks every year. The government must be responsible for handling and controlling such situations. It should think seriously about the security of its citizens from such ruthless attacks. The things the government should do to protect their people from such attacks and make the world a safer place to live are as follows:
+                    <ul class="list-group">
+                        <li class="list-group-item">Every government should maintain stability in itself, among the leaders and the political parties.</li>
+                        <li class="list-group-item">Borders should have tighter restrictions.</li>
+                        <li class="list-group-item">Armed forces should be deployed at several places where there is a high risk of attack outbreaks.</li>
+                        <li class="list-group-item">Though peace treaties are being signed, they are often not followed accordingly. Every nation should work to maintain peace.</li>
+                        <li class="list-group-item">People should be moved to a safer place if there is any danger.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="subsection">
+                <div class="question">b. Revenge and violence are the integral parts of the history and civilization. They can't be ignored, only managed. Do you agree or not with this statement? Present your logic.</div>
+                <div class="answer">Yes, I agree with the statement that revenge and violence are integral parts of history and civilization. Revenge is associated with hurt and damage, and violence is the use of physical force to injure, abuse, damage, or destroy. The cause of World War II is also due to the revenge from Germany. On June 28, 1919, when the Treaty of Versailles was signed, ending the war between Germany and the Allied Powers, it humiliated and blamed Germany for World War I and imposed heavy debt payments. Germany sought revenge for this in 1939, which started World War II. We have seen from our past that revenge and violence can lead to a miserable situation. Thus, they can't be ignored, but only managed.</div>
+            </div>
+        </section>
+
+        <section id="writing" class="section">
+            <h2>Writing</h2>
+            <div class="subsection">
+                <h3>A. Write a description of an event that you have recently witnessed.</h3>
+                <div class="answer">Recently I witnessed a very special celestial event known as the full lunar eclipse. It was special because astronomers declared it to be the longest lunar eclipse of this century, which took place on July 27. It was difficult for me because I had to stay awake until late at night to watch this lunar eclipse. Finally, the eclipse started at 11:30 pm and ended at 1 a.m. I was accompanied by a few friends who chose to witness this lunar eclipse. We kept looking up in the sky for one and a half hours, which was a bit difficult but rewarding in the end.</div>
+            </div>
+            <div class="subsection">
+                <h3>B. Write an essay on "An Unforgettable Event in my Life' in about 500 words.</h3>
+                <div class="answer">
+                    <p>It is true that if we have joys in our life, we have sorrows too. Like all others, I cannot be an exception. I still remember the day when I felt that there is no joy in the world but sorrow.</p>
+                    <p>I was enjoying the vacations after my tenth-class board examinations. My best friend in the neighborhood, Alisha, was staying with me. Her parents had gone to Kathmandu where her grandfather was to undergo a major operation. My parents and I did our best to keep her happy and away from missing her parents. For us, it was playtime all through the day.</p>
+                    <p>One evening as we were playing our little brain game, her parents called and said her grandfather's operation was successful and her parents were to return the next day by plane. On reading it, Alisha was overjoyed and I joined her in her moment of happiness.</p>
+                    <p>That night Alisha did not sleep. She counted the hours until the early morning. We dressed hurriedly and my father took us to the airport. On reaching there, we sensed something was wrong. The Yeti Airlines flight from Kathmandu had crashed while landing. Fire tenders and ambulances were on the run. Our hearts sank. Alisha fainted from shock. My father hired a taxi and sent us back home.</p>
+                    <p>We waited with throbbing hearts for my father to return with her safe and sound parents. My mother sent for a doctor as Alisha's condition became worse. I sat by her side silently wishing for a happy turn. My father returned only to say that there was no sign of her parents though their names were mentioned in the airline's passenger list. Alisha was hysterical and it became difficult to control her.</p>
+                    <p>She said that she wanted to go to her home. I decided to go with her while my mother would soon follow. Once out on the street, she ran towards her home. I saw a speeding car and shouted at her to stop. She didn't. The car didn't stop and sped away leaving her lying on the road badly hurt.</p>
+                    <p>We immediately took her to a nearby hospital. The doctors who examined her said she may recover gradually but did not confirm her recovery. She was placed in the intensive care unit.</p>
+                    <p>I returned home with my parents. The moment we entered the room, the telephone rang. It was a call from the hospital to inform us that Alisha was no more. I felt numb and tears welled up in my eyes. I still refused to believe what I heard was true.</p>
+                    <p>Again, the telephone rang and it was from Alisha's parents to inform us that they had missed their flight due to some car trouble on their way to the airport. The news of Alisha's parents being alive did not touch my heart. Alisha's parents were shocked to hear about their daughter's death when they came home the next day. But nothing could be done. Even today when I remember the incident, every moment of that day flashes through my eyes and I begin to cry, "Alisha, why did you have to die? I have lost a good friend in you."</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="grammar" class="section">
+            <h2>Grammar</h2>
+            <div class="subsection">
+                <h3>B. Complete these sentences with the correct prepositions.</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">a. The relationship <strong>between</strong> the two boys has changed significantly over the past few years.</li>
+                    <li class="list-group-item">b. <strong>In</strong> Nepal, many girls get married at an early age.</li>
+                    <li class="list-group-item">c. I'm not <strong>in</strong> the mood <strong>for</strong> such silly games.</li>
+                    <li class="list-group-item">d. There were no security personnel <strong>on</strong> duty at that time.</li>
+                    <li class="list-group-item">e. The new smartphone is similar <strong>to</strong> the one I bought a few years ago.</li>
+                    <li class="list-group-item">f. My dad insisted <strong>on</strong> taking the later train.</li>
+                    <li class="list-group-item">g. People <strong>with</strong> ambition always try to achieve their goals, no matter what happens.</li>
+                    <li class="list-group-item">h. Mr. Jenkins has been disabled all his life as a result <strong>of</strong> a childhood illness.</li>
+                    <li class="list-group-item">i. We bought the TV because it was <strong>on</strong> sale.</li>
+                    <li class="list-group-item">j. She has no understanding <strong>of</strong> how computers really work.</li>
+                    <li class="list-group-item">k. I gave him my new T-shirt <strong>in</strong> exchange <strong>for</strong> a few cigarettes.</li>
+                    <li class="list-group-item">l. The company is run <strong>by</strong> two people who hardly ever meet.</li>
+                    <li class="list-group-item">m. All the celebrations and parties were called off <strong>because of</strong> the tragic accident.</li>
+                    <li class="list-group-item">n. There was a great need <strong>of</strong> volunteers at the site of the crash.</li>
+                </ul>
+            </div>
+            
+            <div class="subsection">
+                <h3>C. Complete the following text with correct prepositions.</h3>
+                <div class="answer">
+                    <p>What are we seeing here? One very real possibility is that these are the educational consequences <strong>of</strong> the differences <strong>in</strong> parenting styles that we talked about <strong>in</strong> the Chris Langan chapter. Think back <strong>to</strong> Alex Williams, the nine-year-old whom Annette Lareau studied. His parents believe <strong>in</strong> connected cultivation. He gets taken <strong>to</strong> museums and gets enrolled <strong>in</strong> special programs and goes <strong>to</strong> summer camp, where he takes classes. When he's bored <strong>at</strong> home, there are plenty <strong>of</strong> books to read, and his parents see it as their responsibility to keep him actively engaged <strong>in</strong> the world <strong>for</strong> him. It's hard to see how Alex would get better <strong>at</strong> reading and math <strong>in</strong> the summer.</p>
+                </div>
+            </div>
+            
+            <div class="subsection">
+                <h2>Simple future, future continuous, future perfect and future perfect continuous</h2>
+                <h3>B. make sentences from the given clues as stated in brackets.</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">a. Who will pass the exam?</li>
+                    <li class="list-group-item">b. How will you be getting home?</li>
+                    <li class="list-group-item">c. I'll come later.</li>
+                    <li class="list-group-item">d. She will have caught the train by 3 pm.</li>
+                    <li class="list-group-item">e. It will rain tomorrow.</li>
+                    <li class="list-group-item">f. John will be sleeping at 4 am.</li>
+                    <li class="list-group-item">g. How long will you have been seeing your boyfriend when you get married?</li>
+                    <li class="list-group-item">h. It will be raining in Kathmandu next week.</li>
+                    <li class="list-group-item">i. How long will you have been working here when you retire?</li>
+                    <li class="list-group-item">j. He won't have finished the cleaning by the time she gets home.</li>
+                </ul>
+            </div>
+            
+            <div class="subsection">
+                <h3>C. Complete the following sentences with the correct future tense form of the verbs in the brackets.</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">a. It <strong>will snow</strong> in Brighton tomorrow evening.</li>
+                    <li class="list-group-item">b. On Friday at 8 o'clock, I'm <strong>going to meet</strong> my friend.</li>
+                    <li class="list-group-item">c. Wait! I <strong>will drive</strong> you to the station.</li>
+                    <li class="list-group-item">d. When they get married in March, they <strong>will have been</strong> together for six years.</li>
+                    <li class="list-group-item">e. You're carrying too much. I <strong>will open</strong> the door for you.</li>
+                    <li class="list-group-item">f. Do you think the teacher <strong>will have marked</strong> our homework by Monday morning?</li>
+                    <li class="list-group-item">g. When I see you tomorrow, I <strong>will show</strong> you my new book.</li>
+                    <li class="list-group-item">h. After you take a nap, you <strong>will feel</strong> a lot better.</li>
+                    <li class="list-group-item">i. I <strong>will let</strong> you know the second the builders finish decorating.</li>
+                    <li class="list-group-item">j. We <strong>will wait</strong> in the shelter until the bus comes.</li>
+                    <li class="list-group-item">k. I'm very sorry, Dr. Jones <strong>won't be</strong> back in the clinic until 2 pm.</li>
+                    <li class="list-group-item">l. This summer, I <strong>will have been living</strong> in Birgunj for four years.</li>
+                    <li class="list-group-item">m. I don't think you <strong>will have</strong> any problems when you land in Pokhara.</li>
+                    <li class="list-group-item">n. The baby should be due soon, next week she <strong>will have been</strong> pregnant for nine months.</li>
+                    <li class="list-group-item">o. By the time we get home, they <strong>will have been playing</strong> football for 30 minutes.</li>
+                    <li class="list-group-item">p. When you get off the train, I <strong>will be waiting</strong> for you by the ticket machine.</li>
+                    <li class="list-group-item">q. This time next week, I <strong>will be skiing</strong> in Switzerland!</li>
+                    <li class="list-group-item">r. Now, I <strong>am going to check</strong> my answers.</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+
