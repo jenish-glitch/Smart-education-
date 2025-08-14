@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #388E3C;
+            --background-color: #f1f8e9;
+            --card-background: #ffffff;
+            --text-color: #333333;
+            --header-color: #1a1a1a;
+            --shadow-light: 0 4px 8px rgba(0, 0, 0, 0.05);
+            --shadow-medium: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow-medium);
+            position: relative;
+        }
+        
+        .lesson-title {
+            font-size: 1.5em;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 5px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .card {
+            background-color: var(--card-background);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: var(--shadow-light);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: var(--header-color);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        h2::before {
+            content: "📚";
+            font-size: 1.2em;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            color: var(--secondary-color);
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .match-words {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .match-words li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .match-words li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+        
+        .word-definition {
+            font-weight: 600;
+        }
+        
+        .word-meaning {
+            margin-bottom: 20px;
+        }
+        
+        .word-meaning dt {
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 5px;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 5px;
+        }
+        
+        .word-meaning dd {
+            padding-left: 15px;
+            margin-bottom: 10px;
+        }
+
+        .question-answer {
+            margin-bottom: 20px;
+        }
+
+        .question {
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 5px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .question::before {
+            content: "Q.";
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+        
+        .answer {
+            padding-left: 24px;
+            border-left: 3px solid var(--primary-color);
+            margin-left: 5px;
+        }
+        
+        .list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .list-item::before {
+            content: "•";
+            color: var(--primary-color);
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+        
+        .chronological-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .chronological-list li {
+            margin-bottom: 8px;
+            counter-increment: list-counter;
+        }
+        
+        .chronological-list li::before {
+            content: counter(list-counter) ". ";
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .autobiography-text {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .connective-sentence {
+            padding-left: 20px;
+        }
+        
+        .connective-sentence strong {
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            header {
+                padding: 30px 15px;
+            }
+            .lesson-title {
+                font-size: 1.2em;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="lesson-title">Lesson: Education</div>
+        <h1>Chapter Review</h1>
+        <p>A comprehensive overview of the chapter on education, vocabulary, and grammar.</p>
+    </header>
+
+    <div class="card">
+        <h2>Working with Words</h2>
+        <h3>A. Match the words in column 'A' with their meanings in column 'B'.</h3>
+        <ul class="match-words">
+            <li><span class="word-definition"><strong>expectantly:</strong></span> in a way that shows you are hoping for something, especially something good or exciting</li>
+            <li><span class="word-definition"><strong>beckon:</strong></span> to give a signal to somebody to move nearer or to follow you</li>
+            <li><span class="word-definition"><strong>grapple:</strong></span> to try hard to find a solution to a problem</li>
+            <li><span class="word-definition"><strong>texture:</strong></span> the way food or drink tastes or feels in your mouth</li>
+            <li><span class="word-definition"><strong>cobbled:</strong></span> having a surface that is made of small round stones</li>
+            <li><span class="word-definition"><strong>flimsy:</strong></span> thin and easily torn</li>
+            <li><span class="word-definition"><strong>attire:</strong></span> clothes, especially fine or formal ones</li>
+            <li><span class="word-definition"><strong>marvelous:</strong></span> extremely good; wonderful</li>
+            <li><span class="word-definition"><strong>dynamics:</strong></span> the science of the forces involved in movement</li>
+        </ul>
+
+        <h3>B. Use a dictionary and find the meanings of the following words related to people's life stories.</h3>
+        <div class="word-meaning">
+            <dt>Hagiography</dt>
+            <dd>The writing of the lives of saints.</dd>
+            
+            <dt>Psychobiography</dt>
+            <dd>A biographical study focusing on psychological factors, as childhood traumas and unconscious motives.</dd>
+            
+            <dt>Pathography</dt>
+            <dd>The study of the life of an individual or the history of a community with regard to the influence of a particular disease or psychological disorder.</dd>
+            
+            <dt>Chronicle</dt>
+            <dd>A factual written account of important or historical events in the order of their occurrence.</dd>
+            
+            <dt>Obituary</dt>
+            <dd>A notice of a death, especially in a newspaper, typically including a brief biography of the deceased person.</dd>
+            
+            <dt>Character sketch</dt>
+            <dd>A brief written description of a person's qualities.</dd>
+            
+            <dt>Profile</dt>
+            <dd>A short article giving a description of a person or organization.</dd>
+            
+            <dt>Memoir</dt>
+            <dd>A historical account or biography written from personal knowledge.</dd>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Comprehension</h2>
+        <h3>A. Put the following events in the life of Abdul Kalam in a chronological order.</h3>
+        <ol class="chronological-list">
+            <li>Abdul Kalam attended an elementary school at Rameswaram.</li>
+            <li>A new teacher in the school forbade Abdul Kalam to sit together with his Bramhin friend.</li>
+            <li>One day Abdul Kalam's teacher visited them to share his pride and pleasure about his performance.</li>
+            <li>They celebrated happiness with poli.</li>
+            <li>Many students did not understand well of Sivasubramania Iyer's lecture.</li>
+            <li>He then took the students to the seashore for a practical class.</li>
+            <li>Abdul Kalam was determined that he would make a future study about flight and flight systems.</li>
+        </ol>
+
+        <h3>B. Answer the following questions.</h3>
+        <div class="question-answer">
+            <div class="question">a. What were the causes of Abdul Kalam's happiness?</div>
+            <div class="answer">The causes of Abdul Kalam's happiness were his supportive father, loving mother, inspirational and motivational teachers, his keen interest in mathematics, and his dedication to his studies.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">b. Which two places did Abdul Kalam visit before going to school?</div>
+            <div class="answer">Abdul Kalam visited his Arabic tutoring class and his mathematics teacher's home before heading to school.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">c. What did he like about mathematics?</div>
+            <div class="answer">He liked to learn the rules and principles of mathematics and enjoyed solving complex number problems for hours.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">d. Why was the new teacher unhappy?</div>
+            <div class="answer">The new teacher was unhappy because he saw a Brahmin boy, Ramanadhan Sastry, and a Muslim boy, Abdul Kalam, sitting together on the same bench.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">e. Why did Abdul Kalam have to split with his intimate friend?</div>
+            <div class="answer">Abdul Kalam had to split with his intimate friend because of the new teacher's discriminating behavior regarding religion at Rameswaram Elementary School.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">f. What was the topic of Sivasubramania Iyer's class?</div>
+            <div class="answer">The topic of Sivasubramania Iyer's class was how birds could fly in the sky.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">g. How was the teacher's reaction when the students told him that they did not understand his lecture?</div>
+            <div class="answer">The teacher did not get upset when the students told him that they didn't understand his lecture.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">h. Why did Sivasubramania Iyer take his students to the seashore?</div>
+            <div class="answer">Sivasubramania Iyer took his students to the seashore because he wanted to give them a practical demonstration of the mechanism of bird flight.</div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <h2>Critical Thinking</h2>
+        <h3>a. APJ Abdul Kalam became a renowned aerospace scientist in his later life. Do you find any association of his childhood days in shaping his career? Explain with specific instances from the text.</h3>
+        <div class="answer">
+            <p>Yes, there is a strong association between Abdul Kalam's childhood days and his career as an aerospace scientist. His passion for mathematics and science was evident from an early age, as he consistently scored full marks in these subjects and spent hours solving complex number problems. The most influential moment came from his teacher, Sivasubramania Iyer, who, after finding that students didn't understand his lecture on flight dynamics, took them to the seashore for a practical demonstration. Watching the birds use their wings and tails to fly in proper balance deeply inspired Kalam. This experience determined his future path, leading him to study flight dynamics and eventually become a renowned aerospace scientist.</p>
+        </div>
+        <br>
+        <h3>b. Kalam mentions an instance of discrimination against him in his school life. What picture of society does he want to depict by mentioning the incident? Discuss.</h3>
+        <div class="answer">
+            <p>By mentioning the incident of religious discrimination in his school, Kalam aims to depict a society deeply divided along religious lines. The new teacher's refusal to let Abdul, a Muslim boy, sit next to his Brahmin friend, Ramanadhan Sastry, highlights the rigid social hierarchies and prejudices of the time. This behavior, coming from an educated individual, illustrates how such discrimination was ingrained in the societal fabric. Abdul's experience of being separated from his intimate friend paints a sad picture of a society where friendship and innocence were overshadowed by religious bigotry. The incident serves as a powerful reminder of a past where people, even children, were judged not by their character but by their religious identity.</p>
+        </div>
+    </div>
+    
+    <div class="card">
+        <h2>Writing</h2>
+        <h3>Write a short autobiography featuring your childhood life using the following guidelines.</h3>
+        <div class="autobiography-text">
+            <p>I was born in a small village in the northeastern part of Nepalgunj District, into a middle-class family of five. My father is a tailor, and my mother is a loving housewife. I have an older brother and a younger sister, both of whom are also students.</p>
+            <p>As a student, my daily routine revolves around studying. I usually wake up at 6:00 am to get ready for class after completing my morning routines. I would revise my notes before my classes, which ran from 8:00 am to 1:00 pm. After class, I'd spend some time with friends before heading home. I often took a nap until 4:30 pm, after which I would go out to play with my siblings. We would play different games each evening, like football one day and cricket the next. These memories are very dear to me.</p>
+            <p>I also fondly remember a family picnic where we visited the zoo. My mother packed delicious food, and my father took so many pictures that day. When I look at those photos, the memory feels so vivid, as if it happened just yesterday. My childhood memories are a source of happiness and make me smile whenever I feel low.</p>
+        </div>
+    </div>
+    
+    <div class="card">
+        <h2>Grammar</h2>
+        <h3>A. Study the following sentences and underline the connectives.</h3>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li class="connective-sentence">a. <strong><u>Although</u></strong> she spoke very fast, I understood what she meant to say.</li>
+            <li class="connective-sentence">b. <strong><u>In spite of</u></strong> her hard labour, she failed her exam.</li>
+            <li class="connective-sentence">c. <strong><u>Though</u></strong> he had all the required qualifications, he did not get the job.</li>
+            <li class="connective-sentence">d. <strong><u>Despite</u></strong> having all the qualifications, he did not get the job.</li>
+        </ul>
+
+        <h3>B. Join the following pairs of sentences twice, using although/though/even though and despite/in spite of as in the example.</h3>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li class="list-item">a. He is a millionaire. He lives in a simple house.<br>– <strong>Although</strong> he is a millionaire, he lives in a simple house.<br>– <strong>Despite</strong> being a millionaire, he lives in a simple house.</li>
+            <li class="list-item">b. The weather was extremely bad. The pilot landed the plane safely.<br>– <strong>In spite of</strong> the extremely bad weather, the pilot landed the plane safely.<br>– <strong>Although</strong> the weather was extremely bad, the pilot landed the plane safely.</li>
+            <li class="list-item">c. We study in the same college. We hardly see each other.<br>– <strong>Despite</strong> studying in the same college, we hardly see each other.<br>– <strong>Although</strong> we study in the same college, we hardly see each other.</li>
+            <li class="list-item">d. It rained heavily. We enjoyed our holiday.<br>– <strong>Although</strong> it rained heavily, we enjoyed our holiday.<br>– <strong>In spite of</strong> the heavy rain, we enjoyed our holiday.</li>
+            <li class="list-item">e. I had an umbrella. I got wet in the rain.<br>– <strong>Despite</strong> having an umbrella, I got wet in the rain.<br>– <strong>Although</strong> I had an umbrella, I got wet in the rain.</li>
+            <li class="list-item">f. I was really tired. I could not sleep for a moment.<br>– <strong>Although</strong> I was really tired, I could not sleep for a moment.<br>– I couldn't sleep <strong>despite</strong> being very tired.</li>
+            <li class="list-item">g. She has a very good accent in English. She failed the interview of a newsreader.<br>– <strong>Despite</strong> having a very good accent in English, she failed the interview of a newsreader.<br>– <strong>Although</strong> she has a very good accent in English, she failed the interview of a newsreader.</li>
+            <li class="list-item">h. Lhasa has extremely cold weather in winter. Millions of tourists go there in January.<br>– Millions of tourists go to Lhasa in January, <strong>even though</strong> it has extremely cold weather in winter.<br>– <strong>Despite</strong> having extremely cold weather in winter, millions of tourists go to Lhasa in January.</li>
+            <li class="list-item">i. He was badly injured in the first round of the boxing match. He was victorious in the third round.<br>– <strong>In spite of</strong> being badly injured in the first round of the boxing match, he was victorious in the third round.<br>– <strong>Although</strong> he was badly injured in the first round of the boxing match, he was victorious in the third round.</li>
+        </ul>
+
+        <h3>C. Complete each sentence in an appropriate way.</h3>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li class="list-item">a. He passed the exam although <strong>he hadn't prepared well</strong>.</li>
+            <li class="list-item">b. She climbed the mountain in spite of <strong>her leg injury</strong>.</li>
+            <li class="list-item">c. He did not give any alms to the beggars even though <strong>he earned a lot</strong>.</li>
+            <li class="list-item">d. In spite of his poor eyesight, <strong>he is conducting online courses</strong>.</li>
+            <li class="list-item">e. She does not go to parties, though <strong>she is very sociable</strong>.</li>
+            <li class="list-item">f. He could not pass the test, in spite of <strong>his ten attempts</strong>.</li>
+            <li class="list-item">g. He refused to eat anything despite <strong>having an appetite</strong>.</li>
+            <li class="list-item">h. He could not score good grades in the SEE exams in spite of <strong>his hard work with private coaching</strong>.</li>
+            <li class="list-item">i. She accepted the job although <strong>she couldn't meet her salary expectation</strong>.</li>
+            <li class="list-item">j. Even though we had planned everything carefully, <strong>we could not complete our mission</strong>.</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
