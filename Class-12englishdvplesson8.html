@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Culture - Chapter Summary</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #5D5FEF;
+            --secondary-color: #A8A8FF;
+            --background-color: #F4F7FC;
+            --card-background: #FFFFFF;
+            --text-color: #333333;
+            --heading-color: #1A1A1A;
+            --border-color: #E0E0E0;
+            --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --shadow-medium: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --section-spacing: 2.5rem;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #8A8BFF);
+            color: #ffffff;
+            padding: 2.5rem 1rem;
+            text-align: center;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            margin-bottom: var(--section-spacing);
+            box-shadow: var(--shadow-medium);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .section {
+            background-color: var(--card-background);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-light);
+            margin-bottom: var(--section-spacing);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: var(--heading-color);
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 1rem;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .subsection {
+            margin-bottom: 2rem;
+        }
+
+        .list-group {
+            padding-left: 0;
+        }
+
+        .list-group li {
+            list-style: none;
+            margin-bottom: 0.75rem;
+            padding: 0.75rem 1rem;
+            background-color: #F1F5F9;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+            transition: background-color 0.3s ease;
+        }
+
+        .list-group li:hover {
+            background-color: #E2E8F0;
+        }
+        
+        .question-answer {
+            margin-bottom: 1.5rem;
+        }
+
+        .question-answer p {
+            margin: 0;
+        }
+
+        .question-answer .question {
+            font-weight: 600;
+            color: var(--primary-color);
+            background-color: #EBF1FF;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+        }
+
+        .question-answer .answer {
+            padding: 0.75rem 1rem;
+            background-color: #F8F9FA;
+            border-left: 3px solid var(--secondary-color);
+            border-radius: 0 0 8px 8px;
+        }
+
+        .definition-list dt {
+            font-weight: 600;
+            color: var(--heading-color);
+            margin-bottom: 0.5rem;
+            background-color: #EBF1FF;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+        }
+
+        .definition-list dd {
+            margin-left: 1rem;
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--secondary-color);
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        .word-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+        }
+
+        .word-table th, .word-table td {
+            text-align: left;
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .word-table th {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .word-table tr:nth-child(even) {
+            background-color: #F8F9FA;
+        }
+        
+        .word-table tr:hover {
+            background-color: #EBF1FF;
+        }
+        
+        .word-table td:nth-child(2), .word-table td:nth-child(3) {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .grammar-item {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: #F1F5F9;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+            box-shadow: var(--shadow-light);
+        }
+
+        .original-sentence {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #E0E0E0;
+        }
+
+        .corrected-sentence {
+            font-weight: 600;
+            color: var(--heading-color);
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 1.5rem;
+            }
+            header h1 {
+                font-size: 3.5rem;
+            }
+            .section {
+                padding: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Human Culture</h1>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="section">
+            <h2>Working with words</h2>
+            
+            <div class="subsection">
+                <h3>A. Complete the given sentences with the suitable words.</h3>
+                <ul class="list-group">
+                    <li>a. The annual report has caused acute **embarrassment** to the government.</li>
+                    <li>b. Ellen has worn high-heels. She is **teetering**.</li>
+                    <li>c. Look! The poor horse is **dragging** a heavy load.</li>
+                    <li>d. As they approached the **outskirts** of the city, Ella's mood visibly lightened.</li>
+                    <li>e. The parcel was wrapped in plain brown paper. It still looks **attractive**.</li>
+                    <li>f. Fruits and vegetables grow in **abundance** in the Terai region.</li>
+                    <li>g. They can **abstract** precious medicines from ordinary substances.</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>C. Add suitable suffix to the root words.</h3>
+                <div class="table-responsive">
+                    <table class="word-table">
+                        <thead>
+                            <tr>
+                                <th>Root Word</th>
+                                <th>Suffix</th>
+                                <th>New Word</th>
+                                <th>Part of Speech</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Neighbour</td><td>hood</td><td>Neighbourhood</td><td>(n.)</td></tr>
+                            <tr><td>Comfort</td><td>able</td><td>Comfortable</td><td>(adj.)</td></tr>
+                            <tr><td>Shop</td><td>ing</td><td>Shopping</td><td>(n.)</td></tr>
+                            <tr><td>Husk</td><td>er</td><td>Husker</td><td>(n.)</td></tr>
+                            <tr><td>Squeamish</td><td>ly</td><td>Squeamishly</td><td>(adv.)</td></tr>
+                            <tr><td>Change</td><td>ing</td><td>Changing</td><td>(adj.)</td></tr>
+                            <tr><td>Shine</td><td>ing</td><td>Shining</td><td>(adv.)</td></tr>
+                            <tr><td>Colloquial</td><td>ly</td><td>Colloquially</td><td>(adv.)</td></tr>
+                            <tr><td>Collect</td><td>ion</td><td>Collection</td><td>(n.)</td></tr>
+                            <tr><td>Embarrass</td><td>ment</td><td>Embarrassment</td><td>(n.)</td></tr>
+                            <tr><td>Persuade</td><td>ive</td><td>Persuasive</td><td>(adj.)</td></tr>
+                            <tr><td>Type</td><td>ing</td><td>Typing</td><td>(adj.)</td></tr>
+                            <tr><td>Differ</td><td>ence</td><td>Difference</td><td>(n.)</td></tr>
+                            <tr><td>Ship</td><td>ing</td><td>Shipping</td><td>(adj.)</td></tr>
+                            <tr><td>Tropic</td><td>al</td><td>Tropical</td><td>(adj.)</td></tr>
+                            <tr><td>Drive</td><td>ing</td><td>Driving</td><td>(adj.)</td></tr>
+                            <tr><td>Reside</td><td>ence</td><td>Residence</td><td>(n.)</td></tr>
+                            <tr><td>Brother</td><td>hood</td><td>Brotherhood</td><td>(n.)</td></tr>
+                            <tr><td>Fresh</td><td>ness</td><td>Freshness</td><td>(n.)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="subsection">
+                <h3>D. Make sentences of your own using the given words.</h3>
+                <dl class="definition-list">
+                    <dt>Sewage</dt>
+                    <dd>Sewage often pollutes the ocean.</dd>
+                    <dt>Sludge</dt>
+                    <dd>A lot of sludge was scooped out of the base of the river.</dd>
+                    <dt>Organic waste</dt>
+                    <dd>Oxygen is required for efficient decomposition of the organic wastes.</dd>
+                    <dt>Inorganic waste</dt>
+                    <dd>The inorganic waste is being processed in a new government-owned plant.</dd>
+                    <dt>Methane</dt>
+                    <dd>The ignition of methane gas killed eight men.</dd>
+                    <dt>Waste reduction</dt>
+                    <dd>The government should focus on waste reduction for a pollution-free environment.</dd>
+                    <dt>Monofil</dt>
+                    <dd>It was caught in a monofilament gill in about 60 feet of water.</dd>
+                    <dt>Market waste</dt>
+                    <dd>Proper recycling and management of market waste should be everyone's first priority.</dd>
+                    <dt>Incineration</dt>
+                    <dd>The government is proposing to incinerate cattle carcasses at 22 sites.</dd>
+                    <dt>Hazardous waste</dt>
+                    <dd>Regular CFLs are categorized as household hazardous waste.</dd>
+                </dl>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Comprehension</h2>
+            <div class="subsection">
+                <h3>Answer the following questions.</h3>
+                <div class="question-answer">
+                    <div class="question">a. How does the author describe the Japanese waste management system?</div>
+                    <div class="answer">The author describes the Japanese waste management system saying that three nights a week, the residents of his neighborhood deposit their household trash at specified areas on the street corners, wrapped in neat bundles, like gifts, and it disappears at dawn.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">b. What are the two reasons behind the existence of sodaigomi in Japanese culture?</div>
+                    <div class="answer">The two reasons behind the existence of sodaigomi in Japanese culture are: one is the small size of the typical Japanese house and another is the Japanese desire for freshness and purity.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">c. What, according to the author, do the Japanese feel at the thought of buying second hand items?</div>
+                    <div class="answer">According to the author, the Japanese feel embarrassment at the thought of buying second hand items.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">d. How is Malaysian culture different from Japanese culture concerning the used items?</div>
+                    <div class="answer">In Malaysian culture no one throws anything away whereas in Japanese culture heaps of clean, new-looking merchandise are thrown on the street. Several customer bids enthusiastically for second handed small to small things in Malaysia whereas shoppers seem to feel embarrassment at the thought of buying second hand items in Japan.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">e. Why did the author feel awkward at the sodaigomi pile?</div>
+                    <div class="answer">The author felt awkward at the sodaigomi pile because he never believed that everything looing perfectly clean, whole, and serviceable is thrown out in Japanese culture.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">f. How many articles did the author bring to his house one after another?</div>
+                    <div class="answer">The author laid in as many provisions as he decently could. At first he grabbed an ordinary low Japanese tea table. He then brought a shiny new bell for one son's bicycle, a small but attractive wooden cupboard, a complete set of wrenches and screwdrivers in a metal toolbox, a Naugahyde-covered barstool and a lacquer serving tray.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">g. Why do most people try to find things in trash pile 'in the dead of the night'?</div>
+                    <div class="answer">Most people try to find things in trash pile 'in the dead of the night' because everyone can pretend not to notice and they can bring no shame upon their kind.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">h. How did the author's family assimilate Japanese culture in using consumer goods?</div>
+                    <div class="answer">The author's family assimilated Japanese culture in using consumer goods by operating in the dead of night to collect the essential materials or goods thrown out in the sodaigomi pile.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Critical thinking</h2>
+            <div class="subsection">
+                <div class="question-answer">
+                    <div class="question">a. If you happen to be in Japan someday, will you collect articles from sodaigomi? Why or why not?</div>
+                    <div class="answer">Yes, I would have collected articles from sodaigomi if I happen to be in Japan someday. I live in the country where people only buy the new things after it gets old, damaged and unable to function properly. So, living in Japanese culture, following the sodaigomi tradition is not of my kind. It is painful to go from the world to one in which we didn't have any household goods, couldn't bring ourselves to buy the overpriced new ones in the store – and then saw heaps of clean, new-looking merchandise just sitting on the street. By picking up items form sodaigomi, I would save a lot of money and would live a good life. So, definitely I will collect articles from sodaigomi instead of going for the new one.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">b. There are some second hand shops in Nepal, too. But, people are not much interested in them. What practice would be suitable in managing second hand items in Nepal?</div>
+                    <div class="answer">Some consumers love buying and selling second-hand items due to cost-effectiveness, as well as ethical and environmental benefits. But many of the peoples if Nepal are not much interested in them. So to encourage second hand shopping in Nepal following things should be considered:
+                        <ol>
+                            <li>Second hand shops should partner with the brands that sell well, and provide assistance for consignors on what products and what brands are best to consign with.</li>
+                            <li>A realistic price should be kept by starting with the original value of the newly manufactured item, and then reducing it in accordance with wear and tear and extent of usage.</li>
+                            <li>Providing additional support, such as offering consignment consultations with advice on pricing, photographing, and shipping items can encourage more people to buy and sell on these shops.</li>
+                            <li>Second hand stores have vibrant social media followings and it should work toward getting out to as many people as possible.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Grammar</h2>
+            <div class="subsection">
+                <h3>B. Use the words from the brackets to complete the sentences.</h3>
+                <ol class="list-group">
+                    <li>This house is very small. I want to buy a **much bigger** one.</li>
+                    <li>I liked the magic show. It was **far more exciting** than I'd expected.</li>
+                    <li>It was very cold yesterday. It's a **bit warmer** today.</li>
+                    <li>The warmer the weather the **better** I feel.</li>
+                    <li>An average American earns **considerably higher** than an average Nepali.</li>
+                    <li>Health care in Nepal is not **as expensive** as it is in the US.</li>
+                    <li>I think the problem is **far more complicated** than it seems.</li>
+                    <li>You are driving very fast. Would you please drive a **bit slowly**?</li>
+                    <li>Your handwriting is not legible. Can you write a **bit neat**?</li>
+                </ol>
+            </div>
+            <div class="subsection">
+                <h3>C. Rewrite the following sentences with the sentence beginnings given below.</h3>
+                <div class="question-answer">
+                    <div class="question">a. Kabir is less intelligent than he pretends.</div>
+                    <div class="answer">He is not as intelligent as he pretends.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">b. I am busy today but I was busier yesterday.</div>
+                    <div class="answer">I'm not as busy as I was yesterday.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">c. Hari has lived in Kathmandu for 10 years but Bikram for 20 years.</div>
+                    <div class="answer">Bikram has lived in Kathmandu 10 years more than Hari.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">d. I used to study 12 hours a day but nowadays I study only 5 hours a day.</div>
+                    <div class="answer">I don't study as much as I used to do.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">e. It's a very good room in our hotel. In fact, it's the best compared to other.</div>
+                    <div class="answer">It's a very good room in our hotel. In fact, it's the best compared to others.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">f. He earns 30 thousand rupees a month but spends 40 thousand.</div>
+                    <div class="answer">He spends more than he earns.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">g. There is no other mountain higher than Mt. Everest in the world.</div>
+                    <div class="answer">Mt. Everest is the highest mountain in the world.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">h. The place was nearer than I thought.</div>
+                    <div class="answer">It was not as far as I thought.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">i. Bharat can play better than Mohan.</div>
+                    <div class="answer">Mohan can't play as good as Bharat.</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>
