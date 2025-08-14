@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #f44336;
+            --secondary-color: #d32f2f;
+            --background-color: #fff8f8;
+            --card-background: #ffffff;
+            --text-color: #333333;
+            --header-color: #1a1a1a;
+            --shadow-light: 0 4px 8px rgba(0, 0, 0, 0.05);
+            --shadow-medium: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow-medium);
+            position: relative;
+        }
+        
+        .lesson-title {
+            font-size: 1.5em;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 5px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .card {
+            background-color: var(--card-background);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: var(--shadow-light);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: var(--header-color);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        h2::before {
+            content: "⚽";
+            font-size: 1.2em;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            color: var(--secondary-color);
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .word-origin {
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 15px;
+        }
+
+        .word-origin p {
+            margin: 5px 0;
+        }
+
+        .word-origin strong {
+            color: var(--secondary-color);
+        }
+
+        .question-answer {
+            margin-bottom: 20px;
+        }
+
+        .question {
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 5px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .question::before {
+            content: "Q.";
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+        
+        .answer {
+            padding-left: 24px;
+            border-left: 3px solid var(--primary-color);
+            margin-left: 5px;
+        }
+        
+        .list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .list-item::before {
+            content: "•";
+            color: var(--primary-color);
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+
+        .punctuation-passage {
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            font-style: italic;
+        }
+
+        .pronunciation-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .pronunciation-group {
+            background-color: #f1f3f6;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            header {
+                padding: 30px 15px;
+            }
+            .lesson-title {
+                font-size: 1.2em;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            .card {
+                padding: 20px;
+            }
+            .pronunciation-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="lesson-title">Lesson: Sports</div>
+        <h1>Chapter Review</h1>
+        <p>A comprehensive overview of the chapter on sports, vocabulary, and grammar.</p>
+    </header>
+
+    <div class="card">
+        <h2>Working with Words</h2>
+        <h3>A. Find out the origin and the meaning of the following words from the text.</h3>
+        <div class="word-origin">
+            <p><strong>Penalty:</strong> From Middle French <em>pénalité</em>. Meaning: a punishment imposed for breaking a law, rule, or contract.</p>
+            <p><strong>Major:</strong> From Latin word "great" and French word "majeur". Meaning: important, serious, or significant.</p>
+            <p><strong>Stadium:</strong> From Latin word meaning "study," "zeal," "dedication". Meaning: A center for the study of the Liberal Arts.</p>
+            <p><strong>Trophy:</strong> From the French <em>trophée</em> in 1513, Old French <em>trophee</em>, from Latin <em>trophaeum</em>. Meaning: A cup or other decorative object awarded as a prize for a victory or success.</p>
+            <p><strong>Defender:</strong> From the Latin word <em>defensor</em> and Old French <em>defendeor</em>. Meaning: One who protects from injury, a champion.</p>
+            <p><strong>Anthem:</strong> From Greek <em>antiphōnos</em>. Meaning: A rousing or uplifting song identified with a particular group, body, or cause.</p>
+            <p><strong>Dejection:</strong> From the Latin <em>deicere</em> meaning "throw down." Meaning: A sad and depressed state; low spirits.</p>
+            <p><strong>Jubilant:</strong> From Latin word <em>jubilare</em>. Meaning: Making a joyful noise.</p>
+            <p><strong>Record:</strong> From Latin words <em>cor</em> and <em>re-</em>. Meaning: A thing constituting a piece of evidence about the past, especially an account kept in writing or some other permanent form.</p>
+            <p><strong>Suave:</strong> From Latin word <em>suavis</em> means "agreeable." Meaning: Charming, confident, and elegant.</p>
+            <p><strong>Podium:</strong> From Greek words <em>pous</em> and <em>pod</em> meaning "foot." Meaning: finish first, second, or third, so as to appear on a podium to receive an award.</p>
+            <p><strong>Tournament:</strong> From old French <em>torneiement</em>. Meaning: A series of contests between a number of competitors, competing for an overall prize.</p>
+            <p><strong>Reminiscent:</strong> From Latin word <em>reminisce</em> meaning remembering. Meaning: Tending to remind one of something.</p>
+            <p><strong>Incredible:</strong> From Latin word <em>In-</em> meaning "not" and <em>credibills</em> meaning "believe."</p>
+            <p><strong>Savor:</strong> From Latin word <em>sapere</em> meaning "to taste."</p>
+        </div>
+
+        <h3>B. Consult a dictionary and define the following terms related to cricket.</h3>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li class="list-item"><strong>Stump:</strong> Each of the three upright pieces of wood which form a wicket.</li>
+            <li class="list-item"><strong>Crease:</strong> Any of a number of lines marked on the pitch at specified places.</li>
+            <li class="list-item"><strong>Boundary:</strong> A hit crossing the limits of the field, scoring four or six runs.</li>
+            <li class="list-item"><strong>Sixer:</strong> A hit for 6 runs.</li>
+            <li class="list-item"><strong>Googly:</strong> Type of deceptive delivery bowled by a right-arm leg-spin bowler.</li>
+            <li class="list-item"><strong>Leg-by:</strong> A run scored from a ball that has touched part of the batsman's body (apart from the hand) without touching the bat.</li>
+            <li class="list-item"><strong>Wicket:</strong> Each of the sets of three stumps with two bails across the top at either end of the pitch.</li>
+            <li class="list-item"><strong>Maiden:</strong> An over in which no runs are scored.</li>
+            <li class="list-item"><strong>Pitch:</strong> The strip of ground between the two sets of stumps.</li>
+            <li class="list-item"><strong>Power-play:</strong> The set of overs with special fielding rules during a limited-overs cricket match.</li>
+            <li class="list-item"><strong>No-ball:</strong> An unlawfully delivered ball, counting one as an extra to the batting side if not otherwise scored from.</li>
+            <li class="list-item"><strong>Yorker:</strong> A ball bowled that hits the cricket pitch around the batsman's feet.</li>
+        </ul>
+        
+        <h3>C. Pronunciation</h3>
+        <div class="pronunciation-grid">
+            <div class="pronunciation-group">
+                <strong>/aɪ/</strong>
+                <p>Fine, shine, why, height, bright, might, five, sight, white, by</p>
+            </div>
+            <div class="pronunciation-group">
+                <strong>/eɪ/</strong>
+                <p>Rein, rail, sleigh, snail, break, fake, eight, game, claim, friend, gait, hail, frame</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Comprehension</h2>
+        <h3>A. State whether the following sentences are True or False or Not Given.</h3>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li class="list-item">a. England was the champion of 1996 World Cup Football. – <strong>True</strong></li>
+            <li class="list-item">b. Italy bagged its first Euro Cup trophy in the Euro Cup 2020. – <strong>True</strong></li>
+            <li class="list-item">c. The English team has won more trophies in International Football than Italy. – <strong>False</strong></li>
+            <li class="list-item">d. According to the captain of the English team, the pain of losing a match has lasting effects. – <strong>Not Given</strong></li>
+            <li class="list-item">e. The Italian team was playing in their home ground. – <strong>False</strong></li>
+            <li class="list-item">f. The goalkeeper of the Italian team had performed the best than any other players in the match. – <strong>True</strong></li>
+        </ul>
+
+        <h3>B. Answer the following questions.</h3>
+        <div class="question-answer">
+            <div class="question">a. Why does the reporter say that England is waiting to heal its half-century long pain?</div>
+            <div class="answer">The reporter said that England is waiting to heal its half-century long pain because England had not won any major title since 1966 A.D.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">b. How did the Italian players react as soon as they became the champions?</div>
+            <div class="answer">As soon as they became the champions, the Italian players reacted by shouting into a TV camera amid the celebrations, mocking the famous lyric "it's coming home" from the England team's anthem.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">c. Why did Saka and Sancho cry?</div>
+            <div class="answer">Saka and Sancho cried because of their third straight penalty failure in the shootout.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">d. Penalty shoot-out has long been a bitter experience for the English team. Why?</div>
+            <div class="answer">Penalty shoot-out has long been a bitter experience for the English team because they missed three penalty shoot-outs consequently in the final match.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">e. State the contribution of Roberto Mancini to the Italian football.</div>
+            <div class="answer">Less than four years ago, Italy was at its lowest point in football history, having failed to qualify for the World Cup for the first time in six decades. Under Roberto Mancini, they are now the best team in Europe with a national record of 34 games unbeaten. Mancini brought great confidence to the Italian football team and guided them to victory in the Euro 2020.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">f. How does the Euro Cup final 2020 remind the audiences of the 2018 World Cup semifinals?</div>
+            <div class="answer">The Euro Cup Final 2020 reminds the audiences of the 2018 World Cup semifinals because, similar to the 2018 match against Croatia, England also scored early against Italy but then spent most of the game chasing its opponent's midfield before losing in extra time.</div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <h2>Critical Thinking</h2>
+        <h3>a. "Every match is a new opportunity. Put its failure behind and start over again." Does this apply to the Italian football team when we analyse their performance from their failure to qualify for the World Cup Football to their victory in the European Championship in these four years?</h3>
+        <div class="answer">
+            <p>Yes, the statement "Every match is a new opportunity. Put its failure behind and start over again" perfectly applies to the Italian football team. Following their failure to qualify for the World Cup for the first time in 60 years, the Italian team, under Roberto Mancini, underwent a radical transformation. They didn't dwell on their failure but used it as a catalyst for change and improvement. Mancini instilled a new culture of confidence, strategy, and organization. This enabled them to go on a national record of 34 games unbeaten and ultimately win the Euro 2020. Their journey is a testament to the power of learning from past failures and approaching every new match as a fresh opportunity to succeed.</p>
+        </div>
+        <br>
+        <h3>b. When a team plays in a home ground, it gets a huge support from the audience in the stadium. Does this support them to win the match or the players may feel pressure to win and thus lose? What do you think?</h3>
+        <div class="answer">
+            <p>Playing on home ground can have a dual effect on a team. On one hand, the massive support from home fans can provide a significant psychological and confidence boost, often referred to as the "home ground advantage." This can lead to better performance, as players feel more encouraged and motivated. The familiarity with the playing conditions, weather, and pitch also gives the home team a tactical edge.</p>
+            <p>However, this support can also create immense pressure. The expectation to perform well and not disappoint the home crowd can be overwhelming for some players. In the case of the Euro Cup 2020 final, England had not won a major tournament since 1966. This long wait created a burden of expectation, and the pressure from the home crowd at Wembley might have contributed to the team's lack of faith and eventual loss in the penalty shootout. Therefore, while home ground support can be a powerful tool for victory, it can also lead to increased pressure, which may cause players to falter and lose a match.</p>
+        </div>
+    </div>
+    
+    <div class="card">
+        <h2>Writing</h2>
+        <h3>A. Punctuate the following passage with appropriate punctuation marks.</h3>
+        <div class="punctuation-passage">
+            A lot of people try to get away from home for a few days each year for a holiday. There are lots of things to choose from, and where you go depends on how much money you've got to spend. Ideas for holidays include relaxing on a beach, exploring cities, and skiing. One man wanted to go to Australia but thought he'd never have enough money to get there. He'd go to his brother's caravan at the seaside instead. A young woman wanted to go clubbing in Ibiza as she'd heard it was a lot of fun.
+        </div>
+    </div>
+    
+    <div class="card">
+        <h2>Grammar</h2>
+        <h3>B. Complete the following sentences with much, many, few or little.</h3>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li class="list-item">a. He is an introvert. He has got very <strong>few</strong> friends.</li>
+            <li class="list-item">b. I am busy in preparing my examinations. I have very <strong>little</strong> time to give to you.</li>
+            <li class="list-item">c. The entire winter season was dry this year. We had <strong>little</strong> rain.</li>
+            <li class="list-item">d. Our town has almost been modernized. There are <strong>few</strong> old buildings left.</li>
+            <li class="list-item">e. You can come today. I haven't got <strong>much</strong> to do.</li>
+            <li class="list-item">f. The party was crowded. There were too <strong>many</strong> people.</li>
+            <li class="list-item">g. How <strong>many</strong> photographs did you take while you were in Switzerland?</li>
+            <li class="list-item">h. There was <strong>little</strong> traffic so I came in time.</li>
+            <li class="list-item">i. Can I borrow a <strong>few</strong> books from you?</li>
+            <li class="list-item">j. Mohan can't be a good teacher. He has <strong>little</strong> patience.</li>
+        </ul>
+
+        <h3>C. Put each or every in the following sentences.</h3>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li class="list-item">a. The party split into three factions, <strong>each</strong> faction headed by a former prime minister.</li>
+            <li class="list-item">b. Leap years occur <strong>every</strong> four years.</li>
+            <li class="list-item">c. <strong>Every</strong> parent worries about their children.</li>
+            <li class="list-item">d. We had a great time in Singapore. We enjoyed <strong>every</strong> minute of our time.</li>
+            <li class="list-item">e. I could catch the main idea of his speech but I didn't understand <strong>each</strong> of his words.</li>
+            <li class="list-item">f. In Nepal, <strong>every</strong> motorcycle rider should wear a helmet.</li>
+            <li class="list-item">g. You must read <strong>each</strong> of these books for the exam.</li>
+        </ul>
+
+        <h3>D. Rewrite the following sentences using all of, most of, none of, both of or some of.</h3>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li class="list-item">a. Your garden is superb. <strong>Most of</strong> the flowers are beautiful.</li>
+            <li class="list-item">b. Do you know Bharat and Kamal? Of course, I do. <strong>Both of</strong> them are my friends.</li>
+            <li class="list-item">c. I bought a box of apples thinking it would be cheaper but I was mistaken. <strong>All of</strong> them were rotten.</li>
+            <li class="list-item">d. When I was in the town, I asked some people for direction but <strong>none of</strong> them were able to help me. I had to call my friend.</li>
+            <li class="list-item">e. We all were soaked in the rain because <strong>none of</strong> us had carried an umbrella.</li>
+            <li class="list-item">f. My father is healthy in his seventies but he feels isolated because <strong>all of</strong> his friends are dead now.</li>
+            <li class="list-item">g. <strong>Some of</strong> the tourists are Korean too. (Original sentence revised for clarity: All of the tourists are not Chinese.)</li>
+        </ul>
+
+        <h3>E. Choose the best word from the brackets to complete the sentences.</h3>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li class="list-item">a. Give me <strong>the</strong> money I owe you. (which/the/a/an)</li>
+            <li class="list-item">b. I want <strong>the</strong> boat which would take me to the island. (the/an/those/a)</li>
+            <li class="list-item">c. Could you pour me <strong>some</strong> water, please? (many/few/these/some)</li>
+            <li class="list-item">d. Only a <strong>few</strong> employees know how important the project was. (a few/a little/little/few)</li>
+            <li class="list-item">e. He was looking for <strong>an</strong> umbrella. (an/a/those/these)</li>
+            <li class="list-item">f. <strong>A large amount of</strong> water was evaporated due to excessive heat. (A large number of/ A lot of/ A large amount of/Many)</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
+
