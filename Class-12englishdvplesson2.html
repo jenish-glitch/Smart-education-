@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3f51b5;
+            --secondary-color: #2e3b8a;
+            --background-color: #e8eaf6;
+            --card-background: #ffffff;
+            --text-color: #333333;
+            --header-color: #1a1a1a;
+            --shadow-light: 0 4px 8px rgba(0, 0, 0, 0.05);
+            --shadow-medium: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow-medium);
+            position: relative;
+        }
+
+        .lesson-title {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5em;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-top: 20px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .card {
+            background-color: var(--card-background);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: var(--shadow-light);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: var(--header-color);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        h2::before {
+            content: "🏠";
+            font-size: 1.2em;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            color: var(--secondary-color);
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .puzzle-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .puzzle-clue {
+            background-color: #f1f3f6;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .word-meaning {
+            margin-bottom: 20px;
+        }
+        
+        .word-meaning dt {
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 5px;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 5px;
+        }
+        
+        .word-meaning dd {
+            padding-left: 15px;
+            margin-bottom: 10px;
+        }
+
+        .question-answer {
+            margin-bottom: 20px;
+        }
+
+        .question {
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 5px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .question::before {
+            content: "Q.";
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+        
+        .answer {
+            padding-left: 24px;
+            border-left: 3px solid var(--primary-color);
+            margin-left: 5px;
+        }
+
+        .list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .list-item::before {
+            content: "•";
+            color: var(--primary-color);
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            header {
+                padding: 30px 15px;
+            }
+            .lesson-title {
+                font-size: 1.2em;
+                top: 15px;
+            }
+            header h1 {
+                font-size: 2em;
+                margin-top: 15px;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="lesson-title">Lesson: Family</div>
+        <h1>Chapter Review</h1>
+        <p>An in-depth look into family structures, roles, and societal changes.</p>
+    </header>
+
+    <div class="card">
+        <h2>Working with Words</h2>
+        <h3>A. Find the words from the text and solve the puzzle.</h3>
+        <div class="puzzle-grid">
+            <div class="puzzle-clue">
+                <strong>ACROSS</strong>
+                <p>1. the custom of having more than one wife at the same time: <strong>Polygamy</strong></p>
+                <p>5. to find an acceptable way of dealing with opposing ideas, needs etc.: <strong>Conflict</strong></p>
+                <p>6. the process in which towns, streets, etc. are built where there was once countryside: <strong>Urbanization</strong></p>
+                <p>7. the process by which somebody learns to behave in an acceptable way in their society: <strong>Socialization</strong></p>
+            </div>
+            <div class="puzzle-clue">
+                <strong>DOWN</strong>
+                <p>1. ruled or controlled by men: <strong>Patriarchy</strong></p>
+                <p>2. the act of taking over a position: <strong>takeover</strong></p>
+                <p>3. done in a way without caring if people are shocked: <strong>surprise</strong></p>
+                <p>4. single–parent: <strong>lone-parent</strong></p>
+            </div>
+        </div>
+        
+        <h3>B. Find the meanings of the following family–related words and use them in your own sentences.</h3>
+        <div class="word-meaning">
+            <dt>Nuclear family</dt>
+            <dd>Meaning: A family of a couple and their dependent children<br>Sentence: I live in a nuclear family and my parents are modern enough.</dd>
+            
+            <dt>Monogamy</dt>
+            <dd>Meaning: The practice of marrying or state of being married to one person at a time<br>Sentence: When my husband and I got married, we took a vow of monogamy.</dd>
+            
+            <dt>Sibling–in–law</dt>
+            <dd>Meaning: Brother–in–law or sister–in–law<br>Sentence: I had a sibling–in–law, who came last Monday to see me.</dd>
+            
+            <dt>Milk kinship</dt>
+            <dd>Meaning: A form of fostering allegiance with fellow community members<br>Sentence: Milk kinship, formed during nursing by a non–biological mother.</dd>
+            
+            <dt>Matrilineal</dt>
+            <dd>Meaning: Based on kinship with the mother or the female line<br>Sentence: The fact that all livestock are inherited along the matrilineal line is exceptional.</dd>
+            
+            <dt>Nepotism</dt>
+            <dd>Meaning: The practice among those with power or influence of favoring relatives or friends, especially by giving them jobs.<br>Sentence: The nepotism in which the pope indulged is especially inexcusable.</dd>
+            
+            <dt>Maternity</dt>
+            <dd>Meaning: The period during pregnancy and shortly after childbirth, motherhood<br>Sentence: Many expectant mothers were crowded out of the maternity hospitals.</dd>
+        </div>
+
+        <h3>C. Make at least five words using the prefixes given.</h3>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li class="list-item"><strong>Pre:</strong> preposition, precaution, previews, prefer, prepare</li>
+            <li class="list-item"><strong>Semi:</strong> semi-abandoned, semi-abstract, semi-arid, semi-casual, semi-conductor</li>
+            <li class="list-item"><strong>Sub:</strong> subconscious, subjugate, submissive, subordinate, subsidiary</li>
+            <li class="list-item"><strong>Mis:</strong> misunderstand, mistake, misbehave, mistrust, misspell</li>
+            <li class="list-item"><strong>Mono:</strong> monochrome, monocot, monocular, monoplane, monopoly</li>
+            <li class="list-item"><strong>Un:</strong> unhappy, unhealthy, untouchable, undo, unemployment</li>
+            <li class="list-item"><strong>In:</strong> internal, inflated, inject, informal, infant</li>
+            <li class="list-item"><strong>Inter:</strong> Intermission, interactive, intercept, interchange, interlock</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Comprehension</h2>
+        <h3>A. The headings of the first five paragraphs of the above text are given below. Write paragraph number next to them.</h3>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li class="list-item">a. Patriarchal family – 3</li>
+            <li class="list-item">b. Functions of the family – 2</li>
+            <li class="list-item">c. Modern model of family – 5</li>
+            <li class="list-item">d. Effects of industrialization on family structure – 4</li>
+            <li class="list-item">e. Defining family – 1</li>
+        </ul>
+
+        <h3>B. Answer the following questions.</h3>
+        <div class="question-answer">
+            <div class="question">a. What type of family is thought to be the oldest form of the family?</div>
+            <div class="answer">The nuclear family is thought to be the oldest form of the family.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">b. How does a family provide security to its members?</div>
+            <div class="answer">A family provides emotional and psychological security through warmth, love, and companionship. Families also provide physical security for members who are too young or too old to care for themselves.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">c. What were the features of the medieval European family?</div>
+            <div class="answer">The main feature of the medieval European family was that it was a patriarchal (male-dominated) and extended family.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">d. What caused the dissolution of extended families in the West?</div>
+            <div class="answer">Industrialization and urbanization led to the dissolution of extended families in the West, as many people, particularly unmarried youths, left farms to become industrial workers in urban centers.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">e. What change occurred in gender roles in the modern family that emerged after the Industrial Revolution?</div>
+            <div class="answer">Following the Industrial Revolution, patriarchal rule began to give way to greater equality between the sexes. Family roles once considered exclusively male or female broke down, some couples chose not to marry legally, and rising levels of divorce led to an increase in one-parent households.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">f. What is family law?</div>
+            <div class="answer">Family law is a practice area concerned with legal issues involving family relationships, such as adoption, divorce, and child custody. Attorneys practicing family law typically handle these and other related legal matters.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">g. How is modern marriage defined?</div>
+            <div class="answer">Modern marriage is defined as a voluntary union, usually between a man and a woman.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">h. What do special family courts try to do?</div>
+            <div class="answer">Special family courts try to deal more fairly with sensitive issues such as the custody of children.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">i. What does the legislation on child labor and child abuse declare?</div>
+            <div class="answer">The legislation on child labor and child abuse declares that society has a responsibility for a child's best future and to provide compulsory education to children.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">j. What is common among most legal systems regarding property?</div>
+            <div class="answer">In most legal systems, a departed family member's property is dealt with by the deceased family member.</div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <h2>Critical Thinking</h2>
+        <h3>a. What changes have started to occur in Nepali families in recent days? What impacts will they bring on the society? Discuss.</h3>
+        <div class="answer">
+            <p>In the 21st century, Nepali families are gradually shifting from traditional to modern cultural norms. People are increasingly prioritizing personal happiness and are opting for nuclear families. While this offers greater happiness and individual satisfaction, it has also led to a rapid increase in divorce rates due to misunderstandings. Both men and women are now sharing household roles and have equal rights within the family. This has led to a greater understanding among family members who can share their ideas and feelings freely.</p>
+            <p>There is also a decline in early, arranged marriages, with more individuals choosing their own partners. This suggests a shift in marital decision-making processes, where personal choice is becoming more important than family agreements. These changes will bring both positive and negative impacts on society. While they promote equality and individual happiness, they may also strain traditional family bonds and values.</p>
+        </div>
+        <br>
+        <h3>b. We see many elderly people in the elderly homes these days in Nepal. Some of them are abandoned while others live there willingly. Do you think Nepali people are deviating from their traditional culture? Give reasons.</h3>
+        <div class="answer">
+            <p>The increasing number of elderly people in nursing homes in Nepal indicates a deviation from traditional culture. Historically, the joint family system was dominant, with families sharing the responsibility of caring for their elders, providing emotional, psychological, and economic support, and giving them respect. This system was the socio-economic backbone of Nepalese society.</p>
+            <p>However, with modernization and new lifestyles, the traditional joint family is breaking down into nuclear families. This shift in family structure and values often compels the elderly to live alone or move to institutions. Reasons for this include the misbehavior of children, financial crises, a feeling of ignorance, and a lack of emotional support. Some elderly people willingly choose to live in these homes, viewing them as a better alternative for a problem-free life.</p>
+            <p>The traditional extended family had its advantages, such as a strong sense of community, cultural protection, and shared responsibilities, but also disadvantages like less privacy and potential for suppressed personality development. The modern nuclear family offers greater understanding, cooperation, and freedom for its members but can lead to a lack of security, proper care for the young and old, and a disconnect from traditional norms. While both family structures have their pros and cons, the rise of elderly homes clearly shows that Nepalese society is moving away from its traditional, integrated family system.</p>
+        </div>
+    </div>
+    
+    <div class="card">
+        <h2>Grammar</h2>
+        <h3>B. Choose the best answer to complete the sentences.</h3>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li class="list-item">a. 'How much was your parking ticket?' 'Fifty rupees.' 'Oh well, it <strong>could have been</strong> worse.'</li>
+            <li class="list-item">b. It <strong>must have</strong> got lost in the post. These things happen sometimes.</li>
+            <li class="list-item">c. 'Sorry I'm late. I got delayed at work.' 'You <strong>must have</strong> called. I was really worried about you.'</li>
+            <li class="list-item">d. 'I don't think he meant to be rude.' 'He <strong>must have</strong> said sorry.'</li>
+            <li class="list-item">e. 'Whose signature is this?' 'I don't know. It <strong>could be</strong> Manoj's. That looks a bit like an M.'</li>
+            <li class="list-item">f. I had it when I left the office so I <strong>mustn't have</strong> lost it on the way home.</li>
+            <li class="list-item">g. You <strong>must think</strong> it's funny, but I think it's pathetic.</li>
+        </ul>
+
+        <h3>C. Complete the following sentences with appropriate endings. Use correct modal verbs.</h3>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li class="list-item">a. At the end of the course, we <strong>must be prepared</strong> for the individual presentation.</li>
+            <li class="list-item">b. If you want to earn a lot of money, I <strong>would suggest</strong> some tips.</li>
+            <li class="list-item">c. You were not in your house yesterday. You <strong>could have had</strong> your belongings stolen.</li>
+            <li class="list-item">d. I'm quite busy tomorrow. I <strong>must visit</strong> my dentist.</li>
+            <li class="list-item">e. When you were a small kid, you <strong>could ask</strong> for money from your relatives.</li>
+            <li class="list-item">f. My car is broken. I <strong>should take</strong> it to the service center.</li>
+            <li class="list-item">g. I've got a fast speed internet at home. I <strong>can watch</strong> movies in high quality.</li>
+            <li class="list-item">h. Even though she didn't study well, she <strong>could solve</strong> all the problems.</li>
+            <li class="list-item">i. There are plenty of newspapers in the library. You <strong>can read</strong> any of them if you want.</li>
+            <li class="list-item">j. What do you think you were doing, playing in the road? You <strong>could have been</strong> hit by the car.</li>
+            <li class="list-item">k. I have no time. I <strong>can't meet</strong> you.</li>
+            <li class="list-item">l. You don't look well. You <strong>should take</strong> a rest.</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
+
