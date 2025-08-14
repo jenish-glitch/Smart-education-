@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecology and Environment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #28a745; /* A fresh, eco-friendly green */
+            --secondary-color: #20c997; /* A complementary teal */
+            --background-color: #e9f5e9;
+            --card-background: #ffffff;
+            --text-color: #343a40;
+            --heading-color: #1a1a1a;
+            --border-color: #ced4da;
+            --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --shadow-medium: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --section-spacing: 2.5rem;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #ffffff;
+            padding: 2.5rem 1rem;
+            text-align: center;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            margin-bottom: var(--section-spacing);
+            box-shadow: var(--shadow-medium);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .section {
+            background-color: var(--card-background);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-light);
+            margin-bottom: var(--section-spacing);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: var(--heading-color);
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 1rem;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .subsection {
+            margin-bottom: 2rem;
+        }
+
+        .list-group {
+            padding-left: 0;
+        }
+
+        .list-group li {
+            list-style: none;
+            margin-bottom: 0.75rem;
+            padding: 0.75rem 1rem;
+            background-color: #f1f8f1;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+            transition: background-color 0.3s ease;
+        }
+
+        .list-group li:hover {
+            background-color: #e0f2e0;
+        }
+
+        .question-answer {
+            margin-bottom: 1.5rem;
+        }
+
+        .question-answer p {
+            margin: 0;
+        }
+
+        .question-answer .question {
+            font-weight: 600;
+            color: var(--primary-color);
+            background-color: #e6f6e9;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+        }
+
+        .question-answer .answer {
+            padding: 0.75rem 1rem;
+            background-color: #f8f9fa;
+            border-left: 3px solid var(--secondary-color);
+            border-radius: 0 0 8px 8px;
+        }
+
+        .word-match-list dt {
+            font-weight: 600;
+            color: var(--heading-color);
+            margin-bottom: 0.5rem;
+            background-color: #e6f6e9;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+        }
+
+        .word-match-list dd {
+            margin-left: 1rem;
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--secondary-color);
+        }
+        
+        .writing-content, .speech-content {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px dashed var(--border-color);
+        }
+
+        .writing-content h4, .speech-content h4 {
+            font-size: 1.1rem;
+            color: var(--heading-color);
+            margin-top: 0;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .grammar-item {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: #f1f8f1;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+            box-shadow: var(--shadow-light);
+        }
+
+        .original-sentence {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #E0E0E0;
+        }
+
+        .corrected-sentence {
+            font-weight: 600;
+            color: var(--heading-color);
+        }
+
+        .compound-words-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            list-style: none;
+            padding: 0;
+        }
+
+        .compound-words-grid li {
+            background-color: #f1f8f1;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+            font-weight: 600;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 1.5rem;
+            }
+            header h1 {
+                font-size: 3.5rem;
+            }
+            .section {
+                padding: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Ecology and Environment</h1>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="section">
+            <h2>Working with words</h2>
+            
+            <div class="subsection">
+                <h3>A. Complete the given sentences with suitable words.</h3>
+                <ul class="list-group">
+                    <li>a. **Logging** is one of the main reasons behind the rapid deforestation in the world.</li>
+                    <li>b. That's one example of how the pandemic should be a **wake-up call**.</li>
+                    <li>c. **Propane** is a gas used as a fuel for cooking and heating.</li>
+                    <li>d. Emergency teams are still clearing the **debris** from the plane crash.</li>
+                    <li>e. What a **transformation**! You look great.</li>
+                    <li>f. My father made a New Year **resolution** to give up smoking.</li>
+                    <li>g. He has worked in the Army for two years. He hates that two-year **stint**.</li>
+                    <li>h. Emissions from the factory are widely suspected of having a/an **detrimental** effect on health.</li>
+                    <li>i. My father is an **occasional** smoker. He doesn't smoke often.</li>
+                    <li>j. **Redwood** is a very tall type of tree that grows especially in California and Oregan.</li>
+                </ul>
+            </div>
+            
+            <div class="subsection">
+                <h3>B. Make sensible compound words.</h3>
+                <ul class="compound-words-grid">
+                    <li>Rattlesnake</li>
+                    <li>Sunflower</li>
+                    <li>Touchdown</li>
+                    <li>Moonlight</li>
+                    <li>Daydream</li>
+                    <li>Fireworks</li>
+                    <li>Watermelon</li>
+                    <li>Basketball</li>
+                    <li>Passport</li>
+                    <li>Washcloth</li>
+                    <li>Weatherman</li>
+                    <li>Grandmother</li>
+                    <li>Crosswalk</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>C. Match the following words/phrases with their meanings.</h3>
+                <dl class="word-match-list">
+                    <dt>Sustainability</dt>
+                    <dd>to keep in existence; maintain. To supply with necessities or nourishment</dd>
+                    
+                    <dt>Tree line</dt>
+                    <dd>the height on a mountain above which the climate is too cold for trees to grow</dd>
+                    
+                    <dt>Precipitation</dt>
+                    <dd>water that returns to the earth as rain, hail, sleet, or snow</dd>
+                    
+                    <dt>Tropical Zone</dt>
+                    <dd>the region between latitudes 23.5 degrees S and 23.5 degrees N</dd>
+                    
+                    <dt>Kyoto Protocol</dt>
+                    <dd>an agreement between countries to reduce their greenhouse gas emissions. It was established in Japan in 1997 but didn't become international law until 2004</dd>
+                    
+                    <dt>Pollutants</dt>
+                    <dd>substances that destroy the purity of air, water, or land</dd>
+                    
+                    <dt>Geosphere</dt>
+                    <dd>the soils, sediments, and rock layers of the Earth's crust, both continental and beneath the ocean floors</dd>
+                    
+                    <dt>Deciduous</dt>
+                    <dd>a plant that sheds all or nearly all its leaves each year</dd>
+                    
+                    <dt>Ephemeral</dt>
+                    <dd>an organism that has a short life cycle</dd>
+                    
+                    <dt>Trash</dt>
+                    <dd>items that are discarded</dd>
+                </dl>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Comprehension</h2>
+
+            <div class="subsection">
+                <h3>A. Choose the best answer.</h3>
+                <ul class="list-group">
+                    <li>a. The author of the text above has the opinion that **Julia Hill made her pastime in a tree for two years more.**</li>
+                    <li>b. The sentence 'Julia had occasional visitors' indicates **she had a few visitors now and then.**</li>
+                    <li>c. The logging company managed 24 hour security service around the tree to **discourage her from her campaign.**</li>
+                    <li>d. Ms. Hill began to respond the loggers with songs and conventional conversations because **she had unconditional love for all nature's creations.**</li>
+                    <li>e. Julia Hill climbed down the tree after 738 days when **her demands were about to be fulfilled.**</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>B. Answer the following questions.</h3>
+                <div class="question-answer">
+                    <div class="question">a. Who was Julia Butterfly Hill? How did Hill's campaign gain popularity?</div>
+                    <div class="answer">Julia Butterfly Hill was a person who lived in a 200-ft-tall redwood tree for more than two years to draw attention to the continued clearcutting of California's remaining redwood forests. Her campaign gained popularity when she started to have occasional visitors.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">b. What made Hill start her mega campaign to save redwood trees?</div>
+                    <div class="answer">When she arrived in the redwood forest, she was gripped by the spirit of the forest. She dropped to her knees and began to sob seeing the clearcutting of redwood trees. She sat and cried for a long time and finally decided to start her mega campaign to save redwood trees.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">c. What kinds of amenities were there to support Hill's life in the tree?</div>
+                    <div class="answer">Hill had a sleeping bag, a solar-powered cell phone for media interviews, and a single-burner propane stove to cook and heat water to support her life in the tree. She had few necessities, and no luxuries.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">d. Did Hill's value of life change after her car accident? How?</div>
+                    <div class="answer">Yes, Hill's value of life changed after her car accident. She said the experience was a wake-up call. Before the accident, her main focus had been work, but later on she became clear that the value of people is not in their stock portfolios and bank accounts, but it is in the legacies they leave behind.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">e. Deforestation causes natural calamities. What evidence do you have in the text to prove this?</div>
+                    <div class="answer">Yes, it's true that deforestation causes natural calamities. In the text we can see that the cutting of redwoods destabilized the hillside and caused the mudslide which carried trees, stumps and debris from that hillside down into the town, leaving seven families without homes.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">f. How did the logging company try to discourage Hill in the early days of her sit-in?</div>
+                    <div class="answer">The logging company tried to discourage Hill in the early days of her sit-in by hiring 24-hour security guards to harass her and to ensure her support team couldn't deliver her supplies. She was menaced with a helicopter at a dangerously close range. A neighboring tree was felled, hitting Luna's outer branches and nearly causing Hill to fall. She was verbally abused, threatened with violence, rape and death, kept awake with floodlights, and bugles and air horns were blown through the night.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">g. How were the vagaries of nature unwelcoming to Hill?</div>
+                    <div class="answer">The logging company wasn't her only problem. One of her scariest times was a 16-hour, 70-mph windstorm that shredded the tarps that surrounded her, and even ripped huge branches off the tree. When lightning struck nearby during an electrical storm, her hair stood straight up. In this way, the vagaries of nature were unwelcoming to Hill.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">h. What is the purpose of the author to write a review on Hill's book? Do you think the author stands for ecological sustainability? Give reasons.</div>
+                    <div class="answer">The purpose of the author to write a review on Hill's book is to bring a spotlight to the issue of deforestation. He wants people to learn about the deforestation and its ill effects through his review and make people know about what a person should do to prevent this. Yes, I think the author stands for ecological sustainability.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Writing</h2>
+
+            <div class="subsection">
+                <h3>A. Write a review of a book/film which you have read/watched recently.</h3>
+                <div class="writing-content">
+                    <h4>The Time Machine</h4>
+                    <p><strong>1. Title of the Book:</strong> The Time Machine</p>
+                    <p><strong>2. Author of the Book:</strong> H.G. Wells</p>
+                    <p><strong>3. Country:</strong> United Kingdom</p>
+                    <p><strong>4. Language:</strong> English</p>
+                    <p><strong>5. First originally published by:</strong> William Heinemann, London in 1895.</p>
+                    <p><strong>6. Genre:</strong> Science Fiction Novel</p>
+                    <p><strong>7. Cost of the Book:</strong> Rs. 300</p>
+                    <p><strong>8. Name of the Publisher:</strong> Dover Publications</p>
+                    <p><strong>9. Edition and year of Copyright:</strong> April 3, 1995</p>
+                    <p><strong>10. No. of pages:</strong> 80</p>
+                    <p><strong>11. Writing style:</strong> Narrative</p>
+                    <p><strong>12. Characters:</strong> The Narrator-Hillyer, Eloi, Morlocks, Weena</p>
+                    <p><strong>13. Plot:</strong> The story follows a Victorian scientist, who claims that he has invented a device that enables him to travel through time, and has visited the future, arriving in the year 802,701 in what had once been London. The narrator recounts the Traveler's lecture to his weekly dinner guests that time is simply the fourth dimension and demonstrates a tabletop model machine for travelling through the fourth dimension. He reveals that he has built a machine capable of carrying a person through time and returns at dinner the following week to recount a remarkable tale, becoming the new narrator.</p>
+                    <p><strong>14. Summary:</strong> A group of men, including the narrator, is listening to the Time Traveler discussing his theory that time is the fourth dimension. The Time Traveler produces a miniature time machine and makes it disappear into thin air. The next week, the guests return, to find their host stumble in, looking disheveled and tired. They sit down after dinner, and the Time Traveler begins his story.</p>
+                    <p><strong>15. My Impressions:</strong> The time traveler's machine is described in such sketchy terms that it can scarcely be believed as an instrument of science, and the time traveler's account is similarly sketchy and bizarre. The very nature of time travel means that he's away for only a short period of time, and the only "proof" of his travels is a crunched up flower. And given that the narrative is told in a twice-removed manner, the reader can't help but wonder whether any of the novels is true at all. Did the time traveler truly engage in such chronological shenanigans, and did he experience what he claims? Or is he simply using an imagined future to provide a warning about the current state of society? But the reality is that neither the truth nor the journey matters: it's only the outcome.</p>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>B. Draft a speech on "Let's save the trees and protect our environment."</h3>
+                <div class="speech-content">
+                    <h4>Let's Save the Trees and Protect Our Environment</h4>
+                    <p>Good morning everyone, thank you for giving me the opportunity to speak on such an important topic: Let's Save the Trees and Protect Our Environment. When one thinks of the most important element to survive the answer that always comes to our mind is air. Air is important for all living beings be it animals or humans. The trees which occupy 32% of the earth's surface provide us with this air.</p>
+                    <p>The trees of the planet act as the lungs in our body and purify the air we breathe. It is due to the existence of trees we inhale fresh air. As trees inhale carbon dioxide and exhale oxygen which serves as the important life source of all living beings. The more trees the planet has the fresher and purer the air we breathe.</p>
+                    <p>Man's attempt to outlive nature is costing us an unfortunate price. This drive for civilization and modernization is harming the environment and therefore the planet to an irreversible extent. When man violates nature the planet suffers and we have to bear the harmful consequences. Let's understand how.</p>
+                    <p>The road to civilization is more often through the way by destroying natural resources.</p>
+                    <p>Man views trees as roadblocks in modernization, that is they see it as it comes in the way of building more buildings and roads. So they tend to deforestation, which is an act of cutting down trees. When trees are cut they build more homes and offices in the land.</p>
+                    <p>Deforestation leads to many unnatural things that disrupt the balance of nature. Due to deforestation, air pollution increases, and global warming rises. Animals lose their home and shelter, the quality of the soil where deforestation is practiced deteriorates due to the untimely removal of roots of trees leading to soil erosion.</p>
+                    <p>As their population is only increasing, it is imperative to have more trees so that the next generation lives breathing fresh air. If deforestation continues the planet will not be able to inhabit future generations because of the imbalance it experiences.</p>
+                    <p>The best way to solve this problem is by avoiding deforestation and moving towards afforestation that is planting trees. We should all strive to save our home which is the planet. Even planting one tree can save so many lives.</p>
+                    <p>It is high time that we take action and protect the environment which nourishes all living and breathing creatures. When saving trees they save lives and inevitably save the planet. Saving trees and protecting environment is the motto we should all live by. Let's leave behind a green planet for the next generation. Spread the word and take action to save trees and in that way, we can protect the environment.</p>
+                    <p>Thanks for the patient hearing!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Grammar</h2>
+            
+            <div class="subsection">
+                <h3>B. Match the conversations with the correct endings.</h3>
+                <ul class="list-group">
+                    <li>a. I'm going to Pokhara on holiday. You said you were going on business.</li>
+                    <li>b. He's a lawyer. You told me he was a teacher.</li>
+                    <li>c. She's had a baby girl. You said she'd had a boy.</li>
+                    <li>d. I haven't seen Binesh for ages. You told me you'd seen him previous week.</li>
+                    <li>e. I love these new boots. You said you hated them.</li>
+                    <li>f. I only cheated in one exam. You admitted you cheated in all your exams.</li>
+                    <li>g. She doesn't speak Hindi or Chinese. You told me she was fluent in both.</li>
+                    <li>h. He works in Kathmandu. You told me his office was in Biratnagar.</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>C. Rewrite the following sentences with the sentence beginnings given below.</h3>
+                <div class="question-answer">
+                    <div class="question">a. The principal said, "You can phone from my office, Rita."</div>
+                    <div class="answer">The principal said that she could phone from his office.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">b. "You must not neglect your duty," said the teacher to the student.</div>
+                    <div class="answer">The teacher told the student that he/she must not neglect his/her duty.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">c. The student said, "Sir, please, grant me a leave for two days."</div>
+                    <div class="answer">The student requested to grant him leave for two days.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">d. I said to her, "Go to school or you will be fined."</div>
+                    <div class="answer">She was told to go to school or she would be fined.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">e. The headmaster said, "Don't make any noise, boys."</div>
+                    <div class="answer">The headmaster asked boys not to make any noise.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">f. "Work hard if you want to rise in life," said the old man.</div>
+                    <div class="answer">The old man suggested working hard if they wanted to rise in life.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">g. He said, "Goodbye, my friends!"</div>
+                    <div class="answer">He said goodbye to his friends.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">h. She said to me, "Have a pleasant journey ahead."</div>
+                    <div class="answer">She told me to have a pleasant journey ahead.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">i. "Don't give me the book, please," Sharmila said.</div>
+                    <div class="answer">Sharmila pleaded not to give her the book.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">j. "Where have you been these days?" she spoke on the telephone.</div>
+                    <div class="answer">He asked on the telephone where I had been those days.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">k. The teacher said, "Have you submitted your assignments, students?"</div>
+                    <div class="answer">The teacher asked students if they had submitted their assignments.</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>D. Complete the text using reported speech.</h3>
+                <div class="grammar-item">
+                    <div class="original-sentence">Dinesh's words: "I've just got engaged! We're getting married next month..."</div>
+                    <div class="corrected-sentence">He said he **(1) had just got engaged**. He told me that **(2) they were getting married** next month. He told me **(3) they were going to Pokhara** for their honeymoon. He mentioned that it **(4) was all going to be** very expensive. He said that his friend **(5) was a photographer** and he **(6) would take** the photos for them. He mentioned that they **(7) would be having** the reception in his parents' garden. He admitted that **(8) his mum was baking** the cake for them. He said his sister's band **(9) was playing free** for them. He said he **(10) hoped I'd come** to the wedding.</div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
