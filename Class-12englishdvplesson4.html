@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #007BFF;
+            --secondary-color: #0056b3;
+            --background-color: #e9f5ff;
+            --card-background: #ffffff;
+            --text-color: #333333;
+            --header-color: #1a1a1a;
+            --shadow-light: 0 4px 8px rgba(0, 0, 0, 0.05);
+            --shadow-medium: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow-medium);
+            position: relative;
+        }
+        
+        .lesson-title {
+            font-size: 1.5em;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 5px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .card {
+            background-color: var(--card-background);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: var(--shadow-light);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: var(--header-color);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        h2::before {
+            content: "💡";
+            font-size: 1.2em;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            color: var(--secondary-color);
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .fill-in-the-blanks {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .fill-in-the-blanks li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .fill-in-the-blanks li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+
+        .question-answer {
+            margin-bottom: 20px;
+        }
+
+        .question {
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 5px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .question::before {
+            content: "Q.";
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+        
+        .answer {
+            padding-left: 24px;
+            border-left: 3px solid var(--primary-color);
+            margin-left: 5px;
+        }
+        
+        .list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .list-item::before {
+            content: "•";
+            color: var(--primary-color);
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+
+        .correct-passage {
+            background-color: #f1f3f6;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            header {
+                padding: 30px 15px;
+            }
+            .lesson-title {
+                font-size: 1.2em;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="lesson-title">Lesson: Technology</div>
+        <h1>Chapter Review</h1>
+        <p>A comprehensive overview of the chapter on technology, vocabulary, and grammar.</p>
+    </header>
+
+    <div class="card">
+        <h2>Working with Words</h2>
+        <h3>A. Choose the correct words from the box to complete the following sentences.</h3>
+        <ul class="fill-in-the-blanks">
+            <li>a. I think that covering up the facts is <strong>equivalent</strong> to lying really.</li>
+            <li>b. If there is not a <strong>substantial</strong> move to public transport, we will have deceleration and the whole regeneration will not work.</li>
+            <li>c. Each new leader would blame his <strong>predecessor</strong> for all the evils of the past.</li>
+            <li>d. We have, in fact, <strong>envisioned</strong> a better world and have made it happen.</li>
+            <li>e. The main linear actuators of the pneumatic systems are <strong>cylinders</strong>.</li>
+            <li>f. The barrel was short and the bullet emerged at <strong>subsonic</strong> speed.</li>
+            <li>g. The city is said to receive two-fifths of the total <strong>freight</strong> delivered in the country.</li>
+            <li>h. It would still take four hours to get down, in a spiral of <strong>gridlock</strong>.</li>
+            <li>i. Apparently, the magician will be doing some <strong>levitation</strong> on the stage tomorrow.</li>
+            <li>j. We might be experiencing some <strong>turbulence</strong> on this flight due to an approaching electrical storm.</li>
+        </ul>
+        
+        <h3>B. Add three more words that are formed with the following prefixes.</h3>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li class="list-item">a. <strong>hyper:</strong> hyperloop, hypersensitive, hyperlipidaemia, hyperinflation.</li>
+            <li class="list-item">b. <strong>ultra:</strong> ultrahigh, ultralight, ultrashort, ultrabasic, ultrafiche.</li>
+            <li class="list-item">c. <strong>up:</strong> uphill, Upwork, upside, uplift</li>
+            <li class="list-item">d. <strong>over:</strong> overcoming, overwhelm, overdrunk, oversized</li>
+            <li class="list-item">e. <strong>multi:</strong> multibillion, multinational, multicultural, multiply</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Comprehension</h2>
+        <h3>Answer the following questions.</h3>
+        <div class="question-answer">
+            <div class="question">a. What is a hyperloop? How does it work?</div>
+            <div class="answer">A hyperloop is a planned train capable of traveling at incredible speeds. It works by being enclosed in a tube with no air, which eliminates friction and allows the train to travel much faster.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">b. How is hyperloop more beneficial than the traditional trains?</div>
+            <div class="answer">The hyperloop is more beneficial than traditional trains because it's less expensive and uses less energy. The track doesn't need to provide constant electricity to the pods, and with pods departing every 30 seconds, it operates more like a demand-based service.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">c. Does hyperloop have a successful history? How?</div>
+            <div class="answer">No, the hyperloop does not have a successful history in its current form. The original concept was to use wagons and pneumatic tubes to transport mail and parcels, not passengers.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">d. Write the contributions of Robert Goddard and Elon Musk for the development of hyperloop.</div>
+            <div class="answer">Robert Goddard, in the early 20th century, created the 'vactrain' idea, which is a clear prototype of the hyperloop. Elon Musk, the founder of Space X and Tesla, revived interest in the idea in August 2013 with his 'Hyperloop Alpha' paper, envisioning a "fifth mode" of transportation for ultra-fast intercity travel.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">e. What relation does speed have with air resistance? Explain.</div>
+            <div class="answer">Speed is inversely related to air resistance. More air resistance decreases the speed of a moving body, and less air resistance increases it. The hyperloop is designed to travel through vacuum tubes to eliminate air resistance, which drastically increases its speed.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">f. What are hyperloop capsules compared with? How are they similar?</div>
+            <div class="answer">Hyperloop capsules are compared with a Boeing 747 because they both accelerate at a similar rate.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">g. How do the passengers feel while travelling via hyperloop? What will be done to make it luxurious?</div>
+            <div class="answer">Passengers on a hyperloop will feel approximately the same as riding a lift or a passenger aircraft. To make the journey luxurious, the cabin will display beautiful scenery, and each passenger will have access to private entertainment systems.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">h. Why does the writer doubt about the success of hyperloop? What does the success depend on?</div>
+            <div class="answer">The writer doubts the success of hyperloop due to the enormous multibillion-dollar expenditure and the fact that the projects are still in the pilot and experimental phases. Its success will depend on factors like destinations, the local economy, and the geographical location.</div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <h2>Critical Thinking</h2>
+        <h3>a. Is the hyperloop the future of transportation or just a dream? What do you think? Justify your opinion with suitable reasons.</h3>
+        <div class="answer">
+            <p>The hyperloop, a conceptual transport system for passengers in pods within vacuum tubes, has the potential to be the future of transportation, not just a dream. While the concept of pneumatic transport isn't new, the application to human travel is a modern ambition. Just as early dreams of flight seemed impossible but are now commonplace, the hyperloop could become a reality.</p>
+            <p>If successful, it promises immense benefits: supersonic speeds, environmental friendliness, and potential economic success. It could drastically change how we travel, making long distances feel short. However, despite this promise, new technologies require significant time and investment to mature. The success will depend on overcoming massive engineering and financial challenges. Until then, it remains an ambitious but hopeful vision for the future.</p>
+        </div>
+        <br>
+        <h3>b. The number of private vehicles is increasing day by day in Nepal beyond the capacity of our infrastructure. What do you think should be done to curb the ever-growing number of private vehicles? Discuss.</h3>
+        <div class="answer">
+            <p>The increasing number of private vehicles in Nepal, outstripping the capacity of our infrastructure, poses a significant problem. To curb this trend, a multi-pronged approach is necessary. First, we must discourage private vehicle ownership. This can be done by implementing a system of progressive taxation on cars, where the tax rate increases with each additional vehicle a family owns, and by raising toll fares.</p>
+            <p>These measures, however, will only be effective if accompanied by a dramatic improvement in public transportation. The public transit system needs to be revamped to be more reliable, comfortable, and efficient. This includes running more buses during peak hours, ensuring they are punctual, and upgrading them with modern amenities like comfortable seating and air conditioning. Cleanliness and hygiene at bus and train stations must also be maintained to make public transport a dignified and pleasant experience. By making public transport a genuinely attractive alternative, we can reduce dependency on private vehicles and alleviate environmental and infrastructure pressures.</p>
+        </div>
+    </div>
+    
+    <div class="card">
+        <h2>Grammar</h2>
+        <h3>B. Rewrite the following sentences with the correct form of the verbs in the brackets.</h3>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li class="list-item">a. The invitation is for one person. I don't mind whether you or she <strong>comes</strong> to the party.</li>
+            <li class="list-item">b. Neither the MPs nor the Prime Minister <strong>has</strong> felt regret for the party split.</li>
+            <li class="list-item">c. I don't care whether he or she <strong>wins</strong> the lottery.</li>
+            <li class="list-item">d. Either the Kantipur or the Republica <strong>is</strong> used for the advertisement.</li>
+            <li class="list-item">e. She speaks in a strange accent. Neither I nor my sister <strong>understands</strong> her.</li>
+            <li class="list-item">f. I forgot whether the singers or the actress <strong>was</strong> given the Film Fair Award last year.</li>
+            <li class="list-item">g. Neither the tracksuit nor the pajamas <strong>fit</strong> me perfectly.</li>
+            <li class="list-item">h. Neither the gas fire nor the electric heaters <strong>are</strong> suitable for room heating.</li>
+        </ul>
+
+        <h3>C. This passage contains the agreement errors. Correct the subjects or verbs that don't agree with each other. Remember to use present tense in your corrections.</h3>
+        <div class="correct-passage">
+            <p>Within the state of Arizona, Rob, along with his family, <strong>moves</strong> frequently from city to city. After his arrival, one of his first tasks <strong>is</strong> to find an apartment close to work, as he does not have a car. Usually, there <strong>are</strong> many different places to choose from, and he <strong>considers</strong> cost, location, and luxury. If one apartment has a washing machine and dryer and costs four hundred dollars a month, he <strong>prefers</strong> to rent it over another apartment which has significantly less rent and is located two blocks from a Laundromat. Rob's family never <strong>wants</strong> to live in an apartment on the thirteenth floor, since all of them <strong>fear</strong> heights. He also <strong>tries</strong> to choose an apartment with a landlord recommended by former tenants. Everybody <strong>knows</strong> that it is important to find a responsible landlord. Rob and his wife love to cook together when both are free, so they need a spacious, well-equipped kitchen. Rob often <strong>looks</strong> for a place with an air conditioner because there are so many scorching days and nights in Arizona. Whenever Rob finds a new apartment, all of his concerns <strong>disappear</strong>. He <strong>feels</strong> relieved and <strong>calls</strong> his mother. Someone <strong>understands</strong>!</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
