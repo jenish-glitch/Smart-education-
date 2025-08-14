@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6a11cb;
+            --secondary-color: #2575fc;
+            --background-color: #f0f2f5;
+            --card-background: #ffffff;
+            --text-color: #343a40;
+            --heading-color: #1a1a1a;
+            --border-color: #e2e8f0;
+            --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --shadow-medium: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --section-spacing: 2.5rem;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #ffffff;
+            padding: 2.5rem 1rem;
+            text-align: center;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            margin-bottom: var(--section-spacing);
+            box-shadow: var(--shadow-medium);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .section {
+            background-color: var(--card-background);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-light);
+            margin-bottom: var(--section-spacing);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: var(--heading-color);
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 1rem;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .subsection {
+            margin-bottom: 2rem;
+        }
+
+        .list-group {
+            padding-left: 0;
+        }
+
+        .list-group li {
+            list-style: none;
+            margin-bottom: 0.75rem;
+            padding: 0.75rem 1rem;
+            background-color: #f2f6fc;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+            transition: background-color 0.3s ease;
+        }
+
+        .list-group li:hover {
+            background-color: #e9eff7;
+        }
+
+        .question-answer {
+            margin-bottom: 1.5rem;
+        }
+
+        .question-answer p {
+            margin: 0;
+        }
+
+        .question-answer .question {
+            font-weight: 600;
+            color: var(--primary-color);
+            background-color: #f2f6fc;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+        }
+
+        .question-answer .answer {
+            padding: 0.75rem 1rem;
+            background-color: #f8f9fa;
+            border-left: 3px solid var(--secondary-color);
+            border-radius: 0 0 8px 8px;
+        }
+
+        .definition-list dt {
+            font-weight: 600;
+            color: var(--heading-color);
+            margin-bottom: 0.5rem;
+            background-color: #f2f6fc;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+        }
+
+        .definition-list dd {
+            margin-left: 1rem;
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--secondary-color);
+        }
+
+        .writing-content {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px dashed var(--border-color);
+        }
+
+        .writing-content h4 {
+            font-size: 1.2rem;
+            color: var(--heading-color);
+            margin-top: 0;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .grammar-item {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: #f2f6fc;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+            box-shadow: var(--shadow-light);
+        }
+
+        .original-sentence {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #E0E0E0;
+        }
+
+        .corrected-sentence {
+            font-weight: 600;
+            color: var(--heading-color);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Hobbies</h1>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="section">
+            <h2>Working with words</h2>
+            
+            <div class="subsection">
+                <h3>A. Find the words from the text which have the following meanings.</h3>
+                <ul class="list-group">
+                    <li>a. a wave-like motion - **undulation**</li>
+                    <li>b. to make or do something again exactly in the same way - **replicate**</li>
+                    <li>c. decayed, deteriorated, or fallen into partial ruin especially through neglect or misuse - **dilapidated**</li>
+                    <li>d. a bright, smooth surface - **sheen**</li>
+                    <li>e. the feeling of having no energy and enthusiasm - **listlessness**</li>
+                    <li>f. a state of noise, commotion and confusion - **cacophonous**</li>
+                    <li>g. being alone, often by choice - **solitude**</li>
+                    <li>h. to regard with respect, often tinged with awe - **revere**</li>
+                    <li>i. said in a way that is not direct, so that the real meaning is not immediately clear - **obliquely**</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>B. Find the meaning of the following words from a dictionary.</h3>
+                <dl class="definition-list">
+                    <dt>Sophisticated</dt>
+                    <dd>deprived of native or original simplicity, highly complicated</dd>
+                    <dt>Conscious</dt>
+                    <dd>likely to notice, consider or appraise</dd>
+                    <dt>Blistering</dt>
+                    <dd>extremely intense or severe</dd>
+                    <dt>Proximity</dt>
+                    <dd>immediately preceding or following</dd>
+                    <dt>Invisible</dt>
+                    <dd>inaccessible to view, recognize or identify</dd>
+                </dl>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Comprehension</h2>
+            
+            <div class="subsection">
+                <h3>Answer the following questions.</h3>
+                <div class="question-answer">
+                    <div class="question">a. What is the author's favourite hobby? Why does she like it so much?</div>
+                    <div class="answer">The author's favourite hobby is walking. She likes it so much because the movement, the rhythm, the undulation of the senses and of the body it initiates is enjoyable.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">b. What sorts of roads did the writer prefer to walk on when she was very young?</div>
+                    <div class="answer">The writer preferred to walk on the roads that were unpaved and uneven, like the paths around her mamaghar when she was very young.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">c. How did walking give the author and her classmates a sense of freedom?</div>
+                    <div class="answer">Walking gave the author and her classmates a sense of freedom because they could be free-willed masters of their time and could find their own way.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">d. In what ways were the roads in Kathmandu different from the ones in Sydney?</div>
+                    <div class="answer">The roads in Sydney were far quieter and organized when compared to the cacophonous streets of Kathmandu.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">e. How did walking help the author in the new country?</div>
+                    <div class="answer">Walking was an escape of all kinds of pressures, a search for pace and a rhythm to the author. It helped her to navigate the new country and it renewed the circumstances of her life.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">f. What were the treasures of Petersham, where the writer lived with her family?</div>
+                    <div class="answer">The treasures of Petersham, where the writer lived with her family were a tiny park which was a minute down the Parramatta road, another park with a huge rock at one end, a buffer zone suburb etc.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">g. What things became her permanent friends with whom she could share her feelings?</div>
+                    <div class="answer">The components of nature such as the earth, the sky, the trees, water, air became her permanent friends with whom she could share her feelings.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">h. Why did she feel that she had travelled to 'a desert, to emptiness' as she went to the United States?</div>
+                    <div class="answer">She felt that she had travelled to 'a desert, to emptiness' as she went to the United States because people living there were running after material pursuit and comfort because of which she felt lonely and a barrier of communication with them.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">i. Why did the author eventually feel that the strange city was known to her?</div>
+                    <div class="answer">Eventually the author felt that the strange city was known to her because she found the place similar to every other place on the earth. The essence of the nature she felt in the strange city was same to the one she found in her hometown.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">j. How did walking make her feel at home with different places she visited?</div>
+                    <div class="answer">Walking made her feel thankfulness to all the streets she walked on because they gave shape to her feet, her body and her being.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Critical thinking</h2>
+            
+            <div class="subsection">
+                <div class="question-answer">
+                    <div class="question">a. Do you believe that walking helps us understand ourselves? Give reasons in support of your opinion.</div>
+                    <div class="answer">Yes, I believe that walking helps us to understand ourselves. Walking provides the best of both worlds. It offers the physical benefits of exercise while also boosting your emotional well-being. It can help reduce anxiety, depression, and a negative mood. It can also boost self-esteem and reduce symptoms of social withdrawal. Walking also helps to clear our head and think creatively. It opens up a free flow of ideas and is a simple way to increase creativity and get physical activity at the same time. While walking we interact with our inner self, we evaluate ourselves, our works, our behavior. This makes us realize actually who we are. Understanding ourselves means self-realization which can happen when we are alone and submerged with natural world. Thus it's true that walking helps us to understand ourselves.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">b. Think of one of your hobbies. How does this hobby relate to your psyche and self?</div>
+                    <div class="answer">Hobbies are seen as markers of a balanced person who is adept at juggling personal and professional well-being. I have only one hobby. Yet, it consumes all my free time. I enjoy reading and have always been a voracious reader. Although I prefer reading fiction, I make a deliberate effort to read at least one non-fiction book in a couple of months. My first book was "Famous Five Go to Kirrin Island" at the age of ten. What I truly treasure about my hobby is its power to transport me to different locations whilst I'm still on my couch. It is a low budget travel option that I often take! Recently, I started attending book club meetings. It's a group of 15 individuals and we meet on the third Sunday, every month to discuss books that we have read in that month. It's wonderful how a few lines can have so many varied interpretations, and can give rise to a multitude of emotions and opinions. My hobby has made me develop analytical thinking and open-mindedness. Reading has also broadened my imagination across horizons. I wouldn't possibly trade it for anything else, ever!</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">c. Many people turn their hobbies into careers. Is it good to turn one's hobby into a career?</div>
+                    <div class="answer">Yes, it's true that many people turn their hobbies into careers. But what I think that is; a big decision of whether to turn a hobby into a career is a godsend for some lucky folks, but for other poor souls, it's not all it's cracked up to be. Whether you're looking to go freelance, set up a limited company or become a sole trader, making hobby turn into livelihood can be a messy business. Hobbies are really important for personal growth and enjoyment, and the last thing you want to do is turn a form of escapism from the hustle, bustle, and grind of everyday life into something stressful and pressurized. To sum up, if a person is truly passionate about his/her career, then he/she can easily turn their hobby into a career else it's going to be a great suffering.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Writing</h2>
+            
+            <div class="subsection">
+                <h3>a. An essay on the advantages of morning walk.</h3>
+                <div class="writing-content">
+                    <h4>Advantages of morning walk</h4>
+                    <p>The modern-day world is full of psychological disorders, poor health, mental tension, and many more problems. Likewise, the life of some people is like a mad rush from one work to another without any break. Besides, there are very few people in the world that care about their health more than their work or daily tasks. But, there are ways by which we can restore our healthfully and morning walk is one of them. Additionally, it is so effective that it can reduce the amount of health disorder from the world.</p>
+                    <p>From childhood, we have heard that "early to bed and early to rise makes a man healthy, wealthy and wise." This is not just a saying because morning walks make a man healthy and wise.</p>
+                    <p>Moreover, it improves the physical shape and state of the body which protects us from many diseases. Besides, all this morning walks create a sense of equality among the people.</p>
+                    <p>Above all, morning walk gives you energy, motivates you to avoid laziness, creates a positive mindset, it is good for your organs especially heart, and it gives you time to plan your schedule. According to research, the best time for a morning walk is in the latter part of the afternoon between 3 pm to 7 pm.</p>
+                    <p>To sum it up, we can say that, Morning walk is very important for the body. Also, it helps to keep the body and mind healthy. Besides, everyone whether kids or elders should try to make a morning walk a part of their daily routine. As it is seen that the life span of people who walk daily is more in comparison to those who do not do morning walk.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Grammar</h2>
+
+            <div class="subsection">
+                <h3>B. Change the following sentences into passive voice.</h3>
+                <ul class="list-group">
+                    <li>a. I want someone to love me. - I **want to be loved**.</li>
+                    <li>b. Someone broke into our house while we were on holiday. - Our house **was broken into** while we were on holiday.</li>
+                    <li>c. I don't like people staring at me. - I don't like **being stared at**.</li>
+                    <li>d. Is it true that someone stole your car? - Is it true that your car **was stolen**?</li>
+                    <li>e. The cat enjoys someone tickling him. - The cat enjoys **being tickled**.</li>
+                    <li>f. Would Swostika open the window? - Would the window **be opened by Swostika**?</li>
+                    <li>g. Did they confess the crime? - **Was the crime confessed by them**?</li>
+                    <li>h. He thinks that someone is teaching Jennie. - He thinks that Jennie **is being taught**.</li>
+                    <li>i. Sabina hates people laughing at her. - Sabina hates **being laughed at**.</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>C. Complete the following sentences as in the example.</h3>
+                <div class="question-answer">
+                    <div class="question">a. English people think that the number thirteen is unlucky.</div>
+                    <div class="answer">The number thirteen **is thought to be** unlucky by English people.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">b. What are you wearing for the wedding? Actually, I am having a suit made (a suit make). They will give it tomorrow.</div>
+                    <div class="answer">Actually, I **am having a suit made**. They will give it tomorrow.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">c. The carpet in our drawing room is very dirty. It needs to be cleaned (clean).</div>
+                    <div class="answer">It **needs to be cleaned**.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">d. There are rumours that the factory at the corner is manufacturing bombs.</div>
+                    <div class="answer">The factory at the corner **is rumoured to be manufacturing** bombs.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">e. Some people believe that Silajit from Jumla cures all indigestion problems.</div>
+                    <div class="answer">Silajit from Jumla **is believed to cure** all digestion problems.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">f. People claim that Changu Narayan temple is the oldest temple in Nepal.</div>
+                    <div class="answer">Changu Narayan temple **is claimed to be** the oldest temple in Nepal.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">g. A: Your car is making a terrible noise. B: Thank you. I am not a mechanic and I will make it be repaired soon. (repair).</div>
+                    <div class="answer">B: Thank you. I am not a mechanic and I will **make it be repaired** soon.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">h. The police suspect that the criminal left the country.</div>
+                    <div class="answer">The criminal **is suspected to have left** the country.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">i. A: Where are you going? B: I am going to the stationery to get my document photocopied. (my document /photocopy)</div>
+                    <div class="answer">B: I am going to the stationery to **get my document photocopied**.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">j. People allege that the corrupt leader has embezzled millions of rupees.</div>
+                    <div class="answer">The leader **is alleged to have embezzled** millions of rupees.</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
+
