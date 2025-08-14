@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money and Economy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2196F3;
+            --secondary-color: #1976D2;
+            --background-color: #e3f2fd;
+            --card-background: #ffffff;
+            --text-color: #333333;
+            --header-color: #1a1a1a;
+            --shadow-light: 0 4px 8px rgba(0, 0, 0, 0.05);
+            --shadow-medium: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow-medium);
+            position: relative;
+        }
+        
+        .lesson-title {
+            font-size: 1.5em;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 5px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+
+        .card {
+            background-color: var(--card-background);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: var(--shadow-light);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: var(--header-color);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        h2::before {
+            content: "💰";
+            font-size: 1.2em;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            color: var(--secondary-color);
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .match-words {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .match-words li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .match-words li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+        
+        .word-definition {
+            font-weight: 600;
+        }
+        
+        .abbreviations-list {
+            list-style-type: none;
+            padding-left: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .abbreviations-list li {
+            padding: 10px 15px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .abbreviations-list li strong {
+            color: var(--secondary-color);
+        }
+
+        .phonetics-list {
+            list-style-type: none;
+            padding-left: 0;
+            display: grid;
+            gap: 10px;
+        }
+        .phonetics-list .phonetic-group {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+        }
+        .phonetics-list .phonetic-group strong {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            color: var(--primary-color);
+        }
+
+        .true-false-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .true-false-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .true-false-list li .statement {
+            flex-grow: 1;
+        }
+        .true-false-list li .answer {
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-weight: 600;
+            color: white;
+            min-width: 80px;
+            text-align: center;
+        }
+        .true-false-list li .answer.true { background-color: #4CAF50; }
+        .true-false-list li .answer.false { background-color: #F44336; }
+        .true-false-list li .answer.not-given { background-color: #FFC107; color: #333;}
+        
+        .question-answer {
+            margin-bottom: 20px;
+        }
+
+        .question {
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 5px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .question::before {
+            content: "Q.";
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+        
+        .answer {
+            padding-left: 24px;
+            border-left: 3px solid var(--primary-color);
+            margin-left: 5px;
+        }
+        
+        .list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .list-item::before {
+            content: "•";
+            color: var(--primary-color);
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+        
+        .text-block {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        .text-block h4 {
+            font-size: 1.2em;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+        
+        .text-block p {
+            margin-bottom: 10px;
+        }
+
+        .punctuate-block p {
+            font-style: italic;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .underline-text strong u {
+            text-decoration-color: var(--primary-color);
+            text-decoration-thickness: 2px;
+        }
+
+        .inline-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .inline-list li {
+            margin-bottom: 8px;
+        }
+        .inline-list li strong {
+            color: var(--secondary-color);
+        }
+
+        .correct-words-list {
+            list-style-type: none;
+            padding-left: 0;
+            display: grid;
+            gap: 10px;
+        }
+        .correct-words-list li {
+            padding: 10px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .correct-words-list li .sentence-part {
+            flex-grow: 1;
+        }
+        .correct-words-list li .answer-part {
+            font-weight: 600;
+            color: var(--primary-color);
+            white-space: nowrap;
+            margin-left: 10px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            header {
+                padding: 30px 15px;
+            }
+            .lesson-title {
+                font-size: 1.2em;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            .card {
+                padding: 20px;
+            }
+            .abbreviations-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="lesson-title">Lesson: Money and Economy</div>
+        <h1>Chapter Review</h1>
+    </header>
+
+    <div class="card">
+        <h2>Working with Words</h2>
+        <h3>A. Match the words in column 'A' with their meanings in column 'B'.</h3>
+        <ul class="match-words">
+            <li><span class="word-definition"><strong>prominent:</strong></span> standing out so as to be seen easily, conspicuous</li>
+            <li><span class="word-definition"><strong>vulnerable:</strong></span> exposed to the possibility of being attacked / harmed</li>
+            <li><span class="word-definition"><strong>potentially:</strong></span> with the capacity to develop or happen in the future</li>
+            <li><span class="word-definition"><strong>transaction:</strong></span> an instance of buying or selling of something</li>
+            <li><span class="word-definition"><strong>initiatives:</strong></span> the power or opportunity to do something before others do</li>
+            <li><span class="word-definition"><strong>launched:</strong></span> to introduce a new plan or product</li>
+            <li><span class="word-definition"><strong>enduring:</strong></span> lasting over a period of time; durable</li>
+            <li><span class="word-definition"><strong>robust:</strong></span> strong and unlikely to break or fall</li>
+        </ul>
+
+        <h3>B. There are different abbreviations used in the text. With the help of the internet, find their full forms.</h3>
+        <ul class="abbreviations-list">
+            <li><strong>QR</strong> : Quick Response</li>
+            <li><strong>ISO</strong> : International Organization for Standardization</li>
+            <li><strong>IEC</strong> : International Electrotechnical Commission</li>
+            <li><strong>URLs</strong> : Uniform Resource Locators</li>
+            <li><strong>EMVCo</strong> : Europay, Mastercard, and Visa Company</li>
+            <li><strong>PIN</strong> : Personal Identification Number</li>
+        </ul>
+
+        <h3>C. Pronounce the following words and identify the vowel sounds /ʊ/ and /u:/.</h3>
+        <ul class="phonetics-list">
+            <li class="phonetic-group">
+                <strong>/ʊ/</strong>
+                put, push, hood, full, bull, book, foot, look, hook, cook, should, soot, stood
+            </li>
+            <li class="phonetic-group">
+                <strong>/u:/</strong>
+                boom, fool, food, loose, boost, groom, moon, soon, room, soothe,
+            </li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Comprehension</h2>
+        <h3>A. Decide whether these statements are True or False. Write NOT GIVEN if you do not find the information.</h3>
+        <ul class="true-false-list">
+            <li><span class="statement">a. The system of QR codes was first launched in South Asia.</span> <span class="answer false">False</span></li>
+            <li><span class="statement">b. The standards of payments via the QR codes were approved by EMVCo.</span> <span class="answer true">True</span></li>
+            <li><span class="statement">c. All sorts of businesses are aided by the QR code payments.</span> <span class="answer false">False</span></li>
+            <li><span class="statement">d. There are several models to the QR code payment service.</span> <span class="answer true">True</span></li>
+            <li><span class="statement">e. In countries like Nepal, the QR code paying system is a complete fiasco.</span> <span class="answer false">False</span></li>
+            <li><span class="statement">f. The QR codes payment service is not applicable to small business.</span> <span class="answer false">False</span></li>
+        </ul>
+        
+        <h3>B. Answer the following questions.</h3>
+        <div class="question-answer">
+            <div class="question">a. How can one pay with QR codes paying system?</div>
+            <div class="answer">One can pay with QR codes paying system either by presenting a QR code for scanning to the merchant, or by scanning at the merchant's QR code.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">b. How did Tencent and Alibaba companies utilise the QR code services at the beginning?</div>
+            <div class="answer">At the beginning, Tencent utilized the QR code services in its social media WeChat for friending and Alibaba utilized it to facilitate Alipay payment services.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">c. How do the QR code based payment services launched by Visa and Mastercard mitigate payment problems?</div>
+            <div class="answer">The QR code based payment services launched by Visa and Mastercard mitigate payment problems by linking QR code payments to debit and credit card accounts.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">d. Why do we need a scheme operator to run the QR code based payment system?</div>
+            <div class="answer">We need a scheme operator for scheme branding at acceptance points, defining the scheme rules and providing a mechanism for handling disputes and exceptions.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">e. What basic requirements are needed to use the QR codes services?</div>
+            <div class="answer">A suitable, secured scheme operator is required to use the QR code services.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">f. How can security concerns related to payment via QR codes be addressed?</div>
+            <div class="answer">Security concerns related to payment via QR codes can be addressed by the use of merchant IDs, registration and real-time notification of payment.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">g. Who should be more careful: customer or the merchant in terms of payment issues? Why?</div>
+            <div class="answer">A customer should be more careful in terms of payment issues because it would be better to stop the fraud happening in the first place rather than trying to correct it later by the merchant.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">h. Do you think the QR code based payment can be a panacea for all sorts of payment problems? Why?</div>
+            <div class="answer">Yes, I think the QR code based payment can be a panacea for all sorts of payment problems because it is fast, secure and easy to create.</div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <h2>Critical Thinking</h2>
+        <h3>a. Some business houses, shops and department stores in city areas have started to adopt QR code payment systems in Nepal, too. What should be done to make it more accessible? Discuss.</h3>
+        <div class="answer">
+            <p>The Covid-19 pandemic has immensely boosted the Scan and Pay service through the QR code in Nepal too. People being concerned with their hygiene are supporting the contactless payment system. Evolving digital payment service providers like Fonepay, IMEPay, Khalti, QPay, and SmartQR also encourage QR code payment by offering their users Scan and Pay services.</p>
+            <p>QR code payment systems can play an impactful role in changing informal sectors into the formal economy. However, Nepal needs to tackle challenges in many infrastructural and behavioural traits before reaching the full potential of e-payment. The lack of interoperability is another major issue for a stable digital payment service. Rapid growth in several PSOs and PSPs may result in an imbalance in the ecosystem of the digital economy. To avoid this hurdle, a unified payment switch is necessary.</p>
+            <p>QR code payment can be a vital factor in uplifting Nepal's digital economy. The government giving more priority to digital payment systems and the central bank to promote this system can be a head start for QR code payment.</p>
+            <p>Mass awareness campaigns and promotional events can also influence this transition. Infrastructural development like high-speed internet connection and wider user accessibility must be considered. Payment service providers, payment service operators, bank and financial institutes, and traders should work together to bring interoperability to their digital payment services.</p>
+        </div>
+        <br>
+        <h3>b. The payments landscape is shifting gears from cash to digital mode. Digital payment brings ease and convenience to the consumer. Is it possible to apply such cashless methods in payments in Nepal? Discuss.</h3>
+        <div class="answer">
+            <p>It's hard but not impossible to apply Digital payment system in Nepal. Nepal needs to tackle challenges in many infrastructural and behavioural traits before reaching the full potential of e-payment. The number of internet users is impressively growing but still not enough to process an established digital economy.</p>
+            <p>QR code payment systems can play an impactful role in changing informal sectors into the formal economy. The government giving more priority to digital payment systems and the central bank to promote this system can be a head start for QR code payment.</p>
+            <p>Mass awareness campaigns and promotional events can also influence this transition. Infrastructural development like high-speed internet connection and wider user accessibility must be considered. Payment service providers, payment service operators, bank and financial institutes, and traders should work together to bring interoperability to their digital payment services.</p>
+            <p>The ultimate goal should be offering a one-stop solution for the consumers to access all sorts of e-payment services, including QR code payment.</p>
+        </div>
+    </div>
+    
+    <div class="card">
+        <h2>Writing</h2>
+        <h3>A. Punctuate this paragraph with appropriate punctuation marks.</h3>
+        <div class="text-block punctuate-block">
+            <p>It was a cold, freezing day. It had been snowing all day in New York. Mr. Tim cooked, and I went outside to play in the snow. We had not seen much snow since we went skiing in Sweden last year. Mrs. Smith was right because she had said that we'd see snow. The next day, we had really a wonderful time there, didn't we?</p>
+        </div>
+        
+        <h3>B. Write a news article about digital payment systems in Nepal.</h3>
+        <div class="text-block">
+            <h4>Digital Payment Systems in Nepal</h4>
+            <p>Digital payment is gaining momentum due to social distancing during the Covid-19 pandemic. The evolution of digital payment platforms and increasing consumers' preference towards e-payment secures a bright future for online payment in Nepal.</p>
+            
+            <h4>What is Digital Payment?</h4>
+            <p>Digital Payment is definitely growing in popularity and is becoming a trend these days. The reason is simple – convenience. In the era when businesses are shifting online, why not transactions!</p>
+            
+            <h4>Major Use of Digital Payment System in Nepal</h4>
+            <p>You can find QR codes in various good and service sectors like departmental stores and small shops, and many banks and financial institutes (BFIs). You can make payments in supermarkets via a QR code scanner using a digital wallet. Local vendors and shops are also using QR codes for quick payment. Fruits and vegetable markets also feature digital payments for grocery shopping. According to a report by the Nepal Rastra Bank, the number of digital transactions from mid-December 2020 to mid-January 2021 was 372,176. Similarly, the transactional amount was Rs 1.245 billion. The next month, the number of transactions increased to 535,790 and the amount to Rs 1.712 billion, suggesting a clear rise in the use of digital payment.</p>
+            
+            <h4>Future and Challenges</h4>
+            <p>Switching to any e-payment services like QR code will be a long-running process. PSOs like eSewa have been offering QR payment services without charging any additional fee during transactions to encourage such platforms. This generation has access to different media that can raise awareness of digital payment significance, so the numbers of users is expected to grow in the future rapidly but still not enough to process an established digital economy. The lack of interoperability is another major issue for a stable digital payment service.</p>
+            
+            <h4>Conclusion</h4>
+            <p>QR code payment can be a vital factor in uplifting Nepal's digital economy. The government giving more priority to digital payment systems and the central bank to promote this system can be a head start for QR code payment. The ultimate goal should be offering a one-stop solution for the consumers to access all sorts of e-payment services, including QR code payment.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Grammar</h2>
+        <h3>A. Look at the following questions and say what type of questions they are.</h3>
+        <ul class="inline-list">
+            <li>a. Do you like this country? <strong>Yes/No Question</strong></li>
+            <li>b. Where is she from? <strong>Wh Question</strong></li>
+            <li>c. How many eggs do we need for this cake? <strong>Wh Question</strong></li>
+            <li>d. Whose children are playing in the yard? <strong>Wh Question</strong></li>
+            <li>e. Does she like ice cream or sweets? <strong>Choice Question</strong></li>
+            <li>f. She sent him an invitation, didn't she? <strong>Tag Question</strong></li>
+            <li>g. Could you tell me if the doctor is available? <strong>Indirect Question</strong></li>
+            <li>h. Do you know how tall they are? <strong>Yes/No Question</strong></li>
+        </ul>
+
+        <h3>B. Choose the correct words from the box to complete the sentences.</h3>
+        <ul class="correct-words-list">
+            <li><span class="sentence-part">a. Is your friend a scientist? – No, he's</span> <span class="answer-part">an artist.</span></li>
+            <li><span class="sentence-part">b. Does Naresh live in Kathmandu? – No,</span> <span class="answer-part">he lives in Pokhara.</span></li>
+            <li><span class="sentence-part">c. When did you get home? –</span> <span class="answer-part">I got home yesterday.</span></li>
+            <li><span class="sentence-part">d. What time do you get up? –</span> <span class="answer-part">I get up at 6:00.</span></li>
+            <li><span class="sentence-part">e. Did the children go to the part? – Yes,</span> <span class="answer-part">they went there after school.</span></li>
+            <li><span class="sentence-part">f. Are you going to school? – No,</span> <span class="answer-part">I'm going home.</span></li>
+            <li><span class="sentence-part">g. Can you speak Chinese? –</span> <span class="answer-part">Just a little.</span></li>
+            <li><span class="sentence-part">h. Where did you grow up? –</span> <span class="answer-part">I grew up in Okhaldhunga.</span></li>
+        </ul>
+        
+        <h3>C. Make wh-questions so that the words in bold become the answer.</h3>
+        <ul class="inline-list">
+            <li>a. Romeo loves <strong>Juliet</strong>.<br><strong>Whom does Romeo love?</strong></li>
+            <li>b. My mother made a <strong>delicious bread</strong> yesterday.<br><strong>What did your mother make yesterday?</strong></li>
+            <li>c. The music was composed by <strong>Narayan Gopal</strong>.<br><strong>Who composed the music?</strong></li>
+            <li>d. I'm looking for a <strong>new book</strong>.<br><strong>What are you looking for?</strong></li>
+            <li>e. They were talking about <strong>the new movie</strong>.<br><strong>What were they talking about?</strong></li>
+            <li>f. She got the idea from <strong>a story</strong>.<br><strong>Where did she get the idea?</strong></li>
+            <li>g. She always goes to school <strong>on foot</strong>.<br><strong>How does she go to school?</strong></li>
+            <li>h. She sometimes goes to the cinema.<br><strong>How often does she go to the cinema?</strong></li>
+            <li>i. They have been waiting for <strong>three years</strong>.<br><strong>How long have they been waiting for?</strong></li>
+        </ul>
+        
+        <h3>D. Change these indirect questions into direct ones.</h3>
+        <ul class="inline-list">
+            <li>a. Could you tell me where the Market Street is?<br><strong>Where is Market Street?</strong></li>
+            <li>b. I'm longing to know what time the bank opens.<br><strong>What time does the bank open?</strong></li>
+            <li>c. Do you have any idea how he's managed to get in shape so quickly?<br><strong>How has he managed to get in shape so quickly?</strong></li>
+            <li>d. I'd like to know how much this motorcycle costs these days.<br><strong>How much does this motorcycle cost these days?</strong></li>
+            <li>e. Did you notice if he had left the car in the park?<br><strong>Had he left the car in the park?</strong></li>
+            <li>f. Have you found out if the train has left?<br><strong>Has the train left?</strong></li>
+            <li>g. I was wondering if they speak English well.<br><strong>Could they speak English well?</strong></li>
+            <li>h. Would you tell us how we can get to the post office from here?<br><strong>How can we get to the post office from here?</strong></li>
+            <li>i. Do you remember if I locked the front door?<br><strong>Did I lock the front door?</strong></li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
