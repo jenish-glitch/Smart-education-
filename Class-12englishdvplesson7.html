@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humour - Chapter Summary</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #50E3C2;
+            --background-color: #F8F9FA;
+            --card-background: #FFFFFF;
+            --text-color: #333333;
+            --heading-color: #1A1A1A;
+            --border-color: #E0E0E0;
+            --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --shadow-medium: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --section-spacing: 2.5rem;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            margin-bottom: var(--section-spacing);
+            box-shadow: var(--shadow-medium);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .section {
+            background-color: var(--card-background);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-light);
+            margin-bottom: var(--section-spacing);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: var(--heading-color);
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 1rem;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .subsection {
+            margin-bottom: 2rem;
+        }
+
+        /* Lists */
+        .list-group {
+            padding-left: 0;
+        }
+
+        .list-group li {
+            list-style: none;
+            margin-bottom: 0.75rem;
+            padding: 0.75rem 1rem;
+            background-color: #F1F5F9;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+            transition: background-color 0.3s ease;
+        }
+
+        .list-group li:hover {
+            background-color: #E2E8F0;
+        }
+
+        .synonym-antonym-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 600px) {
+            .synonym-antonym-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .list-group.antonyms li {
+            border-left-color: #FF6B6B;
+        }
+
+        /* Definitions */
+        .definition-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .definition-list dt {
+            font-weight: 600;
+            color: var(--heading-color);
+            margin-bottom: 0.5rem;
+            background-color: #E6F0FF;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+        }
+
+        .definition-list dd {
+            margin-left: 1rem;
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--secondary-color);
+        }
+
+        /* Comprehension & Critical Thinking */
+        .question-answer {
+            margin-bottom: 1.5rem;
+        }
+
+        .question-answer p {
+            margin: 0;
+        }
+
+        .question-answer .question {
+            font-weight: 600;
+            color: var(--primary-color);
+            background-color: #E6F0FF;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+        }
+
+        .question-answer .answer {
+            padding: 0.75rem 1rem;
+            background-color: #F8F9FA;
+            border-left: 3px solid var(--secondary-color);
+            border-radius: 0 0 8px 8px;
+        }
+
+        /* Writing Section */
+        .writing-content {
+            background-color: #F8F9FA;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px dashed var(--border-color);
+        }
+
+        .writing-content h4 {
+            font-size: 1.1rem;
+            color: var(--heading-color);
+            margin-top: 0;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        /* Grammar Section */
+        .grammar-item {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: #F1F5F9;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+            box-shadow: var(--shadow-light);
+        }
+
+        .original-sentence {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #E0E0E0;
+        }
+
+        .corrected-sentence {
+            font-weight: 600;
+            color: var(--heading-color);
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 1.5rem;
+            }
+            header h1 {
+                font-size: 3rem;
+            }
+            .section {
+                padding: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Humour</h1>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="section">
+            <h2>Working with words</h2>
+            
+            <div class="subsection">
+                <h3>A. Group the following words into synonyms and antonyms of 'laugh'.</h3>
+                <div class="synonym-antonym-grid">
+                    <div>
+                        <h4>Synonyms</h4>
+                        <ul class="list-group">
+                            <li>chuckle</li>
+                            <li>giggle</li>
+                            <li>chortle</li>
+                            <li>crackle</li>
+                            <li>snicker</li>
+                            <li>groan</li>
+                            <li>smirk</li>
+                            <li>whoop</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Antonyms</h4>
+                        <ul class="list-group antonyms">
+                            <li>grin</li>
+                            <li>sob</li>
+                            <li>grimace</li>
+                            <li>frown</li>
+                            <li>pout</li>
+                            <li>scowl</li>
+                            <li>cry</li>
+                            <li>moan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>B. Match the following emotions with their definitions.</h3>
+                <dl class="definition-list">
+                    <dt>a. fear</dt>
+                    <dd>an unpleasant emotion caused by the threat of danger, pain or harm</dd>
+                    
+                    <dt>b. anger</dt>
+                    <dd>a strong feeling of displeasure</dd>
+                    
+                    <dt>c. surprise</dt>
+                    <dd>an unexpected event, fact, etc.</dd>
+                    
+                    <dt>d. disgust</dt>
+                    <dd>a feeling of strong disapproval aroused by something unpleasant</dd>
+                    
+                    <dt>e. sadness</dt>
+                    <dd>affected with grief or unhappiness</dd>
+                    
+                    <dt>f. happiness</dt>
+                    <dd>a pleasurable or satisfying experience</dd>
+                    
+                    <dt>g. relief</dt>
+                    <dd>removal or lightening of something oppressive, painful, or distressing</dd>
+                    
+                    <dt>h. triumph</dt>
+                    <dd>a great victory or achievement</dd>
+                    
+                    <dt>i. contentment</dt>
+                    <dd>the quality or state of being satisfied</dd>
+                </dl>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Comprehension</h2>
+
+            <div class="subsection">
+                <h3>A. Complete the following sentences.</h3>
+                <ol class="list-group">
+                    <li>According to Sophie Scott, laughter is one of the important and misunderstood behaviours.</li>
+                    <li>After her study in Namibia, Scott came to the realization that laughter is one of our richest vocal tics.</li>
+                    <li>Studies have shown that there are six universal emotions across cultures based on facial expressions.</li>
+                    <li>Scott found out that most of the laughs have nothing to do with humour.</li>
+                    <li>The couples who laugh at each other are likely to stay together for longer.</li>
+                    <li>The primary way of communication of grown up people is laughing.</li>
+                    <li>Comedians usually find it easier to work in larger places due to the contagious nature of laughter.</li>
+                </ol>
+            </div>
+
+            <div class="subsection">
+                <h3>B. Answer the following questions.</h3>
+                <div class="question-answer">
+                    <div class="question">a. Why do people giggle at someone's pain or suffering?</div>
+                    <div class="answer">People giggle at someone's pain or suffering because giggling through someone's pain or suffering is a way of convincing yourself (and therefore others) that you're alright, or at least on our way to being alright.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">b. What did Scott's study in Namibia come up with?</div>
+                    <div class="answer">Scott's study in Namibia came up with the realization that laughter is one of our richest vocal ties.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">c. How is laughter a social bonding?</div>
+                    <div class="answer">Laughter is a social bonding because it is an emotion that brings us together and helps us to bond, whether or not something is actually funny.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">d. What role does laughter play in husband-wife relationship?</div>
+                    <div class="answer">According to the author, laughter makes the husband-wife relationship stronger and long-lasting by making it easier to dissipate tension after a stressful event.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">e. How does laughter work as a painkiller?</div>
+                    <div class="answer">Laughter correlates with increased pain threshold, and by encouraging the release of endorphins, it works as a painkiller.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">f. What did the study find about the relation between laughter and brain?</div>
+                    <div class="answer">The study about the relation between laughter and brain found that the brain responds to each kind of laughter and both seem to tickle the brain's mirror regions – the areas that tend to mimic other's actions.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">g. What are two emotions that the author associates with infants and adults?</div>
+                    <div class="answer">Crying and laughter are two emotions that the author associates with infants and adults.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">h. How does a stand-up comedian take the audience's laughter?</div>
+                    <div class="answer">A stand-up comedian takes the audience's laughter by interacting with them, taking the advantage of contagious nature of laughter and reducing the audience to fits of hysterics.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">i. Show the relation between laughter and crowd.</div>
+                    <div class="answer">The relation between laughter and crowd is that laughter is contagious in crowd means that it can easily catch a wave when there are more people in crowd.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">j. What does the author mean when he says "there is always a meaning to it?"</div>
+                    <div class="answer">When author says "there is always a meaning to it" he means that laughter is never neutral and always have a meaning although it seems to be trivial, ephemeral and pointless.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Critical thinking</h2>
+
+            <div class="subsection">
+                <div class="question-answer">
+                    <div class="question">a. Do you agree that 'the couples, who laugh together, stay together?' Is it important for married couples to have the same sense of humour? Why?</div>
+                    <div class="answer">Yes, I agree with the statement that "the couples, who laugh together, stay together." A sense of humour is an attractive trait. There is abundant cross cultural evidence that shows that being funny makes you more desirable as a mate. Simply having a funny bond doesn't mean you two are the perfect match – apparently being able to laugh at the same things makes your partnership even stronger. A good sense of humour makes a person more attractive. Laughter is called the best medicine not without a reason, and this holds true for couples who might be going through stressful times. Studies have proved time and again how laughter helps release feel-good hormones that help to relieve stress. So, it's important for married couples to share good laughter and have the same sense of humour whenever they find themselves bogged down by trouble.</div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">b. Some people believe that sometimes crying is good for health. Do you believe it? Give your reasons.</div>
+                    <div class="answer">Crying is a natural response humans have to a range of emotions, including sadness, grief, joy, and frustration. Yes I believe that crying is good for health. Medical benefits of crying have been known as far back as the Classical era. Thinkers and physicians of ancient Greece and Rome posited that tears work like a purgative, draining off and purifying us. Today's psychological thought largely concurs, emphasizing the role of crying as a mechanism that allows us to release stress and emotional pain. When we cry, we let out tons of emotions that allow our body and mind to reboot after you release all those emotions. Crying is particularly important during periods of grieving. It may even help to process and accept the loss of a loved one. People often report feeling better after they cry. That could be because crying forces us to pay attention to what triggered us and work through our emotions and thoughts. Crying might also help in understanding what's important to us, especially if we cry over something that upset us unexpectedly. By this we can say that crying is an essential form of relief and hence it is good for health too.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Writing</h2>
+            <div class="subsection">
+                <h3>B. Write a description of your favourite comedian.</h3>
+                <div class="writing-content">
+                    <h4>Charlie Chaplin</h4>
+                    <p>Charlie Chaplin was an English comic actor, filmmaker, and composer who rose to fame in the silent era. He is mostly famous for his screen persona "the tramp". Born on April 16, 1889 in London, Chaplin is considered one of the most important figures in the history of the film industry. He had been a productive and creative film maker for about 75 years before he died in 1977.</p>
+                    <p>Chaplin suffered from poverty and hardship in his childhood. He was sent to a workhouse twice before the age of nine. His mother struggled financially when his father was absent. When he was 14, his mother was sent to a mental asylum.</p>
+                    <p>Chaplin's first performances were at music halls as a stage actor and comedian at the age of 19. He went to the USA where he was scouted for the film industry, and began appearing in 1914 for Keystone Studios. He soon developed the Tramp persona and formed a large fan base. Chaplin directed his own films from an early stage, and continued to hone his craft. By 1918, he was one of the best known figures in the film industry.</p>
+                    <p>Chaplin wrote, directed, produced, edited, starred in, and composed the music for most of his films. He was a perfectionist, and his financial independence enabled him to spend years on the development and production of a picture.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Grammar</h2>
+            <div class="subsection">
+                <h3>B. Put the frequency adverbs in appropriate place and rewrite the following sentences.</h3>
+                <div class="grammar-item">
+                    <div class="original-sentence">a. I forget to do my homework. (sometimes)</div>
+                    <div class="corrected-sentence">Sometimes I forget to do my homework.</div>
+                </div>
+                <div class="grammar-item">
+                    <div class="original-sentence">b. My father has touched an alcoholic drink in his life. (never)</div>
+                    <div class="corrected-sentence">My father has never touched an alcoholic drink in his life.</div>
+                </div>
+                <div class="grammar-item">
+                    <div class="original-sentence">c. My father goes for a walk on Saturdays. (often)</div>
+                    <div class="corrected-sentence">My father often goes for a walk on Saturdays.</div>
+                </div>
+                <div class="grammar-item">
+                    <div class="original-sentence">d. We go to the movie theatre. (occasionally)</div>
+                    <div class="corrected-sentence">We occasionally go to the movie theatre.</div>
+                </div>
+                <div class="grammar-item">
+                    <div class="original-sentence">e. My brother is in America. He telephones us. (from time to time)</div>
+                    <div class="corrected-sentence">My brother is in America. He telephones us from time to time.</div>
+                </div>
+                <div class="grammar-item">
+                    <div class="original-sentence">f. My mother gets up at five o'clock. (always)</div>
+                    <div class="corrected-sentence">My mother always gets up at five o'clock.</div>
+                </div>
+                <div class="grammar-item">
+                    <div class="original-sentence">g. He does not like alcoholic drinks but takes some wine. (now and then)</div>
+                    <div class="corrected-sentence">He does not like alcoholic drinks but now and then takes some wine.</div>
+                </div>
+                <div class="grammar-item">
+                    <div class="original-sentence">h. I drink my tea with milk. (generally)</div>
+                    <div class="corrected-sentence">Generally, I drink my tea with milk.</div>
+                </div>
+                <div class="grammar-item">
+                    <div class="original-sentence">i. Have you been to Agra? (ever)</div>
+                    <div class="corrected-sentence">Have you ever been to Agra?</div>
+                </div>
+                <div class="grammar-item">
+                    <div class="original-sentence">j. The restaurant hours vary as it is booked for special events. (frequently)</div>
+                    <div class="corrected-sentence">The restaurant hours vary frequently as it is booked for special events.</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
+
