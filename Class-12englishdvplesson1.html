@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter Review</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #388E3C;
+            --background-color: #f4f7f9;
+            --card-background: #ffffff;
+            --text-color: #333333;
+            --header-color: #1a1a1a;
+            --shadow-light: 0 4px 8px rgba(0, 0, 0, 0.05);
+            --shadow-medium: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 40px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow-medium);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .card {
+            background-color: var(--card-background);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: var(--shadow-light);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: var(--header-color);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: "📚";
+            font-size: 1.2em;
+        }
+        
+        h3 {
+            font-size: 1.4em;
+            color: var(--secondary-color);
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .question-answer {
+            margin-bottom: 20px;
+        }
+        
+        .question {
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 5px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .question::before {
+            content: "Q.";
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .answer {
+            padding-left: 24px;
+            border-left: 3px solid var(--primary-color);
+            margin-left: 5px;
+        }
+
+        .email-card {
+            background-color: #e8f5e9;
+            border-left: 5px solid var(--secondary-color);
+            padding: 25px;
+            border-radius: 8px;
+        }
+        
+        .email-header {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        .email-body p {
+            margin-bottom: 10px;
+        }
+
+        .list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .list-item::before {
+            content: "•";
+            color: var(--primary-color);
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            header {
+                padding: 30px 15px;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Chapter Review</h1>
+        <p>A comprehensive overview of key concepts, questions, and answers.</p>
+    </header>
+
+    <div class="card">
+        <h2>Working with Words</h2>
+        <h3>A. Find the words from the text that match with the following meanings.</h3>
+        <div class="question-answer">
+            <div class="question">a. Walking by dragging one's feet along or without lifting them fully from the ground.</div>
+            <div class="answer"><strong>Shuffle</strong></div>
+        </div>
+        <div class="question-answer">
+            <div class="question">b. Drawing pictures or patterns while thinking about something else.</div>
+            <div class="answer"><strong>Doodle</strong></div>
+        </div>
+        <div class="question-answer">
+            <div class="question">c. A piece of flat metal with writing on it.</div>
+            <div class="answer"><strong>Plaque</strong></div>
+        </div>
+        <div class="question-answer">
+            <div class="question">d. A general rule intended to regulate behavior or thought.</div>
+            <div class="answer"><strong>Precepts</strong></div>
+        </div>
+        <div class="question-answer">
+            <div class="question">e. Move or go in a furtive or stealthy way.</div>
+            <div class="answer"><strong>Sneaky</strong></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Critical Thinking</h2>
+        <h3>B. Consult your teacher and define the following thinking skills.</h3>
+        <div class="question-answer">
+            <div class="question">a. Convergent thinking</div>
+            <div class="answer">Convergent thinking is a type of thinking that focuses on finding the single, well-established answer to a problem. It aims to derive the single best, or most correct, answer to a question.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">b. Divergent thinking</div>
+            <div class="answer">Divergent thinking is a thought process or method used to generate creative ideas by exploring many possible solutions. Many solutions are explored in a short amount of time, and unexpected connections are often drawn.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">c. Critical thinking</div>
+            <div class="answer">Critical thinking is the analysis of facts to form a judgment. It is a complex subject with several definitions, but it generally involves the rational, skeptical, unbiased analysis and evaluation of factual evidence.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">d. Creative thinking</div>
+            <div class="answer">Creative thinking is the ability to generate a completely new, appealing, and useful thought or idea. It is a skill that enables you to come up with original and unconventional ideas.</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Comprehension</h2>
+        <h3>Answer the following questions.</h3>
+        <div class="question-answer">
+            <div class="question">a. Who was Jack? How did he make children laugh?</div>
+            <div class="answer">Jack was a kind of kid other children liked and had a lot of friends. He made children laugh by telling jokes.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">b. Why are "Sharks" important to Reid?</div>
+            <div class="answer">Sharks are important to Reid because they help keep the ocean clean by eating dead organisms.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">c. What does Mr. Browne think about the most important thing?</div>
+            <div class="answer">Mr. Browne thinks the most important thing is to know oneself, or one's own character, and to evaluate it to bring out the best version of someone.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">d. What is that has not been noticed by the student?</div>
+            <div class="answer">The students have not noticed the message on the notice board at the school entrance gate which reads, "Know Thyself."</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">e. How did Jack make fun of the English class?</div>
+            <div class="answer">Jack made fun of the English class by answering the teacher's question "Why are you here?" with "We are here to attend English class."</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">f. What were the students going to do at the end of the month?</div>
+            <div class="answer">At the end of the month, the students were going to write an essay based on Brownie's precept.</div>
+        </div>
+        <div class="question-answer">
+            <div class="question">g. What particular act of students surprised a girl student?</div>
+            <div class="answer">The girl student was surprised by the fact that students would come up with their own personal precept, write it on a postcard, and mail it to Mr. Brownie after their graduation.</div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <h2>Critical Thinking</h2>
+        <h3>a. Have you made your own precept after you read this lesson? What is it? Share it with your friends.</h3>
+        <div class="answer">
+            <p>Yes, I have made my own precepts after reading this lesson. They are as follows:</p>
+            <ul>
+                <li class="list-item">"Success is temporary but failure is permanent"</li>
+                <li class="list-item">"Always stay Positive"</li>
+                <li class="list-item">"Believe in Karma rather than fate"</li>
+                <li class="list-item">"Anything that happens, happens for good"</li>
+            </ul>
+        </div>
+        <br>
+        <h3>b. According to Josh Lanyon, "If there was one life skill everyone on the planet needed, it was the ability to think with critical objectivity." Justify this statement with your logic.</h3>
+        <div class="answer">
+            <p>Josh Lanyon's statement somewhat reflects the core idea behind the development of human skills on this planet. He has presented a fact related to the skills of people. Lanyon connected life skills with the ability to think with critical objectivity.</p>
+            <p>From ancient times until now, people have been developing skills and inventing things. This development was possible because of their ability to think with critical objectivity, which works alongside their life skills, whether they know it or not.</p>
+            <p>Critical objectivity and life skills always go hand-in-hand. People have applied various life skills in their lives, which means they can think with critical objectivity. The ability to think with critical objectivity is always present behind all these life skills.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Writing</h2>
+        <h3>Write an email to your friend explaining an interesting class you had.</h3>
+        <div class="email-card">
+            <div class="email-header">
+                <strong>From:</strong> binodkumar12@gmail.com<br>
+                <strong>To:</strong> shristi2011@gmail.com<br>
+                <strong>Subject:</strong> Interesting class that I had
+            </div>
+            <div class="email-body">
+                <p>Dear Shristi,</p>
+                <p>I hope this letter finds you in good health and high spirits. I am doing pretty well here. I am writing to you to share my experience of my English classes.</p>
+                <p>Compared to any other classes I have taken during my school history, I feel that no other class could give me so much joy, knowledge, and pleasure as English class did. I learned it quite well and, in every test, I got the best marks in the class. I not only learned a lot of basic English knowledge in my middle school but also developed personal characteristics that guided my interests throughout my later education.</p>
+                <p>When I was in middle school, it used to be a great thing to know that there would be an English class tomorrow morning because I could enjoy another interesting 45 minutes during the class. Unlike other classes, such as Science, Nepali, or Mathematics, I even established my English-related interest group on social media, which gave me great benefits in my university studies. I believe no other class has inspired me so far to pursue a scientific result.</p>
+                <p>Another important thing I achieved through English class is the ability to collaborate with other students. I think it certainly formed my teamwork spirit, which I later used when I entered a career as an engineer. I can still clearly remember my primary and high school English teachers. They were all people of great patience and had an instructive nature. They told me not to quit when I failed again and again. They gave me a lot of confidence and mental discipline towards success. I would like to end this email by saying that English class is the only class I used to enjoy the most.</p>
+                <p>Regards,<br>Binod Kumar</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <h2>Grammar</h2>
+        <h3>Rewrite the following sentences adding appropriate question tags.</h3>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li class="list-item">a. Gill does not know Ann, doesn't he?</li>
+            <li class="list-item">b. I'm very patient, aren't I?</li>
+            <li class="list-item">c. They'd never met me before, had they?</li>
+            <li class="list-item">d. Listen carefully, will you?</li>
+            <li class="list-item">e. Let's have a break, shall we?</li>
+            <li class="list-item">f. Let us invite them, will you?</li>
+            <li class="list-item">g. Hari used to live in France as a boy, didn't he?</li>
+            <li class="list-item">h. You'd better not take a hard drink, had you?</li>
+            <li class="list-item">i. Sheep eat grass, don't they?</li>
+            <li class="list-item">j. Mr. Pande can speak nine languages, can't he?</li>
+            <li class="list-item">k. She's finished her classes, hasn't she?</li>
+            <li class="list-item">l. She barely managed to reach the goal, did she?</li>
+            <li class="list-item">m. Don't let him swim in that pond, will you?</li>
+            <li class="list-item">n. There are lots of people here, aren't there?</li>
+        </ul>
+
+        <h3>Read the following situations. What do you say in these situations? Use question tags.</h3>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li class="list-item">a. The sky is full of clouds. You can see lightning and hear thunder.
+                <br>It's going to rain soon, isn't it?
+            </li>
+            <li class="list-item">b. You want to pay the taxi fare but you are short by 100 rupees.
+                <br>Shyam, you have to lend me Rs. 100, don't you?
+            </li>
+            <li class="list-item">c. You have met a stranger at a party and you want to have a chat with him/her.
+                <br>We will talk later, won't we?
+            </li>
+            <li class="list-item">d. You came out of the film hall with your friend. You enjoyed the film.
+                <br>The film was very enjoyable, wasn't it?
+            </li>
+            <li class="list-item">e. You and your friend listened to a comedian on the stage and felt spellbound by his/her performance.
+                <br>He gave an excellent presentation, didn't he?
+            </li>
+            <li class="list-item">f. You think your friend's father has arrived from the US but you are not sure.
+                <br>Your father has not arrived from US, has he?
+            </li>
+            <li class="list-item">g. You think Susan will join the new job tomorrow but you are not sure.
+                <br>Susan will go to her new job tomorrow, won't she?
+            </li>
+            <li class="list-item">h. Your friend's hair looks too short.
+                <br>You have got too short hair, haven't you?
+            </li>
+            <li class="list-item">i. You want to go for a picnic with your friends in class.
+                <br>Let's go to picnic, shall we?
+            </li>
+            <li class="list-item">j. You want permission from your father to go for a walk.
+                <br>Let me go for an evening walk, will you?
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>
+
